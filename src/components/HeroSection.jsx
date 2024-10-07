@@ -4,7 +4,7 @@ import tester1 from '../assets/herosection/tester1.jpg';
 const HeroSection = ({ servicesRef, projectsRef }) => {
   return (
     <div className="flex flex-col items-center mt-6 lg:mt-20">
-      <h1 className="text-5xl tracking-wide text-center sm:text-7xl">
+      <h1 className="text-4xl tracking-wide text-center sm:text-7xl">
         <span className="font-bold text-blue-600">METER</span>
         <span className="font-bold text-red-600"> ELECTRIC</span>
       </h1>
