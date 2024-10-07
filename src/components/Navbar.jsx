@@ -21,7 +21,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 py-2 border-b backdrop-blur-lg border-blue-700/80">
+    <nav className="sticky top-0 z-50 py-2 font-light border-b backdrop-blur-lg border-blue-700/80">
       <div className="container relative px-4 mx-auto lg:text-sm">
         <div className="flex items-center justify-between">
           <div className="flex items-center flex-shrink-0">
@@ -41,7 +41,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
                     if (item.scrollTo === 'projectsRef') handleScroll(projectsRef);
                     if (item.scrollTo === 'contactRef') handleScroll(contactRef);
                   }}
-                  className="text-blue-700 hover:underline">
+                  className="p-1 text-blue-700 hover:underline hover:bg-slate-50">
                   {item.label}
                 </button>
               </li>

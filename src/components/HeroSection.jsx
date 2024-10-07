@@ -14,8 +14,9 @@ const HeroSection = ({ servicesRef, projectsRef }) => {
       <p className="max-w-4xl mt-10 text-center text-balance text-md text-neutral-600">
         Welcome to METER ELECTRIC, your go-to destination for quality electrical solutions. As
         specialists in the industry, we provide comprehensive commercial, residential, and
-        industrial services tailored to your needs. Choose METER ELECTRIC for reliable service that
-        illuminates your world with safety & efficiency.
+        industrial services tailored to your needs.{' '}
+        {/* Choose METER ELECTRIC for reliable service that
+        illuminates your world with safety & efficiency. */}
       </p>
       <div className="flex justify-center my-10">
         <button
@@ -29,7 +30,7 @@ const HeroSection = ({ servicesRef, projectsRef }) => {
           PROJECTS
         </button>
       </div>
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center mt-2">
         <img
           src={tester1}
           className="w-1/3 mx-1 my-2 border border-blue-700 rounded-lg shadow-sm shadow-sky-400"

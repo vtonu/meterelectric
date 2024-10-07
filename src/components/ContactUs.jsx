@@ -53,7 +53,7 @@ const Contacts = ({ homeRef }) => {
       <div className="button-container">
         <button
           onClick={() => homeRef.current?.scrollIntoView({ behavior: 'smooth' })}
-          className="flex px-2 py-2 mx-2 rounded-sm shadow-sm text-neutral-900 shadow-blue-300 bg-gradient-to-br from-blue-500 to-blue-100 group-hover:from-sky-500 group-hover:to-blue-100 hover:text-blue-100 dark:text-white focus:outline-none focus:ring-blue-300 dark:focus:ring-sky-800">
+          className="flex px-2 py-2 mx-2 rounded-sm shadow-sm text-neutral-800 shadow-blue-300 bg-gradient-to-br from-blue-600 to-blue-50 group-hover:from-sky-300 group-hover:to-blue-200 hover:text-blue-100 dark:text-white focus:outline-none focus:ring-blue-300 dark:focus:ring-sky-800">
           <MoveUp />
           Back to Top
         </button>
