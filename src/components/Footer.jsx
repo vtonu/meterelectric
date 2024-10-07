@@ -1,5 +1,6 @@
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 
 const Footer = () => {
   return (
@@ -7,6 +8,7 @@ const Footer = () => {
       <h3 className="flex flex-col items-center gap-2 mb-4 text-xs font-light text-neutral-700">
         <Link to="/">
           <img className="h-20 m-2 cursor-pointer" src={logo} alt="Logo" />
+          <Analytics />
         </Link>
         {/* Copyright © 2024 METER ELECTRIC LLC. */}
       </h3>
