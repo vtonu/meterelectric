@@ -22,32 +22,32 @@ const Projects = () => {
         <br></br> <br></br>
       </h2>
 
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-2">
-        <div className="w-full p-2">
+      <div className="grid grid-cols-5">
+        <div className="w-1/2 mx-auto">
           <img src={Work1} alt="Work 1" className="border border-blue-600 rounded-md" />
         </div>
-        <div className="w-full p-2">
+        <div className="w-1/2 mx-auto">
           <img src={Work2} alt="Work 2" className="border border-blue-600 rounded-md" />
         </div>
 
-        <div className="w-full p-2">
+        <div className="w-1/2 mx-auto">
           <img src={Work3} alt="Work 3" className="border border-blue-600 rounded-md" />
         </div>
-        <div className="w-full p-2">
+        <div className="w-1/2 mx-auto">
           <img src={Work4} alt="Work 4" className="border border-blue-600 rounded-md" />
         </div>
-        <div className="w-full p-2">
+        <div className="w-1/2 mx-auto">
           <img src={Work5} alt="Work 5" className="border border-blue-600 rounded-md" />
         </div>
       </div>
-      <div className="button-container">
+      {/* <div className="button-container">
         <button
           onClick={() => homeRef.current?.scrollIntoView({ behavior: 'smooth' })}
           className="flex px-2 py-2 mx-2 rounded-sm shadow-sm text-neutral-900 shadow-blue-300 bg-gradient-to-br from-blue-500 to-blue-100 group-hover:from-sky-500 group-hover:to-blue-100 hover:text-blue-100 dark:text-white focus:outline-none focus:ring-blue-300 dark:focus:ring-sky-800">
           <MoveLeft />
           Return Home
         </button>
-      </div>
+      </div> */}
       <Footer />
     </div>
   );
