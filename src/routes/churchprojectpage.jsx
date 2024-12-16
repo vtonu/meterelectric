@@ -13,14 +13,19 @@ const Projects = () => {
       <h2 className="mt-6 text-5xl tracking-wide text-center sm:text-5xl lg:text-6xl">
         CHURCH{" "}
         <span className="text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
-          PROJECT
+          PROJECTS
         </span>
         <br></br> <br></br>
       </h2>
 
       <div className="flex flex-col items-center">
         <div className="flex justify-center pb-4">
-          <video autoPlay loop className="w-1/2">
+          <video
+            autoPlay
+            loop
+            className="w-1/2"
+            onContextMenu={(e) => e.preventDefault()}
+          >
             <source src={churchprojectvideo} type="video/mp4" />
           </video>
         </div>
