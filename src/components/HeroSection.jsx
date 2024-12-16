@@ -1,6 +1,5 @@
 import load from '../assets/herosection/load.jpg';
 import tester1 from '../assets/herosection/tester1.jpg';
-import churchprojectvideo from '../assets//videos/churchprojectvideo.mp4';
 
 const HeroSection = ({ servicesRef, projectsRef }) => {
   return (

@@ -26,13 +26,13 @@ const Projects = () => {
             className="border border-blue-600 rounded-md"
           />
         </div>
-        <div className="w-1/2 mx-auto">
+        {/* <div className="w-1/2 mx-auto">
           <img
             src={project1_yellow}
             alt="Project 3"
             className="border border-blue-600 rounded-md"
           />
-        </div>
+        </div> */}
       </div>
       {/* <div className="button-container">
         <button
