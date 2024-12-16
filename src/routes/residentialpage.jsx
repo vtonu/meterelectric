@@ -22,20 +22,24 @@ const Projects = () => {
         <br></br> <br></br>
       </h2>
 
-      <div className="grid grid-cols-2 gap-2">
-        <div className="w-1/2 mx-auto">
-          <img src={Work1} alt="Work 1" className="border border-blue-600 rounded-md" />
-        </div>
-        <div className="w-1/2 mx-auto">
+      <div className="grid grid-cols-2 gap-4 w-1/2 mx-auto">
+        
+        <div className="w-full mx-auto">
           <img src={Work2} alt="Work 2" className="border border-blue-600 rounded-md" />
         </div>
-        <div className="w-1/2 mx-auto">
+        <div className="w-full mx-auto">
           <img src={Work3} alt="Work 3" className="border border-blue-600 rounded-md" />
         </div>
-        <div className="w-1/2 mx-auto">
+        <div className="w-full mx-auto">
+          <img src={Work1} alt="Work 1" className="border border-blue-600 rounded-md" />
+        </div>
+        <div className="w-full mx-auto">
           <img src={Work4} alt="Work 4" className="border border-blue-600 rounded-md" />
         </div>
-        <div className="w-1/2 mx-auto">
+        <div className="w-full mx-auto">
+          <img src={Work5} alt="Work 5" className="border border-blue-600 rounded-md" />
+        </div>
+        <div className="w-full mx-auto">
           <img src={Work5} alt="Work 5" className="border border-blue-600 rounded-md" />
         </div>
       </div>

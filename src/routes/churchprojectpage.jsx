@@ -1,7 +1,6 @@
 import Navbar from '../components/Navbar';
 
-import Work1 from '../assets/services/commercialwork/1.jpg';
-import Work2 from '../assets/services/commercialwork/2.jpg';
+import churchprojectvideo from '../assets/videos/churchproject.mp4';
 
 import Footer from '../components/Footer';
 
@@ -12,20 +11,17 @@ const Projects = () => {
     <div className="mt-20 min-h-[600px]">
       <Navbar />
       <h2 className="mt-6 text-5xl tracking-wide text-center sm:text-5xl lg:text-6xl">
-        COMMERCIAL{' '}
+        CHURCH{' '}
         <span className="text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
-          SERVICES
+          PROJECT
         </span>
         <br></br> <br></br>
       </h2>
 
-      <div className="grid grid-cols-2 w-1/2 mx-auto gap-4">
-        <div className="w-full mx-auto">
-          <img src={Work1} alt="Work 1" className="border border-blue-600 rounded-md" />
-        </div>
-        <div className="w-full mx-auto">
-          <img src={Work2} alt="Work 2" className="border border-blue-600 rounded-md" />
-        </div>
+      <div className="flex justify-center p-2">
+      <video controls className='w-1/2'>
+          <source src={churchprojectvideo} type="video/mp4" />
+        </video>
       </div>
       {/* <div className="button-container">
         <button

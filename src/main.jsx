@@ -7,6 +7,7 @@ import ErrorPage from './error-page';
 import ResidentialPage from './routes/residentialpage';
 import IndustrialPage from './routes/industrialpage';
 import CommercialPage from './routes/commercialpage';
+import ChurchProjectPage from './routes/churchprojectpage';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
     element: <CommercialPage />,
     errorElement: <ErrorPage />,
   },
+  {
+    path: 'projects',
+    element: <ChurchProjectPage />,
+    errorElement: <ErrorPage />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

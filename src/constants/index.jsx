@@ -5,6 +5,7 @@ import generac from '../assets/profile-pictures/generac.jpg';
 import commercial from '../assets/services/commercial.jpg';
 import residential from '../assets/services/residential.jpg';
 import industrial from '../assets/services/industrial.jpg';
+import project1_church from '../assets/projects/church.jpg';
 
 export const navItems = [
   { label: 'HOME', scrollTo: 'homeRef' },
@@ -92,6 +93,31 @@ export const features = [
           />
         </div>
       </div>
+    ),
+  },
+];
+
+export const projectList = [
+  {
+    link: '/projects',
+    description: (
+      <div>
+            <div className="w-1/3 pb-2">
+                <img
+                  src={project1_church}
+                  alt="Three Hierarchs Church"
+                  className="border border-blue-100 rounded-md"
+                />
+              </div>
+              <button
+                className="px-4 py-2 font-normal border-blue-600 rounded-sm shadow-sm border-1 bg-gradient-to-r from-blue-500 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200">
+               Three Holy Hierarchs Romanian Orthodox Church
+               
+               <p className='font-thin'>
+               6402 226th St SW Mountlake Terrace, WA 98043
+               </p>
+              </button>
+            </div>
     ),
   },
 ];

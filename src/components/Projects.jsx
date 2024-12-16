@@ -3,6 +3,8 @@ import project1_church from '../assets/projects/church.jpg';
 import project2_redbluewires from '../assets/projects/project2_redbluewires.jpg';
 import project3_yellowstickers from '../assets/projects/project3_yellowstickers.jpg';
 import project4_housebackground from '../assets/projects/project4_housebackground.jpg';
+import { Link } from 'react-router-dom';
+import { projectList } from '../constants';
 
 const Projects = () => {
   return (
@@ -15,6 +17,15 @@ const Projects = () => {
         <br></br> <br></br>
       </h2>
       <div>
+        {projectList.map((project, index) => (
+          <div key={index}>
+            <Link to={project.link}>
+              {project.description}
+            </Link>
+          </div>
+        ))}
+      </div>
+      {/* <div>
       <div className="w-1/3 pb-2">
           <img
             src={project1_church}
@@ -31,7 +42,7 @@ const Projects = () => {
          6402 226th ST SW Mountlake Terrace, WA 98043
          </p>
         </button>
-      </div>
+      </div> */}
       <div className="grid grid-cols-4 gap-4 pt-8">
         <div className="w-full p-2">
           <img
