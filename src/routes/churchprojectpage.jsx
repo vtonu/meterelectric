@@ -3,10 +3,15 @@ import Navbar from "../components/Navbar";
 import churchprojectvideo from "../assets/videos/churchproject.mp4";
 import Footer from "../components/Footer";
 import { MoveLeft } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import {
+  useNavigate,
+  useNavigationType,
+  NavigationType,
+} from "react-router-dom";
 
 const Projects = () => {
   const navigate = useNavigate();
+  const navigationType = useNavigationType();
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -14,6 +19,14 @@ const Projects = () => {
       videoRef.current.play();
     }
   }, []);
+
+  const handleReturnHome = () => {
+    if (navigationType === NavigationType.POP) {
+      navigate(-1);
+    } else {
+      navigate("/");
+    }
+  };
 
   return (
     <div className="mt-20 min-h-[600px]">
@@ -38,7 +51,7 @@ const Projects = () => {
       </div>
       <div className="button-container">
         <button
-          onClick={() => navigate(-1)}
+          onClick={handleReturnHome}
           className="flex px-4 py-2 font-normal border-blue-600 rounded-sm shadow-sm border-1 bg-gradient-to-r from-blue-500 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200"
         >
           <MoveLeft />
