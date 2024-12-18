@@ -1,19 +1,19 @@
 import Navbar from "../components/Navbar";
-
 import churchprojectvideo from "../assets/videos/churchproject.mp4";
-
 import Footer from "../components/Footer";
-
 import { MoveLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="mt-20 min-h-[600px]">
       <Navbar />
       <h2 className="mt-6 text-5xl tracking-wide text-center sm:text-5xl lg:text-6xl">
-        CHURCH{" "}
+        Energy Saving{" "}
         <span className="text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
-          PROJECTS
+          Projects
         </span>
         <br></br> <br></br>
       </h2>
@@ -29,16 +29,16 @@ const Projects = () => {
             <source src={churchprojectvideo} type="video/mp4" />
           </video>
         </div>
-        <p>Energy Saving Project.</p>
       </div>
-      {/* <div className="button-container">
+      <div className="button-container">
         <button
-          onClick={() => homeRef.current?.scrollIntoView({ behavior: 'smooth' })}
-          className="flex px-2 py-2 mx-2 rounded-sm shadow-sm text-neutral-900 shadow-blue-300 bg-gradient-to-br from-blue-500 to-blue-100 group-hover:from-sky-500 group-hover:to-blue-100 hover:text-blue-100 dark:text-white focus:outline-none focus:ring-blue-300 dark:focus:ring-sky-800">
+          onClick={() => navigate(-1)}
+          className="flex px-4 py-2 font-normal border-blue-600 rounded-sm shadow-sm border-1 bg-gradient-to-r from-blue-500 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200"
+        >
           <MoveLeft />
           Return Home
         </button>
-      </div> */}
+      </div>
       <Footer />
     </div>
   );

@@ -1,16 +1,15 @@
 import Navbar from "../components/Navbar";
-
-import Work1 from "../assets/services/residentialwork/1.jpg";
 import Work2 from "../assets/services/residentialwork/2.jpg";
 import Work3 from "../assets/services/residentialwork/3.jpg";
 import Work4 from "../assets/services/residentialwork/4.jpg";
 import Work5 from "../assets/services/residentialwork/5.jpg";
-
 import Footer from "../components/Footer";
-
 import { MoveLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="mt-20 min-h-[600px]">
       <Navbar />
@@ -39,13 +38,6 @@ const Projects = () => {
         </div>
         <div className="w-full mx-auto">
           <img
-            src={Work1}
-            alt="Work 1"
-            className="border border-blue-600 rounded-md"
-          />
-        </div>
-        <div className="w-full mx-auto">
-          <img
             src={Work4}
             alt="Work 4"
             className="border border-blue-600 rounded-md"
@@ -59,14 +51,15 @@ const Projects = () => {
           />
         </div>
       </div>
-      {/* <div className="button-container">
+      <div className="button-container">
         <button
-          onClick={() => homeRef.current?.scrollIntoView({ behavior: 'smooth' })}
-          className="flex px-2 py-2 mx-2 rounded-sm shadow-sm text-neutral-900 shadow-blue-300 bg-gradient-to-br from-blue-500 to-blue-100 group-hover:from-sky-500 group-hover:to-blue-100 hover:text-blue-100 dark:text-white focus:outline-none focus:ring-blue-300 dark:focus:ring-sky-800">
+          onClick={() => navigate(-1)}
+          className="flex px-4 py-2 font-normal border-blue-600 rounded-sm shadow-sm border-1 bg-gradient-to-r from-blue-500 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200"
+        >
           <MoveLeft />
           Return Home
         </button>
-      </div> */}
+      </div>
       <Footer />
     </div>
   );
