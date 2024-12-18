@@ -10,11 +10,8 @@ const Projects = () => {
   return (
     <div className="mt-20 min-h-[600px]">
       <Navbar />
-      <h2 className="mt-6 text-5xl tracking-wide text-center sm:text-5xl lg:text-6xl">
-        Energy Saving{" "}
-        <span className="text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
-          Projects
-        </span>
+      <h2 className="mt-6 text-2xl sm:text-5xl lg:text-6xl tracking-wide text-center">
+        Energy Saving Projects
         <br></br> <br></br>
       </h2>
 

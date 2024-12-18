@@ -1,22 +1,22 @@
-import { BatteryCharging } from 'lucide-react';
-import { Cable } from 'lucide-react';
-import { KeyboardMusic } from 'lucide-react';
-import generac from '../assets/profile-pictures/generac.jpg';
-import commercial from '../assets/services/commercial.jpg';
-import residential from '../assets/services/residential.jpg';
-import industrial from '../assets/services/industrial.jpg';
-import project1_church from '../assets/projects/church.jpg';
+import { BatteryCharging } from "lucide-react";
+import { Cable } from "lucide-react";
+import { KeyboardMusic } from "lucide-react";
+import generac from "../assets/profile-pictures/generac.jpg";
+import commercial from "../assets/services/commercial.jpg";
+import residential from "../assets/services/residential.jpg";
+import industrial from "../assets/services/industrial.jpg";
+import project1_church from "../assets/projects/church.jpg";
 
 export const navItems = [
-  { label: 'HOME', scrollTo: 'homeRef' },
-  { label: 'SERVICES', scrollTo: 'servicesRef' },
-  { label: 'PROJECTS', scrollTo: 'projectsRef' },
-  { label: 'CONTACT', scrollTo: 'contactRef' },
+  { label: "HOME", scrollTo: "homeRef" },
+  { label: "SERVICES", scrollTo: "servicesRef" },
+  { label: "PROJECTS", scrollTo: "projectsRef" },
+  { label: "CONTACT", scrollTo: "contactRef" },
 ];
 
 export const partners = [
   {
-    company: 'GENERAC COMPANY',
+    company: "GENERAC COMPANY",
     image: generac,
   },
 ];
@@ -29,12 +29,12 @@ export const features = [
         Commercial
       </span>
     ),
-    link: '/commercial',
+    link: "/commercial",
     description: (
       <div className="p-6 font-normal border rounded-md bg-neutral-900 text-md border-neutral-600">
         <p className="text-center">
-          From logic systems to automations & controls, Meter Electric provides tailored solutions
-          for every project. <br></br>
+          From logic systems to automations & controls, Meter Electric provides
+          tailored solutions for every project. <br></br>
           <br></br>
         </p>
         <div className="w-full p-2">
@@ -54,12 +54,13 @@ export const features = [
         Residential
       </span>
     ),
-    link: '/residential',
+    link: "/residential",
     description: (
       <div className="p-6 font-normal border rounded-md bg-neutral-900 text-md border-neutral-600">
         <p className="text-center ">
-          Top-quality residential services, from EV charger installations to emergency generators,
-          meter service upgrades, panel replacements & more.
+          Top-quality residential services, from EV charger installations to
+          emergency generators, meter service upgrades, panel replacements &
+          more.
         </p>
         <div className="w-full p-2">
           <img
@@ -78,12 +79,12 @@ export const features = [
         Industrial
       </span>
     ),
-    link: '/industrial',
+    link: "/industrial",
     description: (
       <div className="p-6 font-normal border rounded-md bg-neutral-900 text-md border-neutral-600">
         <p className="text-center ">
-          From control systems troubleshooting to automations & controls, Meter Electric provides
-          tailored solutions for every industry.
+          From control systems troubleshooting to automations & controls, Meter
+          Electric provides tailored solutions for every industry.
         </p>
         <div className="w-full p-2">
           <img
@@ -99,25 +100,27 @@ export const features = [
 
 export const projectList = [
   {
-    link: '/projects',
+    link: "/projects",
     description: (
-      <div>
-            <div className="w-1/3 pb-2">
-                <img
-                  src={project1_church}
-                  alt="Three Hierarchs Church"
-                  className="border border-blue-100 rounded-md"
-                />
-              </div>
-              <button
-                className="px-4 py-2 font-normal border-blue-600 rounded-sm shadow-sm border-1 bg-gradient-to-r from-blue-500 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200">
-               Three Holy Hierarchs Romanian Orthodox Church
-               
-               <p className='font-thin'>
-               6402 226th St SW Mountlake Terrace, WA 98043
-               </p>
-              </button>
-            </div>
+      <div className="flex flex-col items-center">
+        <div className="w-full sm:w-1/3 pb-2 px-4 sm:px-0">
+          <img
+            src={project1_church}
+            alt="Three Hierarchs Church"
+            className="border border-blue-100 rounded-md"
+          />
+        </div>
+        <div className="w-full sm:w-1/3 px-4 sm:px-0">
+          <div className="px-2 py-1 font-normal border-blue-600 rounded-sm shadow-sm border-1 bg-gradient-to-r from-blue-500 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200 text-center">
+            <span className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold">
+              Three Holy Hierarchs Romanian Orthodox Church
+            </span>
+            <p className="font-thin text-xs sm:text-sm md:text-base lg:text-lg">
+              6402 226th St SW Mountlake Terrace, WA 98043
+            </p>
+          </div>
+        </div>
+      </div>
     ),
   },
 ];
