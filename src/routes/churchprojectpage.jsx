@@ -1,3 +1,4 @@
+import React, { useEffect, useRef } from "react";
 import Navbar from "../components/Navbar";
 import churchprojectvideo from "../assets/videos/churchproject.mp4";
 import Footer from "../components/Footer";
@@ -6,6 +7,13 @@ import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
   const navigate = useNavigate();
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  }, []);
 
   return (
     <div className="mt-20 min-h-[600px]">
@@ -18,6 +26,7 @@ const Projects = () => {
       <div className="flex flex-col items-center">
         <div className="flex justify-center pb-4">
           <video
+            ref={videoRef}
             autoPlay
             loop
             className="w-1/2"
