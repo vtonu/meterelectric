@@ -61,7 +61,7 @@ const Contacts = ({ homeRef }) => {
           className="flex px-2 py-2 mx-2 rounded-sm shadow-sm text-neutral-800 shadow-blue-500 bg-gradient-to-br from-blue-600 to-blue-500 group-hover:from-sky-300 group-hover:to-blue-200 hover:text-blue-100 dark:text-white focus:outline-none focus:ring-blue-300 dark:focus:ring-sky-800"
         >
           <MoveUp />
-          Back to Top
+          Back Top
         </button>
       </div>
     </div>

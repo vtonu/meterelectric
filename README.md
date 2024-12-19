@@ -1,4 +1,4 @@
-🌲 Minimal landing page using React, Vite, HMR, ESLint template (ME v1.9)
+🌲 Minimal landing page using React, Vite, HMR, ESLint template (ME v2.0)
 
 ```bash
 npm install
