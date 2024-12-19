@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Work1 from "../assets/services/commercialwork/1.jpg";
 import Work2 from "../assets/services/commercialwork/2.jpg";
+import ThumbnailWork from "../assets/services/commercial.jpg";
 import Footer from "../components/Footer";
 import { MoveLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -31,6 +32,13 @@ const Projects = () => {
           <img
             src={Work2}
             alt="Work 2"
+            className="border border-blue-600 rounded-md"
+          />
+        </div>
+        <div className="w-full mx-auto">
+          <img
+            src={ThumbnailWork}
+            alt="Thumbnail Work Commercial"
             className="border border-blue-600 rounded-md"
           />
         </div>

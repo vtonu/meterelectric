@@ -3,6 +3,7 @@ import Work2 from "../assets/services/residentialwork/2.jpg";
 import Work3 from "../assets/services/residentialwork/3.jpg";
 import Work4 from "../assets/services/residentialwork/4.jpg";
 import Work5 from "../assets/services/residentialwork/5.jpg";
+import ThumbnailWork from "../assets/services/residential.jpg";
 import Footer from "../components/Footer";
 import { MoveLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -47,6 +48,13 @@ const Projects = () => {
           <img
             src={Work5}
             alt="Work 5"
+            className="border border-blue-600 rounded-md"
+          />
+        </div>
+        <div className="w-full mx-auto">
+          <img
+            src={ThumbnailWork}
+            alt="Thumbnail Work Residential"
             className="border border-blue-600 rounded-md"
           />
         </div>

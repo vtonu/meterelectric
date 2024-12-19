@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 
 import project1_yellow from "../assets/projects/project1_yellow.jpg";
+import ThumbnailWork from "../assets/services/industrial.jpg";
 
 import Footer from "../components/Footer";
 
@@ -25,6 +26,13 @@ const Projects = () => {
           <img
             src={project1_yellow}
             alt="Project 3"
+            className="border border-blue-600 rounded-md"
+          />
+        </div>
+        <div className="w-1/2 mx-auto">
+          <img
+            src={ThumbnailWork}
+            alt="Thumbnail Work Industrial"
             className="border border-blue-600 rounded-md"
           />
         </div>
