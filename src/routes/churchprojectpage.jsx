@@ -32,7 +32,7 @@ const Projects = () => {
     <div className="mt-20 min-h-[600px]">
       <Navbar />
       <h2 className="mt-6 text-2xl sm:text-5xl lg:text-6xl tracking-wide text-center">
-        Energy Saving Projects
+        Energy Saving Project
         <br></br> <br></br>
       </h2>
 
