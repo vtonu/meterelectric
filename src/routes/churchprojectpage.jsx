@@ -44,6 +44,7 @@ const Projects = () => {
             loop
             className="w-1/2"
             onContextMenu={(e) => e.preventDefault()}
+            controls
           >
             <source src={churchprojectvideo} type="video/mp4" />
           </video>
