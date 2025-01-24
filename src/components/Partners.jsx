@@ -29,7 +29,7 @@ const Partners = () => {
         ))}
       </div>
       <div className="flex justify-center items-center pt-6">
-        <span className="text-transparent bg-gradient-to-r from-orange-700 to-orange-500 bg-clip-text text-center text-4xl">
+        <span className="text-transparent bg-gradient-to-r from-orange-700 to-orange-600 bg-clip-text text-center text-4xl">
           Certified Generac Installer
         </span>
       </div>
