@@ -25,11 +25,30 @@ const Projects = () => {
   };
 
   const customStyles = {
+    overlay: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      backgroundColor: "rgba(0, 0, 0, 0.75)", // Dim background
+      position: "fixed",
+      top: 0,
+      left: 0,
+      width: "100vw",
+      height: "100vh",
+      zIndex: 1000, // Ensures it's above everything
+    },
     content: {
-      transform: "translate(0%, -100%)",
-      maxWidth: "100vw",
-      maxHeight: "80vh",
-      overflow: "none",
+      position: "relative",
+      inset: "auto",
+      padding: 0,
+      border: "none",
+      background: "transparent",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      maxWidth: "90vw",
+      maxHeight: "90vh",
+      overflow: "hidden",
     },
   };
 
@@ -49,7 +68,7 @@ const Projects = () => {
           <img
             src={Work1}
             alt="Work 1"
-            className="border border-blue-600 rounded-md"
+            className="border border-blue-600 rounded-md "
             onClick={() => openModal(Work1)}
           />
         </div>
@@ -84,7 +103,7 @@ const Projects = () => {
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Image Modal"
-        className="modal px-2"
+        className="modal px-16"
         overlayClassName="overlay"
       >
         <button
@@ -95,7 +114,11 @@ const Projects = () => {
           <Minimize2 />
         </button>
         {selectedImage && (
-          <img src={selectedImage} alt="Selected" className="modal-image" />
+          <img
+            src={selectedImage}
+            alt="Selected"
+            className="max-w-full max-h-[90vh] object-contain"
+          />
         )}
       </Modal>
       <Footer />
