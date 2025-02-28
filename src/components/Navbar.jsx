@@ -1,4 +1,4 @@
-import { Menu, X } from 'lucide-react';
+import { Menu, X, PhoneCall } from 'lucide-react';
 import { useState } from 'react';
 import logo from '../assets/logo.png';
 import { navItems } from '../constants';
@@ -31,6 +31,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
             </Link>
             {/* <span className="text-xl tracking-tight">METER ELECTRIC LLC</span> */}
           </div>
+
           <ul className="hidden space-x-12 lg:flex ml-14">
             {navItems.map((item, index) => (
               <li key={index}>
@@ -53,6 +54,34 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
           </div>
         </div>
 
+        {mobileDrawerOpen && (
+          <div className="fixed right-0 z-20 flex flex-col items-center justify-center w-full p-12 bg-neutral-200 lg:hidden">
+            <ul>
+              {navItems.map((item, index) => (
+                <li key={index} className="py-4">
+                  <button
+                    onClick={() => {
+                      if (item.scrollTo === 'homeRef') handleScroll(null); // Scroll to top
+                      if (item.scrollTo === 'servicesRef') handleScroll(servicesRef);
+                      if (item.scrollTo === 'projectsRef') handleScroll(projectsRef);
+                      if (item.scrollTo === 'contactRef') handleScroll(contactRef);
+                    }}
+                    className="text-blue-700 hover:underline">
+                    {item.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+      <div className="relative p-2 mx-auto bg-blue-500 lg:text-sm">
+        <div className="flex items-center justify-center ">
+          <a href="tel:425-588-7578" className="flex items-center justify-center gap-2">
+            <PhoneCall />
+            <p>425-588-7578 </p>
+          </a>
+        </div>
         {mobileDrawerOpen && (
           <div className="fixed right-0 z-20 flex flex-col items-center justify-center w-full p-12 bg-neutral-200 lg:hidden">
             <ul>

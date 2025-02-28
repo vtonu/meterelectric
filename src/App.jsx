@@ -24,7 +24,7 @@ const App = () => {
       />
       <div className="px-2 pt-20 mx-auto max-w-7xl">
         <div ref={homeRef}>
-          <HeroSection servicesRef={servicesRef} projectsRef={projectsRef} />
+          <HeroSection contactRef={contactRef} />
         </div>
         <div ref={servicesRef}>
           <FeatureSection />
