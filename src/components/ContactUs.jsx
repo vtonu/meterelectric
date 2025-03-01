@@ -13,7 +13,7 @@ const Contacts = ({ homeRef }) => {
         </div>
         <br />
         <br />
-        <h6 className="flex gap-2 text-sm">Email - meterelectrical@gmail.com</h6>
+        {/* <h6 className="flex gap-2 text-sm">Email - meterelectrical@gmail.com</h6> */}
         {/* <h6 className="flex gap-2 text-sm">
           Website - www.meterelectrical.com
           <button
@@ -25,7 +25,7 @@ const Contacts = ({ homeRef }) => {
             </span>
           </button>
         </h6> */}
-        <h6 className="flex gap-2 text-sm">Phone - (425)-588-7578</h6>
+        {/* <h6 className="flex gap-2 text-sm">Phone - (425)-588-7578</h6> */}
       </h2>
       <div className="button-container">
         <button

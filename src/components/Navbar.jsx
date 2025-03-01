@@ -21,7 +21,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 py-2 font-light border-b backdrop-blur-lg border-blue-700/80">
+    <nav className="sticky top-0 z-50 py-2 font-light backdrop-blur-lg border-blue-700/80">
       <div className="container relative px-4 mx-auto lg:text-sm">
         <div className="flex items-center justify-between">
           <div className="flex items-center flex-shrink-0">
@@ -55,7 +55,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
         </div>
 
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 flex flex-col items-center justify-center w-full p-12 bg-neutral-200 lg:hidden">
+          <div className="fixed right-0 z-20 flex flex-col items-center justify-center w-full p-12 bg-neutral-200 lg:hidden ">
             <ul>
               {navItems.map((item, index) => (
                 <li key={index} className="py-4">
@@ -75,15 +75,17 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
           </div>
         )}
       </div>
-      <div className="relative p-2 mx-auto bg-blue-500 lg:text-sm">
+      <div className="relative p-2 mx-auto bg-blue-600 lg:text-sm">
         <div className="flex items-center justify-center ">
-          <a href="tel:425-588-7578" className="flex items-center justify-center gap-2">
+          <a
+            href="tel:425-588-7578"
+            className="flex items-center justify-center gap-2 text-xl font-semibold text-white">
             <PhoneCall />
             <p>425-588-7578 </p>
           </a>
         </div>
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 flex flex-col items-center justify-center w-full p-12 bg-neutral-200 lg:hidden">
+          <div className="fixed right-0 z-20 flex flex-col items-center justify-center w-full p-2 bg-neutral-200 lg:hidden">
             <ul>
               {navItems.map((item, index) => (
                 <li key={index} className="py-4">

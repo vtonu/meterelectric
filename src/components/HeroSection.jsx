@@ -1,9 +1,12 @@
 const HeroSection = ({ contactRef }) => {
   return (
     <div className="flex flex-col items-center ">
-      <p className="text-5xl font-bold text-center text-balance text-neutral-600">METER ELECTRIC</p>
-      <p className="pt-2 text-2xl text-center text-balance text-neutral-600">
-        Your go-to destination for quality electrical solutions.{' '}
+      <p className="text-4xl font-bold text-center text-balance text-neutral-600 mt-[-60px]">
+        METER ELECTRIC
+      </p>
+      <p className="pt-2 text-xl text-center text-balance text-neutral-600">
+        Your go-to destination for quality electrical solutions, offering residential, commercial
+        and industrial services.{' '}
       </p>
       <br />
       <button

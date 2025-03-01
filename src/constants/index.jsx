@@ -1,6 +1,3 @@
-import { BatteryCharging } from 'lucide-react';
-import { Cable } from 'lucide-react';
-import { KeyboardMusic } from 'lucide-react';
 import generac from '../assets/profile-pictures/generac.jpg';
 import commercial from '../assets/services/commercial.jpg';
 import residential from '../assets/services/residential.jpg';
@@ -23,76 +20,44 @@ export const partners = [
 
 export const features = [
   {
-    /* icon: <BatteryCharging />,
-    text: (
-      <span className="px-4 py-2 font-medium tracking-wide text-blue-700 uppercase rounded-sm text-md bg-neutral-100">
-        See Full List
-      </span>
-    ), */
     link: '/residential',
     description: (
-      <div className="p-6 font-normal border rounded-md bg-neutral-900 text-md border-neutral-600">
-        <p className="text-center ">
+      <div className="p-6 font-normal text-center border rounded-md shadow-sm border-neutral-900 rounded-b-xl font-sm border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-600 shadow-neutral-500">
+        <span className="text-2xl text-red-600">RESIDENTIAL</span>
+        <p className="p-3 text-left">
           Top-quality residential services, from EV charger installations to emergency generators,
           meter service upgrades, panel replacements & more.
         </p>
-        <div className="w-full p-2">
-          <img
-            src={residential}
-            alt="Residential Image"
-            className="object-cover h-48 border border-blue-600 rounded-md w-96"
-          />
-        </div>
+        <img src={residential} alt="Industrial Image" className="object-cover w-full h-48 " />
       </div>
     ),
   },
   {
-    /* icon: <KeyboardMusic />,
-    text: (
-      <span className="px-4 py-2 font-medium tracking-wide text-blue-700 uppercase rounded-sm text-md bg-neutral-100">
-        Commercial
-      </span>
-    ), */
     link: '/commercial',
     description: (
-      <div className="p-6 font-normal border rounded-md bg-neutral-900 text-md border-neutral-600">
-        <p className="text-center">
+      <div className="p-6 font-normal text-center border rounded-md shadow-sm border-neutral-900 rounded-b-xl font-sm border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-600 shadow-neutral-500">
+        <span className="text-2xl text-blue-500">COMMERCIAL</span>
+        <p className="p-3 text-left">
           From logic systems to automations & controls, Meter Electric provides tailored solutions
           for every project. <br></br>
           <br></br>
         </p>
-        <div className="w-full p-2">
-          <img
-            src={commercial}
-            alt="Commercial Image"
-            className="object-cover h-48 border border-blue-600 rounded-md w-96"
-          />
-        </div>
+        <img src={commercial} alt="Commercial Image" className="object-cover w-full h-48 " />
       </div>
     ),
   },
 
   {
-    /* icon: <Cable />,
-    text: (
-      <span className="px-4 py-2 font-medium tracking-wide text-blue-700 uppercase rounded-sm text-md bg-neutral-100">
-        Industrial
-      </span>
-    ), */
     link: '/industrial',
     description: (
-      <div className="p-6 font-normal border rounded-md bg-neutral-900 text-md border-neutral-600">
-        <p className="text-center ">
+      <div className="p-6 font-normal text-center border rounded-md shadow-sm border-neutral-900 rounded-b-xl font-sm border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-600 shadow-neutral-500">
+        <span className="text-2xl text-gray-400 ">INDUSTRIAL</span>
+
+        <p className="pt-3 text-left">
           From control systems troubleshooting to automations & controls, Meter Electric provides
           tailored solutions for every industry.
         </p>
-        <div className="w-full p-2">
-          <img
-            src={industrial}
-            alt="Industrial Image"
-            className="object-cover h-48 border border-blue-600 rounded-md w-96"
-          />
-        </div>
+        <img src={industrial} alt="Industrial Image" className="object-cover w-full h-48 " />
       </div>
     ),
   },
