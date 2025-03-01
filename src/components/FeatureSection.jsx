@@ -1,9 +1,24 @@
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { features } from '../constants';
-import { ArrowDownToLine } from 'lucide-react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
+
+const services = [
+  'Electrical Installation Services',
+  'EV Car Charger Installation',
+  'Emergency Generator Installation',
+  'Panel Upgrades & Replacement',
+  'Electrical Safety Inspections',
+  'Surge Protection',
+  'Electrical Repairs',
+  'Electrical Rewiring',
+];
 
 const FeatureSection = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpand = () => setIsExpanded(!isExpanded);
+
   return (
     <div className="relative mt-10 border-b border-blue-700 min-h-[600px]">
       <h2 className="text-4xl tracking-wide text-center border-t border-blue-700 sm:text-5xl lg:text-6xl">
@@ -13,6 +28,29 @@ const FeatureSection = () => {
           SERVICES
         </span>
       </h2>
+      <br></br>
+      <div className="flex justify-center">
+        <button
+          onClick={toggleExpand}
+          className="flex items-center justify-center w-48 h-12 text-white shadow-sm border-neutral-900 rounded-b-xl border-1 bg-gradient-to-r from-neutral-950 to-neutral-900 hover:to-neutral-600 shadow-neutral-500 ">
+          {isExpanded ? <ChevronUp /> : <ChevronDown />}
+          <span className="ml-2">{isExpanded ? 'Close' : 'See All'}</span>
+        </button>
+      </div>
+      <div
+        className={`transition-max-height duration-500 ease-in-out overflow-hidden ${
+          isExpanded ? 'max-h-screen' : 'max-h-0'
+        }`}>
+        <div className="p-6 mt-2 text-lg text-white bg-black rounded-lg shadow-lg">
+          <ul className="list-disc list-inside">
+            {services.map((service, index) => (
+              <li key={index} className="mb-4">
+                {service}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
       <div className="flex flex-wrap">
         {features.map((feature, index) => (
           <div key={index} className="w-full sm:w-1/2 lg:w-1/3">
@@ -22,15 +60,8 @@ const FeatureSection = () => {
                 {feature.icon}
               </div>
               <p className="p-2 text-md text-amber-50">
-                {/* Wrap the image with the Link component */}
                 <Link to={feature.link}>{feature.description}</Link>
               </p>
-            </div>
-            <div className="flex justify-center">
-              <button className="flex items-center px-4 py-2  text-white border-neutral-900 shadow-sm rounded-b-xl  border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-600 shadow-neutral-500 mt-[-10px]">
-                <ChevronDown />
-                See Full List
-              </button>
             </div>
           </div>
         ))}
