@@ -1,33 +1,108 @@
-import { MoveUp, Copy } from 'lucide-react';
-import { useCallback } from 'react';
+// filepath: /d:/DEV/meterelectric/src/components/ContactUs.jsx
+import { MoveUp } from 'lucide-react';
+import emailjs from 'emailjs-com';
+import { useRef } from 'react';
 
 const Contacts = ({ homeRef }) => {
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_nkbhqc2', 'template_uvs045i', formRef.current, '4UY1iC6hv079GQ67m')
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert('Message sent successfully!');
+        },
+        (error) => {
+          console.log(error.text);
+          alert('Failed to send message, please try again.');
+        },
+      );
+  };
+
   return (
     <div className="mt-20 tracking-wide min-h-[300px] border-t border-blue-700">
-      <h2 className="flex flex-col items-center pt-10 mt-2 text-5xl tracking-wide text-center">
+      <h2 className="flex flex-col items-center mt-2 text-5xl tracking-wide text-center pt-36">
         <div>
           CONTACT{' '}
           <span className="text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
             US
           </span>
         </div>
-        <br />
-        <br />
         <h6 className="flex gap-2 text-sm">Email - meterelectrical@gmail.com</h6>
-        {/* <h6 className="flex gap-2 text-sm">
-          Website - www.meterelectrical.com
-          <button
-            onClick={() => copyToClipboard("www.meterelectrical.com")}
-            className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-blue-600 to-blue-100 group-hover:from-sky-500 group-hover:to-blue-100 hover:text-white dark:text-white focus:outline-none focus:ring-blue-300 dark:focus:ring-sky-800"
-          >
-            <span className="relative transition-all duration-75 ease-in bg-white rounded-md group-hover:bg-opacity-0">
-              <Copy className="flex w-6 h-6 px-1 py-1 shadow-sm rounded-xs text-neutral-900 shadow-blue-300" />
-            </span>
-          </button>
-        </h6> */}
         <h6 className="flex gap-2 text-sm">Phone - (425)-588-7578</h6>
       </h2>
-      <div className="button-container">
+
+      <div className="max-w-lg px-6 py-12 mx-auto bg-white border border-gray-300 rounded-lg shadow-lg isolate sm:py-16 lg:px-8">
+        <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
+          {/* Name Field */}
+          <div>
+            <label htmlFor="name" className="block text-sm font-semibold text-gray-900">
+              Name
+            </label>
+            <div className="mt-2.5">
+              <input
+                id="name"
+                name="name"
+                type="text"
+                required
+                autoComplete="name"
+                className="block w-full px-3 py-2 text-base text-gray-900 bg-white border rounded-md outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500"
+              />
+            </div>
+          </div>
+
+          {/* Email Field */}
+          <div>
+            <label htmlFor="email" className="block text-sm font-semibold text-gray-900">
+              Email
+            </label>
+            <div className="mt-2.5">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                autoComplete="email"
+                placeholder="meterelectrical@gmail.com"
+                className="block w-full px-3 py-2 text-base text-gray-900 bg-white border rounded-md outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500"
+              />
+            </div>
+          </div>
+
+          {/* Message Field */}
+          <div>
+            <label htmlFor="message" className="block text-sm font-semibold text-gray-900">
+              Message
+            </label>
+            <div className="mt-2.5">
+              <textarea
+                id="message"
+                name="message"
+                rows={3}
+                required
+                placeholder="Your message here..."
+                className="block w-full px-3 py-2 text-base text-gray-900 bg-white border rounded-md outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500"
+              />
+            </div>
+          </div>
+
+          {/* Submit Button */}
+          <div>
+            <button
+              type="submit"
+              className="block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+
+      {/* Back Top Button */}
+      <div className="mt-6 button-container">
         <button
           onClick={() => homeRef.current?.scrollIntoView({ behavior: 'smooth' })}
           className="flex px-2 py-2 mx-2 rounded-sm shadow-sm text-neutral-800 shadow-blue-500 bg-gradient-to-br from-blue-600 to-blue-500 group-hover:from-sky-300 group-hover:to-blue-200 hover:text-blue-100 dark:text-white focus:outline-none focus:ring-blue-300 dark:focus:ring-sky-800">
