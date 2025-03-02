@@ -1,28 +1,33 @@
 import { MoveUp } from 'lucide-react';
 import emailjs from 'emailjs-com';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 const Contacts = ({ homeRef }) => {
   const formRef = useRef();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
       )
       .then(
         (result) => {
           console.log(result.text);
           alert('Message sent successfully!');
+          formRef.current.reset();
+          setIsSubmitting(false);
         },
         (error) => {
           console.log(error.text);
           alert('Failed to send message, please try again.');
+          setIsSubmitting(false);
         },
       );
   };
@@ -50,7 +55,7 @@ const Contacts = ({ homeRef }) => {
             <div className="mt-2.5">
               <input
                 id="name"
-                name="name"
+                name="from_name"
                 type="text"
                 required
                 autoComplete="name"
@@ -68,7 +73,7 @@ const Contacts = ({ homeRef }) => {
             <div className="mt-2.5">
               <input
                 id="email"
-                name="email"
+                name="reply_to"
                 type="email"
                 required
                 autoComplete="email"
@@ -99,15 +104,16 @@ const Contacts = ({ homeRef }) => {
           <div>
             <button
               type="submit"
-              className="block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
-              Submit
+              disabled={isSubmitting}
+              className="block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:bg-blue-300">
+              {isSubmitting ? 'Sending...' : 'Submit'}
             </button>
           </div>
         </form>
       </div>
 
       {/* Back Top Button */}
-      <div className="mt-6 button-container">
+      <div className=" button-container">
         <button
           onClick={() => homeRef.current?.scrollIntoView({ behavior: 'smooth' })}
           className="flex px-2 py-2 mx-2 rounded-sm shadow-sm text-neutral-800 shadow-blue-500 bg-gradient-to-br from-blue-600 to-blue-500 group-hover:from-sky-300 group-hover:to-blue-200 hover:text-blue-100 dark:text-white focus:outline-none focus:ring-blue-300 dark:focus:ring-sky-800">
