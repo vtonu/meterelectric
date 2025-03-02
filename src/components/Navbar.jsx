@@ -17,7 +17,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
     } else {
       ref.current?.scrollIntoView({ behavior: 'smooth' });
     }
-    setMobileDrawerOpen(false); // Close the mobile drawer when a link is clicked
+    setMobileDrawerOpen(false);
   };
 
   return (
@@ -25,11 +25,9 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
       <div className="container relative px-4 mx-auto lg:text-sm">
         <div className="flex items-center justify-between">
           <div className="flex items-center flex-shrink-0">
-            {/* Wrap the logo with the Link component */}
             <Link to="/">
               <img className="h-20 m-2 cursor-pointer" src={logo} alt="Logo" />
             </Link>
-            {/* <span className="text-xl tracking-tight">METER ELECTRIC LLC</span> */}
           </div>
 
           <ul className="hidden space-x-12 lg:flex ml-14">
@@ -37,7 +35,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
               <li key={index}>
                 <button
                   onClick={() => {
-                    if (item.scrollTo === 'homeRef') handleScroll(null); // Scroll to top
+                    if (item.scrollTo === 'homeRef') handleScroll(null);
                     if (item.scrollTo === 'servicesRef') handleScroll(servicesRef);
                     if (item.scrollTo === 'projectsRef') handleScroll(projectsRef);
                     if (item.scrollTo === 'contactRef') handleScroll(contactRef);
@@ -61,7 +59,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
                 <li key={index} className="py-4">
                   <button
                     onClick={() => {
-                      if (item.scrollTo === 'homeRef') handleScroll(null); // Scroll to top
+                      if (item.scrollTo === 'homeRef') handleScroll(null);
                       if (item.scrollTo === 'servicesRef') handleScroll(servicesRef);
                       if (item.scrollTo === 'projectsRef') handleScroll(projectsRef);
                       if (item.scrollTo === 'contactRef') handleScroll(contactRef);
@@ -91,7 +89,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
                 <li key={index} className="py-4">
                   <button
                     onClick={() => {
-                      if (item.scrollTo === 'homeRef') handleScroll(null); // Scroll to top
+                      if (item.scrollTo === 'homeRef') handleScroll(null);
                       if (item.scrollTo === 'servicesRef') handleScroll(servicesRef);
                       if (item.scrollTo === 'projectsRef') handleScroll(projectsRef);
                       if (item.scrollTo === 'contactRef') handleScroll(contactRef);

@@ -5,38 +5,9 @@ import { useRef } from 'react';
 const Contacts = ({ homeRef }) => {
   const formRef = useRef();
 
-  // Utility to check submission limit
-  const canSendMessage = () => {
-    const today = new Date().toDateString();
-    const savedDate = localStorage.getItem('submissionDate');
-    let submissionCount = parseInt(localStorage.getItem('submissionCount') || '0', 10);
-
-    // Reset limit if day has changed
-    if (savedDate !== today) {
-      localStorage.setItem('submissionDate', today);
-      localStorage.setItem('submissionCount', '1');
-      return true;
-    }
-
-    // Otherwise, check if limit reached
-    if (submissionCount >= 3) {
-      return false;
-    } else {
-      localStorage.setItem('submissionCount', (submissionCount + 1).toString());
-      return true;
-    }
-  };
-
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // If limit reached, deny
-    if (!canSendMessage()) {
-      alert('You have reached the maximum number of submissions for today.');
-      return;
-    }
-
-    // Use environment variables instead of inline credentials
     emailjs
       .sendForm(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -83,7 +54,7 @@ const Contacts = ({ homeRef }) => {
                 type="text"
                 required
                 autoComplete="name"
-                placeholder="Your name..."
+                placeholder="Your name here..."
                 className="block w-full px-3 py-2 text-base text-gray-900 bg-white border rounded-md outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500"
               />
             </div>
@@ -101,7 +72,7 @@ const Contacts = ({ homeRef }) => {
                 type="email"
                 required
                 autoComplete="email"
-                placeholder="Your email address..."
+                placeholder="Your email here..."
                 className="block w-full px-3 py-2 text-base text-gray-900 bg-white border rounded-md outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500"
               />
             </div>
@@ -136,7 +107,7 @@ const Contacts = ({ homeRef }) => {
       </div>
 
       {/* Back Top Button */}
-      <div className=" button-container">
+      <div className="mt-6 button-container">
         <button
           onClick={() => homeRef.current?.scrollIntoView({ behavior: 'smooth' })}
           className="flex px-2 py-2 mx-2 rounded-sm shadow-sm text-neutral-800 shadow-blue-500 bg-gradient-to-br from-blue-600 to-blue-500 group-hover:from-sky-300 group-hover:to-blue-200 hover:text-blue-100 dark:text-white focus:outline-none focus:ring-blue-300 dark:focus:ring-sky-800">
