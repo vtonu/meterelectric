@@ -9,6 +9,7 @@ const HeroSection = ({ contactRef }) => {
         and industrial services.{' '}
       </p>
       <br />
+      <br />
       <button
         onClick={() => contactRef.current?.scrollIntoView({ behavior: 'smooth' })}
         className="px-4 py-3 mx-2 font-medium border-blue-600 rounded-sm shadow-sm border-1 bg-gradient-to-r from-blue-400 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200">
