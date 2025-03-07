@@ -51,7 +51,7 @@ const Projects = () => {
             <img
               src={image.src}
               alt={image.alt}
-              className="object-cover w-full h-96 border border-blue-600 rounded-md lg:h-96 xl:h-[40rem]"
+              className="object-cover w-full h-96 border border-blue-600 rounded-md lg:h-96 xl:h-[50rem]"
             />
           </div>
         ))}
