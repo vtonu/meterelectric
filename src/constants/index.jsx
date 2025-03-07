@@ -53,7 +53,7 @@ export const features = [
       <div className="p-6 font-normal text-center border rounded-md shadow-sm border-neutral-900 rounded-b-xl font-sm border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-600 shadow-neutral-500">
         <span className="text-2xl text-gray-400 ">INDUSTRIAL</span>
 
-        <p className="pt-3 text-left">
+        <p className="p-3 text-left">
           From control systems troubleshooting to automations & controls, Meter Electric provides
           tailored solutions for every industry.
         </p>

@@ -4,14 +4,14 @@ import { features } from '../constants';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const services = [
-  'Electrical Installation Services',
-  'EV Car Charger Installation',
   'Emergency Generator Installation',
   'Panel Upgrades & Replacement',
+  'Electrical Installation Services',
   'Electrical Safety Inspections',
-  'Surge Protection',
-  'Electrical Repairs',
+  'EV Car Charger Installation',
   'Electrical Rewiring',
+  'Electrical Repairs',
+  'Surge Protection',
 ];
 
 const FeatureSection = () => {
@@ -41,7 +41,7 @@ const FeatureSection = () => {
         className={`transition-max-height duration-500 ease-in-out overflow-hidden ${
           isExpanded ? 'max-h-screen' : 'max-h-0'
         }`}>
-        <div className="p-6 mt-2 text-lg text-white bg-black rounded-lg shadow-lg">
+        <div className="max-w-lg p-6 mx-auto mt-2 text-lg text-white bg-black rounded-lg shadow-lg">
           <ul className="list-disc list-inside">
             {services.map((service, index) => (
               <li key={index} className="mb-4">
