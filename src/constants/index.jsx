@@ -77,10 +77,10 @@ export const projectList = [
         </div>
         <div className="w-full px-4 sm:w-1/3 sm:px-0">
           <div className="px-2 py-1 font-normal text-center border-blue-600 rounded-sm shadow-sm border-1 bg-gradient-to-r from-blue-500 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200">
-            <span className="text-xs font-semibold sm:text-sm md:text-base lg:text-lg">
+            <span className="text-xs font-semibold sm:text-sm md:text-base lg:text-md">
               Three Holy Hierarchs Romanian Orthodox Church
             </span>
-            <p className="text-xs font-thin sm:text-sm md:text-base lg:text-lg">
+            <p className="text-xs font-thin sm:text-sm md:text-base lg:text-md">
               6402 226th St SW Mountlake Terrace, WA 98043
             </p>
           </div>

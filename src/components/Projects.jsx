@@ -6,6 +6,12 @@ import project1_yellow from '../assets/projects/project1_yellow.jpg';
 import project2_redbluewires from '../assets/projects/project2_redbluewires.jpg';
 import project3_yellowstickers from '../assets/projects/project3_yellowstickers.jpg';
 import project4_housebackground from '../assets/projects/project4_housebackground.jpg';
+import project5_industrialwires from '../assets/projects/project5_industrialdustwires.jpg';
+import project6_panel from '../assets/projects/project6_panel.jpg';
+import project7_panel from '../assets/projects/project7_panel.jpg';
+import project8_carcharger from '../assets/projects/project8_carcharger.jpg';
+import project9_generac from '../assets/projects/project9_generac.jpg';
+import project10_carcharger from '../assets/projects/project10_carcharger.jpg';
 import { Link } from 'react-router-dom';
 import { projectList } from '../constants';
 
@@ -51,7 +57,7 @@ const Projects = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 400,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
@@ -62,10 +68,16 @@ const Projects = () => {
   };
 
   const images = [
-    { src: project1_yellow, alt: 'Project 3' },
-    { src: project2_redbluewires, alt: 'Project 4' },
-    { src: project3_yellowstickers, alt: 'Project 2' },
-    { src: project4_housebackground, alt: 'Project 2' },
+    { src: project1_yellow, alt: 'Project 1' },
+    { src: project2_redbluewires, alt: 'Project 2' },
+    { src: project3_yellowstickers, alt: 'Project 3' },
+    { src: project4_housebackground, alt: 'Project 4' },
+    { src: project5_industrialwires, alt: 'Project 5' },
+    { src: project6_panel, alt: 'Project 6' },
+    { src: project7_panel, alt: 'Project 7' },
+    { src: project8_carcharger, alt: 'Project 8' },
+    { src: project9_generac, alt: 'Project 9' },
+    { src: project10_carcharger, alt: 'Project 10' },
   ];
 
   return (
