@@ -9,6 +9,44 @@ import project4_housebackground from '../assets/projects/project4_housebackgroun
 import { Link } from 'react-router-dom';
 import { projectList } from '../constants';
 
+const NextArrow = (props) => {
+  const { className, onClick, style } = props;
+  return (
+    <div
+      className={`${className} bg-blue-600 rounded-full  hover:bg-blue-600`}
+      onClick={onClick}
+      style={{
+        ...style,
+        right: '20px',
+        zIndex: 1,
+        width: '28px',
+        height: '28px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}></div>
+  );
+};
+
+const PrevArrow = (props) => {
+  const { className, onClick, style } = props;
+  return (
+    <div
+      className={`${className} bg-blue-600 rounded-full  hover:bg-blue-600`}
+      onClick={onClick}
+      style={{
+        ...style,
+        left: '20px',
+        zIndex: 1,
+        width: '28px',
+        height: '28px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}></div>
+  );
+};
+
 const Projects = () => {
   const settings = {
     dots: true,
@@ -17,8 +55,10 @@ const Projects = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    autoplay: true, // Enable autoplay
-    autoplaySpeed: 3000, // Set autoplay speed to 3 seconds
+    autoplay: true,
+    autoplaySpeed: 3000,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
 
   const images = [
@@ -30,7 +70,7 @@ const Projects = () => {
 
   return (
     <div className="mt-20 min-h-[600px]">
-      <h2 className="mt-6 text-5xl tracking-wide text-center sm:text-5xl lg:text-6xl">
+      <h2 className="mt-8 text-5xl tracking-wide text-center sm:text-5xl lg:text-6xl">
         OUR{' '}
         <span className="text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
           PROJECTS
@@ -45,13 +85,18 @@ const Projects = () => {
         ))}
       </div>
 
-      <Slider {...settings} className="pt-8">
+      <h2 className="pt-10 mt-20 text-5xl tracking-wide text-center border-t border-blue-700 sm:text-5xl lg:text-6xl">
+        <span className="text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
+          GALLERY
+        </span>
+      </h2>
+      <Slider {...settings} className="pt-5">
         {images.map((image, index) => (
-          <div key={index} className="w-full p-2">
+          <div key={index} className="w-full p-4">
             <img
               src={image.src}
               alt={image.alt}
-              className="object-cover w-full h-96 border border-blue-600 rounded-md lg:h-96 xl:h-[50rem]"
+              className="object-contain w-full p-6 bg-black border border-blue-600 rounded-md h-96 lg:h-96"
             />
           </div>
         ))}

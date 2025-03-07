@@ -34,7 +34,7 @@ const Contacts = ({ homeRef }) => {
 
   return (
     <div className="mt-20 tracking-wide min-h-[300px] border-t border-blue-700">
-      <h2 className="flex flex-col items-center gap-2 mt-2 mb-2 text-5xl tracking-wide text-center pt-36">
+      <h2 className="flex flex-col items-center gap-2 pt-12 mt-2 mb-2 text-5xl tracking-wide text-center">
         <div>
           CONTACT{' '}
           <span className="text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">

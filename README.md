@@ -1,1 +1,1 @@
-⚡ React, Vite, HMR, TailwindCSS, ESLint (ME v2.6)
+⚡ React, Vite, HMR, TailwindCSS, ESLint (ME v2.7)
