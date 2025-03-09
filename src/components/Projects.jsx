@@ -9,7 +9,6 @@ import project4_housebackground from '../assets/projects/project4_housebackgroun
 import project5_industrialwires from '../assets/projects/project5_industrialdustwires.jpg';
 import project6_panel from '../assets/projects/project6_panel.jpg';
 import project7_panel from '../assets/projects/project7_panel.jpg';
-import project8_carcharger from '../assets/projects/project8_carcharger.jpg';
 import project9_generac from '../assets/projects/project9_generac.jpg';
 import project10_carcharger from '../assets/projects/project10_carcharger.jpg';
 import { Link } from 'react-router-dom';
@@ -75,9 +74,8 @@ const Projects = () => {
     { src: project5_industrialwires, alt: 'Project 5' },
     { src: project6_panel, alt: 'Project 6' },
     { src: project7_panel, alt: 'Project 7' },
-    { src: project8_carcharger, alt: 'Project 8' },
-    { src: project9_generac, alt: 'Project 9' },
-    { src: project10_carcharger, alt: 'Project 10' },
+    { src: project9_generac, alt: 'Project 8' },
+    { src: project10_carcharger, alt: 'Project 9' },
   ];
 
   return (

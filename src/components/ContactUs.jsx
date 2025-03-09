@@ -32,6 +32,21 @@ const Contacts = ({ homeRef }) => {
       );
   };
 
+  const formatPhoneNumber = (e) => {
+    const input = e.target.value.replace(/\D/g, '').substring(0, 10);
+    const areaCode = input.substring(0, 3);
+    const middle = input.substring(3, 6);
+    const last = input.substring(6, 10);
+
+    if (input.length > 6) {
+      e.target.value = `${areaCode}-${middle}-${last}`;
+    } else if (input.length > 3) {
+      e.target.value = `${areaCode}-${middle}`;
+    } else if (input.length > 0) {
+      e.target.value = `${areaCode}`;
+    }
+  };
+
   return (
     <div className="mt-20 tracking-wide min-h-[300px] border-t border-blue-700">
       <h2 className="flex flex-col items-center gap-2 pt-12 mt-2 mb-2 text-5xl tracking-wide text-center">
@@ -67,6 +82,25 @@ const Contacts = ({ homeRef }) => {
             </div>
           </div>
 
+          {/* Phone Number Field */}
+          <div>
+            <label htmlFor="phone" className="block text-sm font-semibold text-gray-900">
+              Phone Number
+            </label>
+            <div className="mt-2.5">
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                required
+                autoComplete="tel"
+                placeholder="Phone number here..."
+                maxLength="12"
+                className="block w-full px-3 py-2 text-base text-gray-900 bg-white border rounded-md outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500"
+                onInput={formatPhoneNumber}
+              />
+            </div>
+          </div>
           {/* Email Field */}
           <div>
             <label htmlFor="email" className="block text-sm font-semibold text-gray-900">
