@@ -90,7 +90,7 @@ const Contacts = ({ homeRef }) => {
             <div className="mt-2.5">
               <input
                 id="phone"
-                name="phone"
+                name="contact_number"
                 type="tel"
                 required
                 autoComplete="tel"
@@ -109,7 +109,7 @@ const Contacts = ({ homeRef }) => {
             <div className="mt-2.5">
               <input
                 id="email"
-                name="reply_to"
+                name="user_email"
                 type="email"
                 required
                 autoComplete="email"
