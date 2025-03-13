@@ -1,11 +1,6 @@
-import { ChevronDownSquare } from 'lucide-react';
-
 const HeroSection = ({ contactRef }) => {
   return (
-    <div className="flex flex-col items-center w-full max-w-6xl mx-auto">
-      <p className="text-4xl font-bold text-center text-balance text-neutral-600 mt-[-60px] md:text-5xl lg:text-6xl">
-        METER ELECTRIC
-      </p>
+    <div className="flex flex-col items-center w-full max-w-6xl mx-auto mt-[-50px]">
       <p className="max-w-4xl mx-auto mb-4 text-center text-md text-balance text-neutral-600 md:mb-8 lg:mb-8 md:text-2xl">
         Your go-to destination for quality electrical solutions, offering residential, commercial
         and industrial services.{' '}

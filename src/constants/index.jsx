@@ -22,7 +22,7 @@ export const features = [
   {
     link: '/residential',
     description: (
-      <div className="p-6 font-normal text-center border rounded-md shadow-sm border-neutral-900 rounded-b-xl font-sm border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-600 shadow-neutral-500">
+      <div className="p-6 font-normal text-center border rounded-md shadow-sm border-neutral-900 rounded-b-xl font-sm border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-700 shadow-neutral-500">
         <span className="text-2xl text-red-600">RESIDENTIAL</span>
         <p className="p-3 text-left">
           Top-quality residential services, from EV charger installations to emergency generators,
@@ -35,7 +35,7 @@ export const features = [
   {
     link: '/commercial',
     description: (
-      <div className="p-6 font-normal text-center border rounded-md shadow-sm border-neutral-900 rounded-b-xl font-sm border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-600 shadow-neutral-500">
+      <div className="p-6 font-normal text-center border rounded-md shadow-sm border-neutral-900 rounded-b-xl font-sm border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-700 shadow-neutral-500">
         <span className="text-2xl text-blue-500">COMMERCIAL</span>
         <p className="p-3 text-left">
           From logic systems to automations & controls, Meter Electric provides tailored solutions
@@ -50,7 +50,7 @@ export const features = [
   {
     link: '/industrial',
     description: (
-      <div className="p-6 font-normal text-center border rounded-md shadow-sm border-neutral-900 rounded-b-xl font-sm border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-600 shadow-neutral-500">
+      <div className="p-6 font-normal text-center border rounded-md shadow-sm border-neutral-900 rounded-b-xl font-sm border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-700 shadow-neutral-500">
         <span className="text-2xl text-gray-400 ">INDUSTRIAL</span>
 
         <p className="p-3 text-left">

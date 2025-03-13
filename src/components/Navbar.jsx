@@ -40,7 +40,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
                     if (item.scrollTo === 'projectsRef') handleScroll(projectsRef);
                     if (item.scrollTo === 'contactRef') handleScroll(contactRef);
                   }}
-                  className="p-1 text-blue-700 hover:underline hover:bg-slate-50">
+                  className="p-1 text-blue-700 hover:underline hover:bg-blue-50">
                   {item.label}
                 </button>
               </li>

@@ -18,18 +18,21 @@ const NextArrow = (props) => {
   const { className, onClick, style } = props;
   return (
     <div
-      className={`${className} bg-blue-600 rounded-full  hover:bg-blue-600`}
+      className={`${className} bg-blue-600 rounded-full hover:bg-blue-700`}
       onClick={onClick}
       style={{
         ...style,
-        right: '20px',
+        right: '10px',
         zIndex: 1,
-        width: '28px',
-        height: '28px',
+        width: '30px',
+        height: '30px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-      }}></div>
+        lineHeight: '30px',
+      }}>
+      <span className="text-white">›</span>
+    </div>
   );
 };
 
@@ -37,18 +40,21 @@ const PrevArrow = (props) => {
   const { className, onClick, style } = props;
   return (
     <div
-      className={`${className} bg-blue-600 rounded-full  hover:bg-blue-600`}
+      className={`${className} bg-red-600 rounded-full hover:bg-red-700`}
       onClick={onClick}
       style={{
         ...style,
-        left: '20px',
+        left: '10px',
         zIndex: 1,
-        width: '28px',
-        height: '28px',
+        width: '30px',
+        height: '30px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-      }}></div>
+        lineHeight: '30px',
+      }}>
+      <span className="text-white">‹</span>
+    </div>
   );
 };
 

@@ -32,7 +32,11 @@ const FeatureSection = () => {
       <div className="flex justify-center">
         <button
           onClick={toggleExpand}
-          className="flex items-center justify-center w-48 h-12 text-white shadow-sm border-neutral-900 rounded-b-xl border-1 bg-gradient-to-r from-neutral-950 to-neutral-900 hover:to-neutral-600 shadow-neutral-500 ">
+          className={`flex items-center justify-center w-48 h-12 text-white ${
+            isExpanded
+              ? 'bg-black rounded-none border-none shadow-none'
+              : 'border-neutral-900 border-1 bg-gradient-to-r from-neutral-950 to-neutral-900 hover:to-neutral-600 shadow-neutral-500 rounded-b-xl'
+          }`}>
           {isExpanded ? <ChevronUp /> : <ChevronDown />}
           <span className="ml-2">{isExpanded ? 'Close' : 'See All'}</span>
         </button>
@@ -41,7 +45,10 @@ const FeatureSection = () => {
         className={`transition-max-height duration-500 ease-in-out overflow-hidden ${
           isExpanded ? 'max-h-screen' : 'max-h-0'
         }`}>
-        <div className="max-w-lg p-6 mx-auto mt-2 text-lg text-white bg-black rounded-lg shadow-lg">
+        <div
+          className={`max-w-lg p-6 mx-auto mt-0 text-lg text-white bg-black shadow-lg ${
+            isExpanded ? 'rounded-none' : 'rounded-lg'
+          }`}>
           <ul className="list-disc list-inside">
             {services.map((service, index) => (
               <li key={index} className="mb-4">
