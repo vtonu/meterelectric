@@ -79,7 +79,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
             href="tel:425-588-7578"
             className="flex items-center justify-center gap-2 text-xl font-semibold text-white">
             <PhoneCall />
-            <p>425-588-7578 </p>
+            <p>425-561-9562 </p>
           </a>
         </div>
         {mobileDrawerOpen && (

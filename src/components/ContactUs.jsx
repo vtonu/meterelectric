@@ -1,5 +1,6 @@
 import { MoveUp } from 'lucide-react';
 import emailjs from 'emailjs-com';
+import { PhoneCall } from 'lucide-react';
 import { useRef, useState } from 'react';
 
 const Contacts = ({ homeRef }) => {
@@ -57,7 +58,13 @@ const Contacts = ({ homeRef }) => {
           </span>
         </div>
         <h6 className="flex gap-2 text-sm">Email - meterelectrical@gmail.com</h6>
-        <h6 className="flex gap-2 text-sm">Phone - (425)-588-7578</h6>
+
+        <a
+          href="tel:425-588-7578"
+          className="flex items-center justify-center gap-2 text-xl font-semibold text-blue-600">
+          <PhoneCall />
+          <p>425-561-9562 </p>
+        </a>
       </h2>
 
       <div className="max-w-lg px-6 py-8 mx-auto bg-white border border-gray-300 rounded-lg shadow-lg isolate sm:py-8 lg:px-6">
