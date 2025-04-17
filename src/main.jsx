@@ -1,44 +1,44 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from './App.jsx';
-import './index.css';
-import ErrorPage from './error-page';
-import ResidentialPage from './routes/residentialpage';
-import IndustrialPage from './routes/industrialpage';
-import CommercialPage from './routes/commercialpage';
-import ChurchProjectPage from './routes/churchprojectpage';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./App.jsx";
+import "./index.css";
+import ErrorPage from "./error-page";
+import ResidentialPage from "./routes/residentialpage";
+import IndustrialPage from "./routes/industrialpage";
+import CommercialPage from "./routes/commercialpage";
+import ChurchProjectPage from "./routes/churchprojectpage";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
   },
   {
-    path: 'residential',
+    path: "residential",
     element: <ResidentialPage />,
     errorElement: <ErrorPage />,
   },
   {
-    path: 'industrial',
+    path: "industrial",
     element: <IndustrialPage />,
     errorElement: <ErrorPage />,
   },
   {
-    path: 'commercial',
+    path: "commercial",
     element: <CommercialPage />,
     errorElement: <ErrorPage />,
   },
   {
-    path: 'projects',
+    path: "projects",
     element: <ChurchProjectPage />,
     errorElement: <ErrorPage />,
-  }
+  },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.StrictMode>
 );

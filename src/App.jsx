@@ -1,13 +1,13 @@
-import { useRef } from 'react';
-import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import FeatureSection from './components/FeatureSection';
-import Projects from './components/Projects';
-import Partners from './components/Partners';
-import Contacts from './components/ContactUs';
+import { useRef } from "react";
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import FeatureSection from "./components/FeatureSection";
+import Projects from "./components/Projects";
+import Partners from "./components/Partners";
+import Contacts from "./components/ContactUs";
 
-import { Analytics } from '@vercel/analytics/react';
-import Footer from './components/Footer';
+import { Analytics } from "@vercel/analytics/react";
+import Footer from "./components/Footer";
 
 const App = () => {
   const homeRef = useRef(null);
@@ -37,9 +37,9 @@ const App = () => {
         <div ref={contactRef}>
           <Contacts homeRef={homeRef} />
         </div>
+        <Footer />
+        <Analytics />
       </div>
-      <Footer />
-      <Analytics />
     </>
   );
 };

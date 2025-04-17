@@ -1,63 +1,76 @@
-import generac from '../assets/profile-pictures/generac.jpg';
-import commercial from '../assets/services/commercial.jpg';
-import residential from '../assets/services/residential.jpg';
-import industrial from '../assets/services/industrial.jpg';
-import project1_church from '../assets/projects/church.jpg';
+import generac from "../assets/profile-pictures/generac.jpg";
+import commercial from "../assets/services/commercial.jpg";
+import residential from "../assets/services/residential.jpg";
+import industrial from "../assets/services/industrial.jpg";
+import project1_church from "../assets/projects/church.jpg";
 
 export const navItems = [
-  { label: 'HOME', scrollTo: 'homeRef' },
-  { label: 'SERVICES', scrollTo: 'servicesRef' },
-  { label: 'PROJECTS', scrollTo: 'projectsRef' },
-  { label: 'CONTACT', scrollTo: 'contactRef' },
+  { label: "HOME", scrollTo: "homeRef" },
+  { label: "SERVICES", scrollTo: "servicesRef" },
+  { label: "PROJECTS", scrollTo: "projectsRef" },
+  { label: "CONTACT", scrollTo: "contactRef" },
 ];
 
 export const partners = [
   {
-    company: 'GENERAC COMPANY',
+    company: "GENERAC COMPANY",
     image: generac,
   },
 ];
 
 export const features = [
   {
-    link: '/residential',
+    link: "/residential",
     description: (
-      <div className="p-6 font-normal text-center border rounded-md shadow-sm border-neutral-900 rounded-b-xl font-sm border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-700 shadow-neutral-500">
+      <div className="p-6 font-normal text-center border rounded-xs shadow-sm border-neutral-900  font-sm border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-700 shadow-neutral-500">
         <span className="text-2xl text-red-600">RESIDENTIAL</span>
         <p className="p-3 text-left">
-          Top-quality residential services, from EV charger installations to emergency generators,
-          meter service upgrades, panel replacements & more.
+          Top-quality residential services, from EV charger installations to
+          emergency generators, meter service upgrades, panel replacements &
+          more.
         </p>
-        <img src={residential} alt="Industrial Image" className="object-cover w-full h-48 " />
+        <img
+          src={residential}
+          alt="Industrial Image"
+          className="object-cover w-full h-48 "
+        />
       </div>
     ),
   },
   {
-    link: '/commercial',
+    link: "/commercial",
     description: (
-      <div className="p-6 font-normal text-center border rounded-md shadow-sm border-neutral-900 rounded-b-xl font-sm border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-700 shadow-neutral-500">
+      <div className="p-6 font-normal text-center border rounded-sm shadow-sm border-neutral-900 font-sm border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-700 shadow-neutral-500">
         <span className="text-2xl text-blue-500">COMMERCIAL</span>
         <p className="p-3 text-left">
-          From logic systems to automations & controls, Meter Electric provides tailored solutions
-          for every project. <br></br>
+          From logic systems to automations & controls, Meter Electric provides
+          tailored solutions for every project. <br></br>
           <br></br>
         </p>
-        <img src={commercial} alt="Commercial Image" className="object-cover w-full h-48 " />
+        <img
+          src={commercial}
+          alt="Commercial Image"
+          className="object-cover w-full h-48 "
+        />
       </div>
     ),
   },
 
   {
-    link: '/industrial',
+    link: "/industrial",
     description: (
-      <div className="p-6 font-normal text-center border rounded-md shadow-sm border-neutral-900 rounded-b-xl font-sm border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-700 shadow-neutral-500">
+      <div className="p-6 font-normal text-center border rounded-sm shadow-sm border-neutral-900  font-sm border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-700 shadow-neutral-500">
         <span className="text-2xl text-gray-400 ">INDUSTRIAL</span>
 
         <p className="p-3 text-left">
-          From control systems troubleshooting to automations & controls, Meter Electric provides
-          tailored solutions for every industry.
+          From control systems troubleshooting to automations & controls, Meter
+          Electric provides tailored solutions for every industry.
         </p>
-        <img src={industrial} alt="Industrial Image" className="object-cover w-full h-48 " />
+        <img
+          src={industrial}
+          alt="Industrial Image"
+          className="object-cover w-full h-48 "
+        />
       </div>
     ),
   },
@@ -65,7 +78,7 @@ export const features = [
 
 export const projectList = [
   {
-    link: '/projects',
+    link: "/projects",
     description: (
       <div className="flex flex-col items-center">
         <div className="w-full px-4 pb-2 sm:w-1/3 sm:px-0">

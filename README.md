@@ -1,4 +1,4 @@
-⚡ Meter Electric Landing Page (v2.9)
+⚡ Meter Electric Landing Page (v3.0)
 
 A modern and responsive landing page for an electrical contractor, built with React, Vite, Tailwind CSS, and ESLint.
 

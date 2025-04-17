@@ -1,8 +1,8 @@
-import { Menu, X, PhoneCall } from 'lucide-react';
-import { useState } from 'react';
-import logo from '../assets/logo.png';
-import { navItems } from '../constants';
-import { Link } from 'react-router-dom';
+import { Menu, X, PhoneCall } from "lucide-react";
+import { useState } from "react";
+import logo from "../assets/logo.png";
+import { navItems } from "../constants";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -13,9 +13,9 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
 
   const handleScroll = (ref) => {
     if (ref === null) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
-      ref.current?.scrollIntoView({ behavior: 'smooth' });
+      ref.current?.scrollIntoView({ behavior: "smooth" });
     }
     setMobileDrawerOpen(false);
   };
@@ -35,12 +35,16 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
               <li key={index}>
                 <button
                   onClick={() => {
-                    if (item.scrollTo === 'homeRef') handleScroll(null);
-                    if (item.scrollTo === 'servicesRef') handleScroll(servicesRef);
-                    if (item.scrollTo === 'projectsRef') handleScroll(projectsRef);
-                    if (item.scrollTo === 'contactRef') handleScroll(contactRef);
+                    if (item.scrollTo === "homeRef") handleScroll(null);
+                    if (item.scrollTo === "servicesRef")
+                      handleScroll(servicesRef);
+                    if (item.scrollTo === "projectsRef")
+                      handleScroll(projectsRef);
+                    if (item.scrollTo === "contactRef")
+                      handleScroll(contactRef);
                   }}
-                  className="p-1 text-blue-700 hover:underline hover:bg-blue-50">
+                  className="p-1 text-blue-700 hover:underline hover:bg-blue-50"
+                >
                   {item.label}
                 </button>
               </li>
@@ -48,7 +52,9 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
           </ul>
 
           <div className="flex-col justify-end lg:hidden md:flex">
-            <button onClick={toggleNavbar}>{mobileDrawerOpen ? <X /> : <Menu />}</button>
+            <button onClick={toggleNavbar}>
+              {mobileDrawerOpen ? <X /> : <Menu />}
+            </button>
           </div>
         </div>
 
@@ -59,12 +65,16 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
                 <li key={index} className="py-4">
                   <button
                     onClick={() => {
-                      if (item.scrollTo === 'homeRef') handleScroll(null);
-                      if (item.scrollTo === 'servicesRef') handleScroll(servicesRef);
-                      if (item.scrollTo === 'projectsRef') handleScroll(projectsRef);
-                      if (item.scrollTo === 'contactRef') handleScroll(contactRef);
+                      if (item.scrollTo === "homeRef") handleScroll(null);
+                      if (item.scrollTo === "servicesRef")
+                        handleScroll(servicesRef);
+                      if (item.scrollTo === "projectsRef")
+                        handleScroll(projectsRef);
+                      if (item.scrollTo === "contactRef")
+                        handleScroll(contactRef);
                     }}
-                    className="text-blue-700 hover:underline">
+                    className="text-blue-700 hover:underline"
+                  >
                     {item.label}
                   </button>
                 </li>
@@ -77,7 +87,8 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
         <div className="flex items-center justify-center ">
           <a
             href="tel:425-588-7578"
-            className="flex items-center justify-center gap-2 text-xl font-semibold text-white">
+            className="flex items-center justify-center gap-2 text-xl font-semibold text-white"
+          >
             <PhoneCall />
             <p>425-561-9562 </p>
           </a>
@@ -89,12 +100,16 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
                 <li key={index} className="py-4">
                   <button
                     onClick={() => {
-                      if (item.scrollTo === 'homeRef') handleScroll(null);
-                      if (item.scrollTo === 'servicesRef') handleScroll(servicesRef);
-                      if (item.scrollTo === 'projectsRef') handleScroll(projectsRef);
-                      if (item.scrollTo === 'contactRef') handleScroll(contactRef);
+                      if (item.scrollTo === "homeRef") handleScroll(null);
+                      if (item.scrollTo === "servicesRef")
+                        handleScroll(servicesRef);
+                      if (item.scrollTo === "projectsRef")
+                        handleScroll(projectsRef);
+                      if (item.scrollTo === "contactRef")
+                        handleScroll(contactRef);
                     }}
-                    className="text-blue-700 hover:underline">
+                    className="text-blue-700 hover:underline"
+                  >
                     {item.label}
                   </button>
                 </li>

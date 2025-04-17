@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { features } from '../constants';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { features } from "../constants";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const services = [
-  'Emergency Generator Installation',
-  'Panel Upgrades & Replacement',
-  'Electrical Installation Services',
-  'Electrical Safety Inspections',
-  'EV Car Charger Installation',
-  'Electrical Rewiring',
-  'Electrical Repairs',
-  'Surge Protection',
+  "Emergency Generator Installation",
+  "Panel Upgrades & Replacement",
+  "Electrical Installation Services",
+  "Electrical Safety Inspections",
+  "EV Car Charger Installation",
+  "Electrical Rewiring",
+  "Electrical Repairs",
+  "Surge Protection",
 ];
 
 const FeatureSection = () => {
@@ -23,7 +23,7 @@ const FeatureSection = () => {
     <div className="relative mt-10 border-b border-blue-700 min-h-[600px]">
       <h2 className="text-4xl tracking-wide text-center border-t border-blue-700 sm:text-5xl lg:text-6xl">
         <br></br>
-        OUR{' '}
+        OUR{" "}
         <span className="text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
           SERVICES
         </span>
@@ -34,21 +34,24 @@ const FeatureSection = () => {
           onClick={toggleExpand}
           className={`flex items-center justify-center w-48 h-12 text-white ${
             isExpanded
-              ? 'bg-black rounded-none border-none shadow-none'
-              : 'border-neutral-900 border-1 bg-gradient-to-r from-neutral-950 to-neutral-900 hover:to-neutral-600 shadow-neutral-500 rounded-b-xl'
-          }`}>
+              ? "bg-black rounded-none border-none shadow-none"
+              : "border-neutral-900 border-1 bg-gradient-to-r from-neutral-950 to-neutral-900 hover:to-neutral-600 shadow-neutral-500 rounded-b-xl"
+          }`}
+        >
           {isExpanded ? <ChevronUp /> : <ChevronDown />}
-          <span className="ml-2">{isExpanded ? 'Close' : 'See All'}</span>
+          <span className="ml-2">{isExpanded ? "Close" : "See All"}</span>
         </button>
       </div>
       <div
         className={`transition-max-height duration-500 ease-in-out overflow-hidden ${
-          isExpanded ? 'max-h-screen' : 'max-h-0'
-        }`}>
+          isExpanded ? "max-h-screen" : "max-h-0"
+        }`}
+      >
         <div
           className={`max-w-lg p-6 mx-auto mt-0 text-lg text-white bg-black shadow-lg ${
-            isExpanded ? 'rounded-none' : 'rounded-lg'
-          }`}>
+            isExpanded ? "rounded-none" : "rounded-lg"
+          }`}
+        >
           <ul className="list-disc list-inside">
             {services.map((service, index) => (
               <li key={index} className="mb-4">
