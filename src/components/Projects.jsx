@@ -90,7 +90,7 @@ const Projects = () => {
     <div className="mt-20 min-h-[600px]">
       <h2 className="mt-8 text-5xl tracking-wide text-center sm:text-5xl lg:text-6xl">
         OUR{" "}
-        <span className="text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
+        <span className="text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">
           PROJECTS
         </span>
         <br></br> <br></br>
@@ -104,7 +104,7 @@ const Projects = () => {
       </div>
 
       <h2 className="pt-10 mt-20 text-5xl tracking-wide text-center  sm:text-5xl lg:text-6xl">
-        <span className="text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
+        <span className="text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">
           GALLERY
         </span>
       </h2>

@@ -53,7 +53,7 @@ const Projects = () => {
       <div className="button-container">
         <button
           onClick={handleReturnHome}
-          className="flex px-4 py-2 font-normal border-blue-600 rounded-sm shadow-sm border-1 bg-gradient-to-r from-blue-500 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200"
+          className="flex px-4 py-2 font-normal border-blue-600 rounded-xs shadow-xs border-1 bg-linear-to-r from-blue-500 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200"
         >
           <MoveLeft />
           Return Home

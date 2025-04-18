@@ -25,7 +25,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
       <div className="container relative px-4 mx-auto lg:text-sm">
         <div className="flex items-center justify-between">
           {/* Logo section with a validated internal link */}
-          <div className="flex items-center flex-shrink-0">
+          <div className="flex items-center shrink-0">
             <Link to="/" onClick={(e) => e.preventDefault()}>
               <img className="h-20 m-2 cursor-pointer" src={logo} alt="Logo" />
             </Link>
@@ -89,7 +89,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
           </div>
         )}
       </div>
-      <div className="relative p-2 mx-auto bg-blue-600 lg:text-sm">
+      <div className="relative p-3 mx-auto bg-blue-600 lg:text-sm">
         <div className="flex items-center justify-center ">
           <a
             href="tel:425-588-7578"

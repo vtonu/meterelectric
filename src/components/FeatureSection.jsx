@@ -28,7 +28,7 @@ const FeatureSection = () => {
       <h2 className="text-4xl tracking-wide text-center border-t border-blue-700 sm:text-5xl lg:text-6xl">
         <br></br>
         OUR{" "}
-        <span className="text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
+        <span className="text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">
           SERVICES
         </span>
       </h2>
@@ -46,7 +46,7 @@ const FeatureSection = () => {
             className={`flex items-center justify-center w-48 h-12 text-white ${
               isExpanded
                 ? "bg-black rounded-none border-none shadow-none"
-                : "border-neutral-900 border-1 bg-gradient-to-r from-neutral-950 to-neutral-900 hover:to-neutral-600 shadow-neutral-500 rounded-b-xl"
+                : "border-neutral-900 border-1 bg-linear-to-r from-neutral-950 to-neutral-900 hover:to-neutral-600 shadow-neutral-500 rounded-b-xl"
             }`}
           >
             {/* Chevron icon and button label */}
@@ -85,7 +85,7 @@ const FeatureSection = () => {
                 {/* Feature text */}
                 <div>{feature.text}</div>
                 {/* Feature icon */}
-                <div className="flex items-center justify-center w-10 h-10 text-blue-700 rounded-sm">
+                <div className="flex items-center justify-center w-10 h-10 text-blue-700 rounded-xs">
                   {feature.icon}
                 </div>
                 {/* Feature description with link */}

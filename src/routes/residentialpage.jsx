@@ -60,7 +60,7 @@ const Projects = () => {
       <Navbar />
       <h2 className="mt-6 text-5xl tracking-wide text-center sm:text-5xl lg:text-6xl">
         RESIDENTIAL{" "}
-        <span className="text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
+        <span className="text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">
           SERVICES
         </span>
         <br></br> <br></br>
@@ -119,7 +119,7 @@ const Projects = () => {
       <div className="button-container">
         <button
           onClick={() => navigate(-1)}
-          className="flex px-4 py-2 font-normal border-blue-600 rounded-sm shadow-sm border-1 bg-gradient-to-r from-blue-500 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200"
+          className="flex px-4 py-2 font-normal border-blue-600 rounded-xs shadow-xs border-1 bg-linear-to-r from-blue-500 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200"
         >
           <MoveLeft />
           Return Home
@@ -136,7 +136,7 @@ const Projects = () => {
         <button
           onClick={closeModal}
           style={{ position: "absolute", top: "20px", right: "20px" }}
-          className="close-button bg-gradient-to-r from-blue-500 to-blue-800 px-1 py-1 text-amber-50 hover:to-blue-500"
+          className="close-button bg-linear-to-r from-blue-500 to-blue-800 px-1 py-1 text-amber-50 hover:to-blue-500"
         >
           <Minimize2 />
         </button>

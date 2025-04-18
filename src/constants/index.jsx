@@ -22,7 +22,7 @@ export const features = [
   {
     link: "/residential",
     description: (
-      <div className="p-6 font-normal text-center border rounded-xs shadow-sm border-neutral-900  font-sm border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-700 shadow-neutral-500">
+      <div className="p-6 font-normal text-center border rounded-xs shadow-xs border-neutral-900  font-sm border-1 bg-linear-to-r from-neutral-900 to-neutral-800 hover:to-neutral-700 shadow-neutral-500">
         <span className="text-2xl text-red-600">RESIDENTIAL</span>
         <p className="p-3 text-left">
           Top-quality residential services, from EV charger installations to
@@ -40,7 +40,7 @@ export const features = [
   {
     link: "/commercial",
     description: (
-      <div className="p-6 font-normal text-center border rounded-sm shadow-sm border-neutral-900 font-sm border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-700 shadow-neutral-500">
+      <div className="p-6 font-normal text-center border rounded-xs shadow-xs border-neutral-900 font-sm border-1 bg-linear-to-r from-neutral-900 to-neutral-800 hover:to-neutral-700 shadow-neutral-500">
         <span className="text-2xl text-blue-500">COMMERCIAL</span>
         <p className="p-3 text-left">
           From logic systems to automations & controls, Meter Electric provides
@@ -59,7 +59,7 @@ export const features = [
   {
     link: "/industrial",
     description: (
-      <div className="p-6 font-normal text-center border rounded-sm shadow-sm border-neutral-900  font-sm border-1 bg-gradient-to-r from-neutral-900 to-neutral-800 hover:to-neutral-700 shadow-neutral-500">
+      <div className="p-6 font-normal text-center border rounded-xs shadow-xs border-neutral-900  font-sm border-1 bg-linear-to-r from-neutral-900 to-neutral-800 hover:to-neutral-700 shadow-neutral-500">
         <span className="text-2xl text-gray-400 ">INDUSTRIAL</span>
 
         <p className="p-3 text-left">
@@ -89,7 +89,7 @@ export const projectList = [
           />
         </div>
         <div className="w-full px-4 sm:w-1/3 sm:px-0">
-          <div className="px-2 py-1 font-normal text-center border-blue-600 rounded-sm shadow-sm border-1 bg-gradient-to-r from-blue-500 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200">
+          <div className="px-2 py-1 font-normal text-center border-blue-600 rounded-xs shadow-xs border-1 bg-linear-to-r from-blue-500 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200">
             <span className="text-xs font-semibold sm:text-sm md:text-base lg:text-md">
               Three Holy Hierarchs Romanian Orthodox Church
             </span>

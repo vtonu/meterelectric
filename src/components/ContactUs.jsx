@@ -61,7 +61,7 @@ const Contacts = ({ homeRef }) => {
       <h2 className="flex flex-col items-center gap-2 pt-12 mt-2 mb-2 text-5xl tracking-wide text-center">
         <div>
           CONTACT{" "}
-          <span className="text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
+          <span className="text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">
             US
           </span>
         </div>
@@ -172,7 +172,7 @@ const Contacts = ({ homeRef }) => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:bg-blue-300"
+              className="block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-2xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:bg-blue-300"
             >
               {isSubmitting ? "Sending..." : "Submit"}
             </button>
@@ -182,14 +182,23 @@ const Contacts = ({ homeRef }) => {
 
       {/* Back Top Button */}
       <div className=" button-container">
+        {/* <button
+          onClick={() =>
+            homeRef.current?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="flex px-2 py-2 mx-2 rounded-xs shadow-xs text-neutral-800 shadow-blue-500 bg-linear-to-br from-blue-600 to-blue-500 group-hover:from-sky-300 group-hover:to-blue-200 hover:text-blue-100 dark:text-white focus:outline-hidden focus:ring-blue-300 dark:focus:ring-sky-800"
+        >
+          <MoveUp />
+          Back Top
+        </button> */}
         <button
           onClick={() =>
             homeRef.current?.scrollIntoView({ behavior: "smooth" })
           }
-          className="flex px-2 py-2 mx-2 rounded-sm shadow-sm text-neutral-800 shadow-blue-500 bg-gradient-to-br from-blue-600 to-blue-500 group-hover:from-sky-300 group-hover:to-blue-200 hover:text-blue-100 dark:text-white focus:outline-none focus:ring-blue-300 dark:focus:ring-sky-800"
+          className="flex px-4 py-3 mx-2 font-medium border-blue-600 rounded-xs shadow-xs border-1 bg-linear-to-r from-blue-400 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200 md:mb-4 lg:mb-4 md:px-6 md:py-4 md:text-lg"
         >
           <MoveUp />
-          Back Top
+          Back to Top
         </button>
       </div>
     </div>
