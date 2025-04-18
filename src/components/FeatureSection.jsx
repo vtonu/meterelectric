@@ -25,7 +25,7 @@ const FeatureSection = () => {
   return (
     <div className="relative mt-10 border-b border-blue-700 min-h-[600px] ">
       {/* Background Grid for visual effect */}
-      <div className="absolute h-full w-full bg-[radial-gradient(#3B82F6_1px,transparent_1px)] [background-size:12px_12px] [mask-image:radial-gradient(clip_50%_50%_at_50%_50%,#000_100%,transparent_100%)] z-10 pointer-events-none"></div>
+      <div className="absolute h-full w-full bg-[radial-gradient(#3B82F6_1px,transparent_1px)] [background-size:8px_8px] [mask-image:radial-gradient(clip_50%_50%_at_50%_50%,#000_100%,transparent_100%)] z-10 pointer-events-none"></div>
 
       {/* Section Title */}
       <h2 className="text-4xl tracking-wide text-center border-t border-blue-700 sm:text-5xl lg:text-6xl">
@@ -78,7 +78,7 @@ const FeatureSection = () => {
         </div>
 
         {/* Features Section */}
-        <div className="flex flex-wrap bg-neutral-50 ">
+        <div className="flex flex-wrap  ">
           {features.map((feature, index) => (
             <div key={index} className="w-full sm:w-1/2 lg:w-1/3">
               <div>

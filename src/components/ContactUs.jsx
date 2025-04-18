@@ -51,7 +51,7 @@ const Contacts = ({ homeRef }) => {
 
   return (
     <div
-      className="mt-20 tracking-wide min-h-[300px] border-t border-blue-700"
+      className="mt-20  tracking-wide min-h-[300px] border-t border-blue-700"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
@@ -181,7 +181,7 @@ const Contacts = ({ homeRef }) => {
       </div>
 
       {/* Back Top Button */}
-      <div className=" button-container">
+      <div className=" button-container ">
         {/* <button
           onClick={() =>
             homeRef.current?.scrollIntoView({ behavior: "smooth" })
