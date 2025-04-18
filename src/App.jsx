@@ -23,7 +23,7 @@ const App = () => {
         projectsRef={projectsRef}
         contactRef={contactRef}
       />
-      <div className="px-2 pt-20 mx-auto max-w-7xl">
+      <div className="pt-10 px-2">
         <div ref={homeRef}>
           <HeroSection contactRef={contactRef} />
         </div>

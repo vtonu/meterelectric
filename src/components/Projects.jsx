@@ -103,12 +103,12 @@ const Projects = () => {
         ))}
       </div>
 
-      <h2 className="pt-10 mt-20 text-5xl tracking-wide text-center  sm:text-5xl lg:text-6xl">
+      {/* <h2 className="pt-10 mt-20 text-5xl tracking-wide text-center  sm:text-5xl lg:text-6xl">
         <span className="text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">
           GALLERY
         </span>
-      </h2>
-      <Slider {...settings} className="pt-5">
+      </h2> */}
+      <Slider {...settings} className="pt-2 w-md mx-auto ">
         {images.map((image, index) => (
           <div key={index} className="w-full p-4">
             <img

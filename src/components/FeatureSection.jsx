@@ -23,7 +23,10 @@ const FeatureSection = () => {
   const toggleExpand = () => setIsExpanded(!isExpanded);
 
   return (
-    <div className="relative mt-10 border-b border-blue-700 min-h-[600px]">
+    <div className="relative mt-10 border-b border-blue-700 min-h-[600px] ">
+      {/* Background Grid for visual effect */}
+      <div className="absolute h-full w-full bg-[radial-gradient(#3B82F6_1px,transparent_1px)] [background-size:12px_12px] [mask-image:radial-gradient(clip_50%_50%_at_50%_50%,#000_100%,transparent_100%)] z-10 pointer-events-none"></div>
+
       {/* Section Title */}
       <h2 className="text-4xl tracking-wide text-center border-t border-blue-700 sm:text-5xl lg:text-6xl">
         <br></br>
@@ -34,11 +37,8 @@ const FeatureSection = () => {
       </h2>
       <br></br>
 
-      {/* Background Grid for visual effect */}
-      <div className="absolute h-full w-full bg-[radial-gradient(#3B82F6_2px,transparent_2px)] [background-size:12px_12px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_80%,transparent_100%)] z-10 pointer-events-none"></div>
-
       {/* Main Content */}
-      <div className="relative z-20">
+      <div className="relative z-20  max-w-screen-xl mx-auto px-2">
         {/* Expand/Collapse Button */}
         <div className="flex justify-center">
           <button
@@ -78,16 +78,14 @@ const FeatureSection = () => {
         </div>
 
         {/* Features Section */}
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap bg-neutral-50 ">
           {features.map((feature, index) => (
             <div key={index} className="w-full sm:w-1/2 lg:w-1/3">
-              <div className="">
+              <div>
                 {/* Feature text */}
                 <div>{feature.text}</div>
                 {/* Feature icon */}
-                <div className="flex items-center justify-center w-10 h-10 text-blue-700 rounded-xs">
-                  {feature.icon}
-                </div>
+                <div>{feature.icon}</div>
                 {/* Feature description with link */}
                 <p className="p-2 text-md text-amber-50">
                   <Link to={feature.link}>{feature.description}</Link>
