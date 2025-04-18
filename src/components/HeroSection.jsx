@@ -1,9 +1,6 @@
 const HeroSection = ({ contactRef }) => {
   return (
     <div className="relative w-full">
-      {/* Background Grid */}
-      <div className="absolute h-full w-full bg-[radial-gradient(#e5e7eb_2px,transparent_2px)] [background-size:14px_14px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
-
       {/* Content */}
       <div className="relative flex flex-col items-center w-full max-w-6xl mx-auto ">
         <p className="max-w-4xl mx-auto mb-4 text-center text-md text-balance text-neutral-600 md:mb-8 lg:mb-8 md:text-2xl">

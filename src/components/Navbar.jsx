@@ -24,17 +24,20 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
     <nav className="sticky top-0 z-50 py-2 font-light backdrop-blur-lg border-blue-700/80">
       <div className="container relative px-4 mx-auto lg:text-sm">
         <div className="flex items-center justify-between">
+          {/* Logo section with a validated internal link */}
           <div className="flex items-center flex-shrink-0">
-            <Link to="/">
+            <Link to="/" onClick={(e) => e.preventDefault()}>
               <img className="h-20 m-2 cursor-pointer" src={logo} alt="Logo" />
             </Link>
           </div>
 
+          {/* Desktop navigation menu */}
           <ul className="hidden space-x-12 lg:flex ml-14">
             {navItems.map((item, index) => (
               <li key={index}>
                 <button
                   onClick={() => {
+                    // Handle scrolling based on the item's scrollTo property
                     if (item.scrollTo === "homeRef") handleScroll(null);
                     if (item.scrollTo === "servicesRef")
                       handleScroll(servicesRef);
@@ -43,7 +46,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
                     if (item.scrollTo === "contactRef")
                       handleScroll(contactRef);
                   }}
-                  className="p-1 text-blue-700 hover:underline hover:bg-blue-50"
+                  className="p-1 text-blue-700 hover:underline hover:bg-blue-100"
                 >
                   {item.label}
                 </button>
@@ -51,6 +54,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
             ))}
           </ul>
 
+          {/* Mobile menu toggle button */}
           <div className="flex-col justify-end lg:hidden md:flex">
             <button onClick={toggleNavbar}>
               {mobileDrawerOpen ? <X /> : <Menu />}
@@ -58,6 +62,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
           </div>
         </div>
 
+        {/* Mobile drawer menu */}
         {mobileDrawerOpen && (
           <div className="fixed right-0 z-20 flex flex-col items-center justify-center w-full p-12 bg-neutral-200 lg:hidden ">
             <ul>
@@ -65,6 +70,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
                 <li key={index} className="py-4">
                   <button
                     onClick={() => {
+                      // Handle scrolling for mobile menu items
                       if (item.scrollTo === "homeRef") handleScroll(null);
                       if (item.scrollTo === "servicesRef")
                         handleScroll(servicesRef);
@@ -100,6 +106,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
                 <li key={index} className="py-4">
                   <button
                     onClick={() => {
+                      // Handle scrolling for mobile menu items
                       if (item.scrollTo === "homeRef") handleScroll(null);
                       if (item.scrollTo === "servicesRef")
                         handleScroll(servicesRef);
