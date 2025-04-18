@@ -51,11 +51,9 @@ const Contacts = ({ homeRef }) => {
 
   return (
     <div
-      className="mt-20  tracking-wide min-h-[300px]  border-blue-700 bg-fixed"
+      className="mt-20  tracking-wide min-h-[300px]  border-blue-700 bg-cover bg-center"
       style={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
       }}
     >
       {/* Separate div for the border at the bottom */}
@@ -174,7 +172,7 @@ const Contacts = ({ homeRef }) => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-2xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:bg-blue-300"
+              className="cursor-pointer block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-2xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:bg-blue-300"
             >
               {isSubmitting ? "Sending..." : "Submit"}
             </button>
@@ -188,7 +186,7 @@ const Contacts = ({ homeRef }) => {
           onClick={() =>
             homeRef.current?.scrollIntoView({ behavior: "smooth" })
           }
-          className="flex px-4 py-3 mx-2 font-medium border-blue-600 rounded-xs shadow-xs border-1 bg-linear-to-r from-blue-400 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200 md:mb-4 lg:mb-4 md:px-6 md:py-4 md:text-lg"
+          className="flex px-4 py-3 mx-2 font-medium border-blue-600 rounded-xs shadow-xs border-1 bg-linear-to-r from-blue-400 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200 md:mb-4 lg:mb-4 md:px-6 md:py-4 md:text-lg cursor-pointer"
         >
           <MoveUp />
           Back to Top

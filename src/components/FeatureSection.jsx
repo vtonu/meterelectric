@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { features } from "../constants";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import backgroundImage2 from "../assets/backgroundwires2.png";
+import backgroundImage from "../assets/backgroundwires.png";
 
 // List of services to display in the expandable section
 const services = [
@@ -25,11 +25,9 @@ const FeatureSection = () => {
 
   return (
     <div
-      className="relative mt-10 border-blue-700 min-h-[600px] bg-fixed "
+      className="relative mt-10 border-blue-700 min-h-[600px]  bg-center bg-fixed"
       style={{
-        backgroundImage: `url(${backgroundImage2})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundImage: `url(${backgroundImage})`,
       }}
     >
       {/* Background Grid for visual effect */}
@@ -51,7 +49,7 @@ const FeatureSection = () => {
         <div className="flex justify-center">
           <button
             onClick={toggleExpand}
-            className={`flex items-center justify-center w-48 h-12 text-white ${
+            className={`flex items-center justify-center cursor-pointer w-48 h-12 text-white ${
               isExpanded
                 ? "bg-black rounded-none border-none shadow-none"
                 : "border-neutral-900 border-1 bg-linear-to-r from-neutral-950 to-neutral-900 hover:to-neutral-600 shadow-neutral-500 rounded-b-xl"

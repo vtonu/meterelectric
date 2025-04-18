@@ -66,7 +66,7 @@ const Projects = () => {
         <br></br> <br></br>
       </h2>
 
-      <div className="grid grid-cols-3 gap-4 w-1/2 mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-6 gap-4 px-4">
         <div className="w-full mx-auto">
           <img
             src={ThumbnailWork}
@@ -116,13 +116,15 @@ const Projects = () => {
           />
         </div>
       </div>
-      <div className="button-container">
+
+      {/* Return Home Button */}
+      <div className="flex items-center justify-center mt-8 mb-4">
         <button
           onClick={() => navigate(-1)}
-          className="flex px-4 py-2 font-normal border-blue-600 rounded-xs shadow-xs border-1 bg-linear-to-r from-blue-500 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200"
+          className="flex px-4 py-3 mx-2 font-medium border-blue-600 rounded-xs shadow-xs border-1 bg-linear-to-r from-blue-400 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200 md:mb-4 lg:mb-4 md:px-6 md:py-4 md:text-lg cursor-pointer"
         >
           <MoveLeft />
-          Return Home
+          Return Back
         </button>
       </div>
       <Modal

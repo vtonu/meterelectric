@@ -2,10 +2,12 @@ import { Menu, X, PhoneCall } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/logo.png";
 import { navItems } from "../constants";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
@@ -20,24 +22,33 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
     setMobileDrawerOpen(false);
   };
 
+  const handleLogoClick = () => {
+    if (location.pathname === "/") {
+      // Refresh the page if already on the home page
+      window.location.reload();
+    } else {
+      // Navigate to the home page
+      navigate("/");
+    }
+  };
+
   return (
-    <nav className="sticky top-0 z-50 py-2 font-light backdrop-blur-lg border-blue-700/80">
+    <nav className="sticky top-0 z-50 py-2 font-light backdrop-blur-lg border-blue-700/80 ">
       <div className="container relative px-4 mx-auto lg:text-sm">
         <div className="flex items-center justify-between">
-          {/* Logo section with a validated internal link */}
+          {/* Logo section */}
           <div className="flex items-center shrink-0">
-            <Link to="/" onClick={(e) => e.preventDefault()}>
+            <button onClick={handleLogoClick}>
               <img className="h-20 m-2 cursor-pointer" src={logo} alt="Logo" />
-            </Link>
+            </button>
           </div>
 
           {/* Desktop navigation menu */}
-          <ul className="hidden space-x-12 lg:flex ml-14">
+          <ul className="hidden space-x-12 lg:flex ml-14 ">
             {navItems.map((item, index) => (
               <li key={index}>
                 <button
                   onClick={() => {
-                    // Handle scrolling based on the item's scrollTo property
                     if (item.scrollTo === "homeRef") handleScroll(null);
                     if (item.scrollTo === "servicesRef")
                       handleScroll(servicesRef);
@@ -46,7 +57,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
                     if (item.scrollTo === "contactRef")
                       handleScroll(contactRef);
                   }}
-                  className="p-1 text-blue-700 hover:underline hover:bg-blue-100"
+                  className="p-1 text-blue-700 hover:underline hover:bg-blue-100 cursor-pointer"
                 >
                   {item.label}
                 </button>
@@ -70,7 +81,6 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
                 <li key={index} className="py-4">
                   <button
                     onClick={() => {
-                      // Handle scrolling for mobile menu items
                       if (item.scrollTo === "homeRef") handleScroll(null);
                       if (item.scrollTo === "servicesRef")
                         handleScroll(servicesRef);
@@ -99,31 +109,6 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
             <p>425-561-9562 </p>
           </a>
         </div>
-        {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 flex flex-col items-center justify-center w-full p-2 bg-neutral-200 lg:hidden">
-            <ul>
-              {navItems.map((item, index) => (
-                <li key={index} className="py-4">
-                  <button
-                    onClick={() => {
-                      // Handle scrolling for mobile menu items
-                      if (item.scrollTo === "homeRef") handleScroll(null);
-                      if (item.scrollTo === "servicesRef")
-                        handleScroll(servicesRef);
-                      if (item.scrollTo === "projectsRef")
-                        handleScroll(projectsRef);
-                      if (item.scrollTo === "contactRef")
-                        handleScroll(contactRef);
-                    }}
-                    className="text-blue-700 hover:underline"
-                  >
-                    {item.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
       </div>
     </nav>
   );
