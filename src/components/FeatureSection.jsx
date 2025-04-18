@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { features } from "../constants";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import backgroundImage from "../assets/backgroundwires.png";
 
 // List of services to display in the expandable section
 const services = [
@@ -23,9 +24,16 @@ const FeatureSection = () => {
   const toggleExpand = () => setIsExpanded(!isExpanded);
 
   return (
-    <div className="relative mt-10 border-b border-blue-700 min-h-[600px] ">
+    <div
+      className="relative mt-10 border-b border-blue-700 min-h-[600px] "
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       {/* Background Grid for visual effect */}
-      <div className="absolute h-full w-full bg-[radial-gradient(#3B82F6_1px,transparent_1px)] [background-size:8px_8px] [mask-image:radial-gradient(clip_50%_50%_at_50%_50%,#000_100%,transparent_100%)] z-10 pointer-events-none"></div>
+      <div className="absolute h-full w-full bg-[radial-gradient(#3B82F6_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(clip_50%_50%_at_50%_50%,#000_100%,transparent_100%)] z-10 pointer-events-none"></div>
 
       {/* Section Title */}
       <h2 className="text-4xl tracking-wide text-center border-t border-blue-700 sm:text-5xl lg:text-6xl">
