@@ -2,7 +2,9 @@ import { partners } from "../constants"; // Importing the list of partners from 
 
 const Partners = () => {
   return (
-    <div className="mt-20 tracking-wide min-h-[300px] border-t border-blue-700">
+    <div className="mt-20 tracking-wide min-h-[300px]  border-blue-700">
+      {/* Separate div for the border at the bottom */}
+      <div className="border-b border-blue-700 max-w-4xl mx-auto"></div>
       {/* Section title */}
       <h2 className="pt-20 mt-6 text-5xl tracking-wide text-center sm:text-5xl lg:text-6xl">
         OUR{" "}

@@ -25,7 +25,7 @@ const FeatureSection = () => {
 
   return (
     <div
-      className="relative mt-10 border-b border-blue-700 min-h-[600px] "
+      className="relative mt-10 border-blue-700 min-h-[600px] bg-fixed "
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
@@ -33,7 +33,7 @@ const FeatureSection = () => {
       }}
     >
       {/* Background Grid for visual effect */}
-      <div className="absolute h-full w-full bg-[radial-gradient(#3B82F6_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(clip_50%_50%_at_50%_50%,#000_100%,transparent_100%)] z-10 pointer-events-none"></div>
+      {/* <div className="absolute h-full w-full bg-[radial-gradient(#3B82F6_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(clip_50%_50%_at_50%_50%,#000_100%,transparent_100%)] z-10 pointer-events-none"></div> */}
 
       {/* Section Title */}
       <h2 className="text-4xl tracking-wide text-center border-t border-blue-700 sm:text-5xl lg:text-6xl">
@@ -106,6 +106,8 @@ const FeatureSection = () => {
         {/* Placeholder for additional grid content */}
         <div className="grid grid-cols-2 gap-2 pb-20 md:grid-cols-3"></div>
       </div>
+      {/* Separate div for the border at the bottom */}
+      <div className="border-b border-blue-700 max-w-4xl mx-auto"></div>
     </div>
   );
 };
