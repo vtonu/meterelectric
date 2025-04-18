@@ -95,13 +95,13 @@ const Projects = () => {
         </span>
         <br></br> <br></br>
       </h2>
-      <div>
+      {/* <div>
         {projectList.map((project, index) => (
           <div key={index}>
             <Link to={project.link}>{project.description}</Link>
           </div>
         ))}
-      </div>
+      </div> */}
 
       <Slider {...settings} className="w-sm mx-auto ">
         {images.map((image, index) => (
