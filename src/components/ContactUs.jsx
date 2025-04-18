@@ -181,16 +181,7 @@ const Contacts = ({ homeRef }) => {
       </div>
 
       {/* Back Top Button */}
-      <div className=" button-container ">
-        {/* <button
-          onClick={() =>
-            homeRef.current?.scrollIntoView({ behavior: "smooth" })
-          }
-          className="flex px-2 py-2 mx-2 rounded-xs shadow-xs text-neutral-800 shadow-blue-500 bg-linear-to-br from-blue-600 to-blue-500 group-hover:from-sky-300 group-hover:to-blue-200 hover:text-blue-100 dark:text-white focus:outline-hidden focus:ring-blue-300 dark:focus:ring-sky-800"
-        >
-          <MoveUp />
-          Back Top
-        </button> */}
+      <div className="flex items-center justify-center mt-8 mb-4">
         <button
           onClick={() =>
             homeRef.current?.scrollIntoView({ behavior: "smooth" })
