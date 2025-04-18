@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { features } from "../constants";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import backgroundImage from "../assets/backgroundwires.png";
+import backgroundImage2 from "../assets/backgroundwires2.png";
 
 // List of services to display in the expandable section
 const services = [
@@ -27,7 +27,7 @@ const FeatureSection = () => {
     <div
       className="relative mt-10 border-blue-700 min-h-[600px] bg-fixed "
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        backgroundImage: `url(${backgroundImage2})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
