@@ -53,7 +53,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="mt-20 min-h-[600px]">
+    <div className=" min-h-[600px] motion-preset-blur">
       <Navbar />
       <h2 className="mt-6 text-5xl tracking-wide text-center sm:text-5xl lg:text-6xl">
         COMMERCIAL{" "}
@@ -63,7 +63,7 @@ const Projects = () => {
         <br></br> <br></br>
       </h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 px-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 px-4">
         <div className=" ">
           <img
             src={Work1}
@@ -72,6 +72,7 @@ const Projects = () => {
             onClick={() => openModal(Work1)}
           />
         </div>
+
         <div className="">
           <img
             src={Work2}
@@ -105,7 +106,7 @@ const Projects = () => {
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Image Modal"
-        className="modal px-16"
+        className="modal px-16 motion-preset-focus motion-preset-expand"
         overlayClassName="overlay"
       >
         <button

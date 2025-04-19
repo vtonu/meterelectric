@@ -168,11 +168,11 @@ const Contacts = ({ homeRef }) => {
           </div>
 
           {/* Submit Button */}
-          <div>
+          <div className="group">
             <button
               type="submit"
               disabled={isSubmitting}
-              className="cursor-pointer block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-2xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:bg-blue-300"
+              className=" cursor-pointer block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-2xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:bg-blue-300 group-active:motion-preset-blur-down group-active:motion-preset-fade"
             >
               {isSubmitting ? "Sending..." : "Submit"}
             </button>

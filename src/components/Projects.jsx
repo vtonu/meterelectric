@@ -11,14 +11,12 @@ import project6_panel from "../assets/projects/project6_panel.jpg";
 import project7_panel from "../assets/projects/project7_panel.jpg";
 import project9_generac from "../assets/projects/project9_generac.jpg";
 import project10_carcharger from "../assets/projects/project10_carcharger.jpg";
-import { Link } from "react-router-dom";
-import { projectList } from "../constants";
 
 const NextArrow = (props) => {
   const { className, onClick, style } = props;
   return (
     <div
-      className={`${className} bg-blue-600 rounded-full hover:bg-blue-700`}
+      className={`${className} opacity-95`}
       onClick={onClick}
       style={{
         ...style,
@@ -30,10 +28,9 @@ const NextArrow = (props) => {
         alignItems: "center",
         justifyContent: "center",
         lineHeight: "30px",
+        backgroundColor: "#1447e6",
       }}
-    >
-      <span className="text-white">›</span>
-    </div>
+    ></div>
   );
 };
 
@@ -41,7 +38,7 @@ const PrevArrow = (props) => {
   const { className, onClick, style } = props;
   return (
     <div
-      className={`${className} bg-red-600 rounded-full hover:bg-red-700`}
+      className={`${className} opacity-95 `}
       onClick={onClick}
       style={{
         ...style,
@@ -53,10 +50,9 @@ const PrevArrow = (props) => {
         alignItems: "center",
         justifyContent: "center",
         lineHeight: "30px",
+        backgroundColor: "#1447e6",
       }}
-    >
-      <span className="text-white">‹</span>
-    </div>
+    ></div>
   );
 };
 
@@ -64,12 +60,12 @@ const Projects = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 400,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
@@ -87,29 +83,21 @@ const Projects = () => {
   ];
 
   return (
-    <div className="mt-20 min-h-[600px]">
-      <h2 className="mt-8 text-5xl tracking-wide text-center sm:text-5xl lg:text-6xl">
-        OUR{" "}
-        <span className="text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">
-          PROJECTS
-        </span>
-        <br></br> <br></br>
+    <div className="mt-20 ">
+      <h2 className="mt-8 text-5xl tracking-wide text-center lg:text-6xl text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
+        GALLERY
       </h2>
-      {/* <div>
-        {projectList.map((project, index) => (
-          <div key={index}>
-            <Link to={project.link}>{project.description}</Link>
-          </div>
-        ))}
-      </div> */}
 
       <Slider {...settings} className="w-sm mx-auto ">
         {images.map((image, index) => (
-          <div key={index} className="w-full p-4">
+          <div
+            key={index}
+            className="focus:outline-none motion-preset-fade motion-preset-blur-down"
+          >
             <img
               src={image.src}
               alt={image.alt}
-              className="object-contain w-full p-6 bg-black border border-blue-600 rounded-md h-96 lg:h-96"
+              className="object-contain w-full p-2 h-96"
             />
           </div>
         ))}

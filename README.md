@@ -1,12 +1,12 @@
-⚡ Meter Electric Landing Page (v3.1.9)
-
-A modern and responsive landing page for an electrical contractor, built with React, Vite, Tailwind CSS, and ESLint.
+⚡ Meter Electric Landing Page (v3.2.0)
 
 🚀 Features
 
+Framework: React 18 + Vite 5
+
 Fast Development: Built with Vite for lightning-fast hot module replacement (HMR).
 
-Modern UI: Styled with Tailwind CSS for a sleek and responsive design.
+Modern UI: Styled with Tailwind v4 for a sleek and responsive design.
 
 Linting: ESLint for clean and maintainable code.
 
@@ -20,16 +20,4 @@ Carousel: Slick-carousel for smooth image sliders.
 
 Analytics: Vercel Analytics for tracking user engagement.
 
-📦 Tech Stack
-
-Framework: React 18 + Vite 5
-
-Styling: Tailwind CSS
-
-Routing: React Router
-
-Linting: ESLint
-
-Utilities: EmailJS, Lucide-react, React Modal, React Slick
-
-Analytics: Vercel Analytics
+Animations: Rombo Tailwind CSS

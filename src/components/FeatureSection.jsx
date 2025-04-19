@@ -46,34 +46,36 @@ const FeatureSection = () => {
       {/* Main Content */}
       <div className="relative z-20  max-w-screen-xl mx-auto px-2">
         {/* Expand/Collapse Button */}
-        <div className="flex justify-center">
+        <div className="flex justify-center ">
           <button
             onClick={toggleExpand}
             className={`flex items-center justify-center cursor-pointer w-48 h-12 text-white ${
               isExpanded
                 ? "bg-black rounded-none border-none shadow-none"
-                : "border-neutral-900 border-1 bg-linear-to-r from-neutral-950 to-neutral-900 hover:to-neutral-600 shadow-neutral-500 rounded-b-xl"
+                : "border-neutral-900 border-1 bg-linear-to-r from-neutral-950 to-neutral-900 hover:to-neutral-600 shadow-neutral-500 rounded-b-xl motion-preset-fade  motion-preset-blur-down"
             }`}
           >
             {/* Chevron icon and button label */}
             {isExpanded ? <ChevronUp /> : <ChevronDown />}
-            <span className="ml-2">{isExpanded ? "Close" : "See All"}</span>
+            <span className="ml-2  ">{isExpanded ? "Close" : "See All"}</span>
           </button>
         </div>
 
         {/* Expandable Services Section */}
         <div
-          className={`transition-max-height duration-500 ease-in-out overflow-hidden ${
+          className={`motion-preset-focus motion-preset-blur-down transition-max-height duration-400 ease-in-out overflow-hidden ${
             isExpanded ? "max-h-screen" : "max-h-0"
           }`}
         >
           <div
-            className={`max-w-lg p-6 mx-auto mt-0 text-lg text-white bg-black shadow-lg ${
-              isExpanded ? "rounded-none" : "rounded-lg"
+            className={`motion-preset-focus motion-preset-blur-right max-w-lg p-6 mx-auto mt-0 text-lg text-white bg-black shadow-lg ${
+              isExpanded
+                ? "rounded-none"
+                : "motion-preset-fade motion-preset-blur-down"
             }`}
           >
             {/* List of services */}
-            <ul className="list-disc list-inside">
+            <ul className="list-disc list-inside ">
               {services.map((service, index) => (
                 <li key={index} className="mb-4">
                   {service}
@@ -84,9 +86,9 @@ const FeatureSection = () => {
         </div>
 
         {/* Features Section */}
-        <div className="flex flex-wrap  ">
+        <div className="flex flex-wrap motion-preset-fade ">
           {features.map((feature, index) => (
-            <div key={index} className="w-full sm:w-1/2 lg:w-1/3">
+            <div key={index} className="w-full sm:w-1/2 lg:w-1/3 ">
               <div>
                 {/* Feature text */}
                 <div>{feature.text}</div>

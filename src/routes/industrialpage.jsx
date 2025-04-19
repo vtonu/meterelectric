@@ -52,7 +52,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="mt-20 min-h-[600px]">
+    <div className=" min-h-[600px] motion-preset-blur">
       <Navbar />
       <h2 className="mt-6 text-5xl tracking-wide text-center sm:text-5xl lg:text-6xl">
         INDUSTRIAL{" "}
@@ -96,7 +96,7 @@ const Projects = () => {
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Image Modal"
-        className="modal px-2"
+        className="modal px-2 motion-preset-focus motion-preset-expand"
         overlayClassName="overlay"
       >
         <button
