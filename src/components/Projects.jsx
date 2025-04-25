@@ -20,7 +20,7 @@ const NextArrow = (props) => {
       onClick={onClick}
       style={{
         ...style,
-        right: "-30px",
+        right: "-20px",
         zIndex: 1,
         width: "30px",
         height: "30px",
@@ -42,7 +42,7 @@ const PrevArrow = (props) => {
       onClick={onClick}
       style={{
         ...style,
-        left: "-30px",
+        left: "-20px",
         zIndex: 1,
         width: "30px",
         height: "30px",
