@@ -51,13 +51,13 @@ const Contacts = ({ homeRef }) => {
 
   return (
     <div
-      className="mt-20  tracking-wide min-h-[300px]  border-blue-700 bg-cover bg-center"
+      className="mt-20  tracking-wide min-h-[300px]   bg-fixed bg-center "
       style={{
         backgroundImage: `url(${backgroundImage})`,
       }}
     >
-      {/* Separate div for the border at the bottom */}
-      <div className="border-b border-blue-700 max-w-4xl mx-auto"></div>
+      {/* Separate div for the border above remove max-w-4xl mx-auto for the line to extend*/}
+      <div className="border-t-1 border-red-700 max-w-4xl mx-auto "></div>
       <h2 className="flex flex-col items-center gap-2 pt-12 mt-2 mb-2 text-5xl tracking-wide text-center">
         <div>
           CONTACT{" "}

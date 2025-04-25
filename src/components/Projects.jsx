@@ -16,11 +16,11 @@ const NextArrow = (props) => {
   const { className, onClick, style } = props;
   return (
     <div
-      className={`${className} opacity-95`}
+      className={`${className} opacity-95 motion-preset-fade  motion-preset-blur-down`}
       onClick={onClick}
       style={{
         ...style,
-        right: "10px",
+        right: "-30px",
         zIndex: 1,
         width: "30px",
         height: "30px",
@@ -38,11 +38,11 @@ const PrevArrow = (props) => {
   const { className, onClick, style } = props;
   return (
     <div
-      className={`${className} opacity-95 `}
+      className={`${className} opacity-95 motion-preset-fade  motion-preset-blur-down`}
       onClick={onClick}
       style={{
         ...style,
-        left: "10px",
+        left: "-30px",
         zIndex: 1,
         width: "30px",
         height: "30px",
@@ -65,7 +65,7 @@ const Projects = () => {
     slidesToScroll: 1,
     arrows: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 5000,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
