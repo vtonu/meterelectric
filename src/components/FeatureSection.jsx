@@ -49,7 +49,7 @@ const FeatureSection = () => {
       <br></br>
 
       {/* Main Content */}
-      <div className="relative z-20  max-w-screen-xl mx-auto px-2">
+      <div className="relative z-20 max-w-screen-xl mx-auto">
         {/* Expand/Collapse Button */}
         <div className="flex justify-center ">
           <button
@@ -69,7 +69,7 @@ const FeatureSection = () => {
         {/* Expandable Services Section */}
         <div
           className={`motion-preset-focus motion-preset-blur-down transition-max-height duration-400 ease-in-out overflow-hidden ${
-            isExpanded ? "max-h-screen" : "max-h-0"
+            isExpanded ? "max-h-screen px-2" : "max-h-0 "
           }`}
         >
           <div
