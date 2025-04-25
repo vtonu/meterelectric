@@ -62,7 +62,7 @@ const FeatureSection = () => {
           >
             {/* Chevron icon and button label */}
             {isExpanded ? <ChevronUp /> : <ChevronDown />}
-            <span className="ml-2  ">{isExpanded ? "Close" : "See All"}</span>
+            <span className="ml-2">{isExpanded ? "Close" : "See All"}</span>
           </button>
         </div>
 
@@ -73,14 +73,14 @@ const FeatureSection = () => {
           }`}
         >
           <div
-            className={`lg:max-w-2xl motion-preset-focus flex justify-center items-center motion-preset-blur-right max-w-lg p-6 mx-auto mt-0 text-lg text-white bg-black shadow-lg ${
+            className={`lg:max-w-2xl motion-preset-focus lg:flex lg:justify-center lg:items-center motion-preset-blur-right max-w-lg p-6 mx-auto mt-0 text-lg text-white bg-black shadow-lg ${
               isExpanded
                 ? "rounded-none"
                 : "motion-preset-fade motion-preset-blur-down"
             }`}
           >
             {/* List of services */}
-            <ul className=" grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 list-disc list-outside text-sm ">
+            <ul className=" grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 list-disc list-outside text-sm pl-4">
               {services.map((service, index) => (
                 <li key={index}>{service}</li>
               ))}

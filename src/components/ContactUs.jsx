@@ -78,7 +78,7 @@ const Contacts = ({ homeRef }) => {
         </a>
       </h2>
 
-      <div className="max-w-lg px-6 py-8 mx-auto bg-white border border-gray-300 rounded-lg shadow-lg isolate sm:py-8 lg:px-6 ">
+      <div className="max-w-lg px-4 py-8 mx-auto bg-white border border-gray-300 rounded-lg shadow-lg isolate sm:py-8 lg:px-6 ">
         <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
           {/* Name Field */}
           <div>
@@ -181,7 +181,7 @@ const Contacts = ({ homeRef }) => {
       </div>
 
       {/* Back Top Button */}
-      <div className="flex items-center justify-center mt-8 mb-4">
+      <div className="flex items-center justify-center mt-8 pb-4">
         <button
           onClick={() =>
             homeRef.current?.scrollIntoView({ behavior: "smooth" })
