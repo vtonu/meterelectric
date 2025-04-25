@@ -1,6 +1,6 @@
 const HeroSection = ({ contactRef }) => {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full pt-10">
       {/* Content */}
       <div className="relative flex flex-col items-center w-full max-w-6xl mx-auto ">
         <p className="max-w-4xl mx-auto mb-4 text-center text-md text-balance text-neutral-700 md:mb-8 lg:mb-8 md:text-2xl">

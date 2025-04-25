@@ -7,7 +7,7 @@ import project1_church from "../assets/projects/church.jpg";
 export const navItems = [
   { label: "HOME", scrollTo: "homeRef" },
   { label: "SERVICES", scrollTo: "servicesRef" },
-  { label: "PROJECTS", scrollTo: "projectsRef" },
+  { label: "GALLERY", scrollTo: "projectsRef" },
   { label: "CONTACT", scrollTo: "contactRef" },
 ];
 

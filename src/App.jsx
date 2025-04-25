@@ -23,7 +23,7 @@ const App = () => {
         projectsRef={projectsRef}
         contactRef={contactRef}
       />
-      <div className="pt-10 px-2">
+      <div className="">
         <div ref={homeRef}>
           <HeroSection contactRef={contactRef} />
         </div>

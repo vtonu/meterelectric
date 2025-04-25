@@ -51,7 +51,7 @@ const Contacts = ({ homeRef }) => {
 
   return (
     <div
-      className="mt-20  tracking-wide min-h-[300px]   bg-fixed bg-center "
+      className="mt-20  tracking-wide min-h-[300px]   bg-fixed bg-center bg-contain px-2"
       style={{
         backgroundImage: `url(${backgroundImage})`,
       }}
@@ -78,7 +78,7 @@ const Contacts = ({ homeRef }) => {
         </a>
       </h2>
 
-      <div className="max-w-lg px-6 py-8 mx-auto bg-white border border-gray-300 rounded-lg shadow-lg isolate sm:py-8 lg:px-6">
+      <div className="max-w-lg px-6 py-8 mx-auto bg-white border border-gray-300 rounded-lg shadow-lg isolate sm:py-8 lg:px-6 ">
         <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
           {/* Name Field */}
           <div>

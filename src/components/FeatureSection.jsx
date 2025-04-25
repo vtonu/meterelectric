@@ -16,7 +16,6 @@ const services = [
   "Fan & Chandelier Installation",
   "Smart Switches / Devices",
   "200 & 400 Amp Service Panel",
-  "Whole House Rewiring",
   "Panel Breaker Replacing",
   "Electrical Troubleshooting",
   "Electrical Rewiring",
@@ -34,14 +33,11 @@ const FeatureSection = () => {
 
   return (
     <div
-      className="relative mt-10 border-blue-700 min-h-[600px]  bg-cover bg-fixed"
+      className="relative mt-10 border-blue-700 min-h-[600px]  bg-contain bg-fixed"
       style={{
         backgroundImage: `url(${backgroundImage})`,
       }}
     >
-      {/* Background Grid for visual effect */}
-      {/* <div className="absolute h-full w-full bg-[radial-gradient(#3B82F6_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(clip_50%_50%_at_50%_50%,#000_100%,transparent_100%)] z-10 pointer-events-none"></div> */}
-
       {/* Section Title */}
       <h2 className="text-4xl tracking-wide text-center border-t-1  border-red-700 sm:text-5xl lg:text-6xl  bg-gradient-to-b from-red-100 to-transparent">
         <br></br>
