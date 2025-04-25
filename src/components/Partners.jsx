@@ -19,9 +19,9 @@ const Partners = () => {
         {partners.map((partner, index) => (
           <div key={index} className="w-full px-4 py-2 sm:w-1/2 lg:w-1/3">
             {/* Individual partner card */}
-            <div className="p-4 border-1 border-blue-700 rounded-md bg-neutral-900">
+            <div className="p-6 border-1 border-blue-700 rounded-sm bg-neutral-900">
               <a
-                href="https://www.generac.com" // Link to partner's website
+                /* href="https://www.generac.com" */ // Link to partner's website
                 target="_blank" // Opens the link in a new tab
                 rel="noopener noreferrer" // Prevents security vulnerabilities
               >
@@ -37,7 +37,7 @@ const Partners = () => {
 
       {/* Footer section with certification text */}
       <div className="flex items-center justify-center pt-6">
-        <span className="text-2xl text-center text-transparent bg-linear-to-r from-orange-700 to-orange-600 bg-clip-text">
+        <span className="text-2xl text-center text-transparent bg-linear-to-r from-orange-700 to-orange-600 bg-clip-text ">
           Certified Generac Installer
         </span>
       </div>

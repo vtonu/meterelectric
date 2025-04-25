@@ -16,8 +16,8 @@ const Footer = () => {
         LIC#: METEREL772R7
         <br></br> UBI#: 605-383-312
       </h6>
-
-      <h6 className="text-xs font-extralight text-neutral-700 ">
+      <br></br>
+      <h6 className="text-xs font-light text-neutral-700 ">
         Copyright © 2025 METER ELECTRIC LLC.
       </h6>
     </footer>

@@ -39,7 +39,7 @@ const FeatureSection = () => {
       }}
     >
       {/* Section Title */}
-      <h2 className="text-4xl tracking-wide text-center border-t-1  border-red-700 sm:text-5xl lg:text-6xl  bg-gradient-to-b from-red-100 to-transparent">
+      <h2 className="text-4xl tracking-wide text-center border-t-1  border-red-700 sm:text-5xl lg:text-6xl  bg-gradient-to-b from-red-50 to-transparent">
         <br></br>
         OUR{" "}
         <span className="text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">
@@ -68,7 +68,7 @@ const FeatureSection = () => {
 
         {/* Expandable Services Section */}
         <div
-          className={`motion-preset-focus motion-preset-blur-down transition-max-height duration-400 ease-in-out overflow-hidden ${
+          className={`motion-preset-focus motion-preset-blur-down transition-max-height duration-200 ease-in-out overflow-hidden ${
             isExpanded ? "max-h-screen px-2" : "max-h-0 "
           }`}
         >

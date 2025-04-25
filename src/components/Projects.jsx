@@ -19,7 +19,7 @@ const NextArrow = (props) => {
 
   return (
     <div
-      className={`${className} opacity-95 `}
+      className={`${className} opacity-90 `}
       onClick={onClick}
       style={{
         position: "absolute",
@@ -31,7 +31,7 @@ const NextArrow = (props) => {
         right: "auto",
         cursor: "pointer",
         backgroundColor: "red",
-        borderRadius: "5px",
+        borderRadius: "6px",
         width: "36px",
         height: "36px",
         display: "flex",
@@ -54,7 +54,7 @@ const PrevArrow = (props) => {
 
   return (
     <div
-      className={`${className} opacity-95 `}
+      className={`${className} opacity-90 `}
       onClick={onClick}
       style={{
         position: "absolute",
@@ -66,7 +66,7 @@ const PrevArrow = (props) => {
         right: "auto",
         cursor: "pointer",
         backgroundColor: "red",
-        borderRadius: "5px",
+        borderRadius: "6px",
         width: "36px",
         height: "36px",
         display: "flex",
