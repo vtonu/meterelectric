@@ -2,7 +2,7 @@ import { MoveUp } from "lucide-react";
 import emailjs from "emailjs-com";
 import { PhoneCall } from "lucide-react";
 import { useRef, useState } from "react";
-import backgroundImage from "../assets/backgroundwires.png";
+import backgroundImage from "../assets/backgroundwires2.png";
 
 const Contacts = ({ homeRef }) => {
   const formRef = useRef();
@@ -51,14 +51,14 @@ const Contacts = ({ homeRef }) => {
 
   return (
     <div
-      className="mt-20  tracking-wide min-h-[300px]   bg-fixed bg-center bg-contain px-2"
+      className="mt-20 tracking-wide min-h-[300px] bg-cover  px-2 "
       style={{
         backgroundImage: `url(${backgroundImage})`,
       }}
     >
       {/* Separate div for the border above remove max-w-4xl mx-auto for the line to extend*/}
-      <div className="border-t-1 border-red-700 max-w-4xl mx-auto "></div>
-      <h2 className="flex flex-col items-center gap-2 pt-12 mt-2 mb-2 text-5xl tracking-wide text-center">
+      <div className="border-t-1 border-red-700 max-w-4xl mx-auto  "></div>
+      <h2 className="flex flex-col items-center gap-2 pt-12 text-5xl tracking-wide text-center bg-gradient-to-b from-white-50 to-transparent">
         <div>
           CONTACT{" "}
           <span className="text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">

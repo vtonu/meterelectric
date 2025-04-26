@@ -111,10 +111,11 @@ const Projects = () => {
   ];
 
   return (
-    <div className="mt-20 relative">
+    <div className="mt-10 relative">
       <h2 className="mt-8 text-5xl tracking-wide text-center lg:text-6xl text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
         GALLERY
       </h2>
+      <br></br>
       <Slider {...settings} className="w-sm mx-auto ">
         {images.map((image, index) => (
           <div
