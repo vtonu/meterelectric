@@ -31,7 +31,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 font-light backdrop-blur-lg border-blue-700/80 mt-4">
+    <nav className="sticky top-0 z-50 font-light backdrop-blur-lg border-blue-700/80 ">
       <div className="container relative px-4 mx-auto lg:text-sm">
         <div className="flex items-center justify-between">
           {/* Logo section */}

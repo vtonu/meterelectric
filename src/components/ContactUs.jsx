@@ -57,7 +57,7 @@ const Contacts = ({ homeRef }) => {
       }}
     >
       {/* Separate div for the border above remove max-w-4xl mx-auto for the line to extend*/}
-      <div className="border-t-1 border-red-700 max-w-4xl mx-auto  "></div>
+      <div className="border-t-1 border-red-600 max-w-4xl mx-auto "></div>
       <h2 className="flex flex-col items-center gap-2 pt-12 text-5xl tracking-wide text-center bg-gradient-to-b from-white-50 to-transparent">
         <div>
           CONTACT{" "}
@@ -71,7 +71,7 @@ const Contacts = ({ homeRef }) => {
 
         <a
           href="tel:425-588-7578"
-          className="flex items-center justify-center gap-2 text-xl font-semibold text-blue-600"
+          className="flex items-center justify-center gap-2 text-xl font-semibold text-blue-600 pb-2"
         >
           <PhoneCall />
           <p>425-561-9562 </p>

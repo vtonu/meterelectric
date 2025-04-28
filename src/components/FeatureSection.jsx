@@ -39,7 +39,7 @@ const FeatureSection = () => {
       }}
     >
       {/* Section Title */}
-      <h2 className="text-4xl tracking-wide text-center border-t-1  border-blue-700 sm:text-5xl lg:text-6xl  bg-gradient-to-b from-blue-50 to-transparent ">
+      <h2 className="text-4xl tracking-wide text-center border-t-1  border-blue-600 sm:text-5xl lg:text-6xl  bg-gradient-to-b from-blue-50 to-transparent ">
         <br></br>
         OUR{" "}
         <span className="text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">
@@ -75,7 +75,7 @@ const FeatureSection = () => {
           <div
             className={`lg:max-w-2xl motion-preset-focus lg:flex lg:justify-center lg:items-center motion-preset-blur-right max-w-lg p-6 mx-auto mt-0 text-lg text-white bg-black shadow-lg ${
               isExpanded
-                ? "rounded-none"
+                ? "rounded-md"
                 : "motion-preset-fade motion-preset-blur-down"
             }`}
           >
@@ -113,7 +113,7 @@ const FeatureSection = () => {
         <div className="grid grid-cols-2 gap-2 pb-20 md:grid-cols-3"></div>
       </div>
       {/* Separate div for the border at the bottom */}
-      <div className="border-b border-red-700 max-w-4xl mx-auto"></div>
+      <div className="border-b border-red-600 max-w-4xl mx-auto"></div>
     </div>
   );
 };
