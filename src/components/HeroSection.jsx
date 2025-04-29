@@ -5,9 +5,9 @@ const HeroSection = ({ contactRef }) => {
     <div className="relative w-full min-h-[450px] h-auto max-h-[60vh] xs:max-h-[70vh] sm:h-auto bg-[url('/src/assets/herosection/headerbanner1.jpg')] bg-cover bg-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-white/95 to-transparent"></div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center h-full w-full max-w-6xl mx-auto pt-6 xs:pt-12 sm:pt-20 sm:px-6 sm:py-8 px-2">
-        <h2 className="text-3xl xs:text-4xl tracking-wide text-center sm:text-5xl lg:text-6xl mx-auto mb-4 xs:mb-6 sm:mb-8 mt-4  xs:mt-8">
-          <span className="text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text font-semibold">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full w-full max-w-6xl mx-auto pt-6 xs:pt-12 sm:pt-20 sm:px-6 sm:py-8 px-2  ">
+        <h2 className="text-3xl xs:text-4xl tracking-wide text-center sm:text-5xl lg:text-6xl mx-auto mb-4 xs:mb-6 sm:mb-8 mt-4  xs:mt-8 motion-preset-focus ">
+          <span className="text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text font-semibold ">
             Your go-to destination for quality electrical solutions.
           </span>
         </h2>
@@ -16,11 +16,11 @@ const HeroSection = ({ contactRef }) => {
           <div className="flex flex-col md:flex-row md:justify-center items-center w-full space-y-2 xs:space-y-4 md:space-y-0 md:space-x-32 pb-4">
             <ul className="flex flex-col space-y-1 xs:space-y-2">
               {[
-                "Licensed, Bonded, & Insured",
+                "Licensed, Bonded & Insured",
                 "2-year Warranty Guarantee",
                 "Transparent, Upfront Pricing",
                 "Locally & Family Owned",
-                "Free Estimates",
+                "FREE Estimates",
               ].map((item, index) => (
                 <li
                   key={index}

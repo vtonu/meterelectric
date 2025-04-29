@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,11 +16,24 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 // Custom Next Arrow Component
 const NextArrow = (props) => {
   const { className, onClick } = props;
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const handleClick = (e) => {
+    setIsAnimating(true);
+    onClick(e);
+
+    // Reset animation after it completes
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 300);
+  };
 
   return (
     <div
-      className={`${className} opacity-90 `}
-      onClick={onClick}
+      className={`custom-arrow next-arrow ${
+        isAnimating ? "motion-preset-focus" : ""
+      }`}
+      onClick={handleClick}
       style={{
         position: "absolute",
         bottom: "-65px",
@@ -40,10 +53,10 @@ const NextArrow = (props) => {
         fontSize: "0px",
         lineHeight: "0",
         color: "transparent",
+        transition: "all 0.2s ease-in-out",
       }}
     >
-      {/* Increase chevron size */}
-      {/* <ChevronRight size={24} color="white" /> */}
+      <ChevronRight size={24} color="white" />
     </div>
   );
 };
@@ -51,11 +64,24 @@ const NextArrow = (props) => {
 // Custom Previous Arrow Component
 const PrevArrow = (props) => {
   const { className, onClick } = props;
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const handleClick = (e) => {
+    setIsAnimating(true);
+    onClick(e);
+
+    // Reset animation after it completes
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 300);
+  };
 
   return (
     <div
-      className={`${className} opacity-90 `}
-      onClick={onClick}
+      className={`custom-arrow prev-arrow ${
+        isAnimating ? "motion-preset-focus" : ""
+      }`}
+      onClick={handleClick}
       style={{
         position: "absolute",
         bottom: "-65px",
@@ -75,10 +101,10 @@ const PrevArrow = (props) => {
         fontSize: "0px",
         lineHeight: "0",
         color: "transparent",
+        transition: "all 0.2s ease-in-out",
       }}
     >
-      {/* Increase chevron size */}
-      {/* <ChevronLeft size={24} color="white" /> */}
+      <ChevronLeft size={24} color="white" />
     </div>
   );
 };
@@ -86,16 +112,33 @@ const PrevArrow = (props) => {
 const Projects = () => {
   // Settings for the react-slick carousel
   const settings = {
-    dots: true,
+    className: "center",
+    centerMode: true,
+    centerPadding: "10px",
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 3,
     arrows: true,
     autoplay: true,
     autoplaySpeed: 5000,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          centerPadding: "10px",
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: "30px",
+        },
+      },
+    ],
   };
 
   const images = [
@@ -116,20 +159,45 @@ const Projects = () => {
         GALLERY
       </h2>
       <br></br>
-      <Slider {...settings} className="w-sm mx-auto ">
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className="focus:outline-none motion-preset-fade motion-preset-blur-down"
-          >
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="object-contain w-full h-96"
-            />
-          </div>
-        ))}
-      </Slider>
+      <div className="gallery-slider">
+        <Slider {...settings} className="mx-auto">
+          {images.map((image, index) => (
+            <div key={index} className="focus:outline-none px-1">
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="object-contain w-full h-96"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+      <style jsx>{`
+        .gallery-slider :global(.slick-slide:not(.slick-center)) {
+          opacity: 0.5;
+          transition: opacity 0.3s ease;
+        }
+
+        .gallery-slider :global(.slick-slide) {
+          transition: all 0.3s ease;
+        }
+
+        /* Hide default slick arrows */
+        .gallery-slider :global(.slick-prev),
+        .gallery-slider :global(.slick-next) {
+          display: none !important;
+        }
+
+        /* Only show our custom arrows */
+        .gallery-slider :global(.custom-arrow) {
+          display: flex !important;
+        }
+
+        /* Hover effect for arrows - more white */
+        .gallery-slider :global(.custom-arrow:hover) {
+          background-color: #4f85f0 !important;
+        }
+      `}</style>
     </div>
   );
 };

@@ -80,9 +80,11 @@ const FeatureSection = () => {
             }`}
           >
             {/* List of services */}
-            <ul className=" grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 list-disc list-outside text-sm pl-4">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-2 list-disc list-outside text-sm pl-4">
               {services.map((service, index) => (
-                <li key={index}>{service}</li>
+                <li key={index} className="pr-4 mr-2">
+                  {service}
+                </li>
               ))}
             </ul>
           </div>
