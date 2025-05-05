@@ -39,9 +39,9 @@ const Partners = () => {
         <div className="max-w-lg text-lg text-black text-left sm:text-center sm:px-0 px-4">
           Our certification means we’ve been thoroughly trained to meet
           Generac’s standards, ensuring your generator is installed correctly,
-          safely, and efficiently. Choosing a certified installer gives you
-          peace of mind and reliable service— making it a smart investment in
-          your home or business’s power security.
+          safely, and efficiently. Choosing Meter Electric gives you peace of
+          mind and reliable service— making it a smart investment in your home
+          or business’s power security.
         </div>
       </div>
     </div>

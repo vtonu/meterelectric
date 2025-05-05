@@ -45,7 +45,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
           <div className="hidden lg:flex items-center absolute left-1/2 transform -translate-x-1/2">
             <a
               href="tel:425-561-9562"
-              className="flex items-center gap-2 text-xl font-semibold text-blue-600"
+              className="flex items-center gap-2 text-2xl font-semibold text-blue-600"
             >
               <PhoneCall />
               <span>425-561-9562</span>
@@ -118,7 +118,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
         </a>
       </div>
 
-      <div className="relative p-2 mx-auto bg-blue-600 lg:text-sm"></div>
+      <div className="relative p-1 mx-auto bg-blue-600 lg:text-sm"></div>
     </nav>
   );
 };
