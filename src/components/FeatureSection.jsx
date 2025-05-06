@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { features } from "../constants";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import backgroundImage from "../assets/backgroundwires2.png";
+import backgroundImage from "../assets/backgroundwires.png";
 import { MapPinIcon } from "lucide-react";
 import serviceAreaImage from "../assets/herosection/citymap.jpg"; // Import the service area image
 

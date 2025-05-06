@@ -40,7 +40,7 @@ layer(base);
 }
 
 .animate-gradient-border {
-  animation: borderAnimation 5s linear infinite;
+  animation: borderAnimation 6s linear infinite;
   /* Ensures the border area is defined for the conic-gradient */
   border: 1px solid transparent; /* Adjust thickness (e.g., border-2px) if needed, ensure color is transparent */
 }
