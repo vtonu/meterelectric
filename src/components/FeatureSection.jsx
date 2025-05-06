@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { features } from "../constants";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import backgroundImage from "../assets/backgroundwires2.png";
+import { MapPinIcon } from "lucide-react";
+import serviceAreaImage from "../assets/herosection/citymap.jpg"; // Import the service area image
 
 // List of services to display in the expandable section
 const services = [
@@ -65,7 +67,6 @@ const FeatureSection = () => {
             <span className="ml-2">{isExpanded ? "Close" : "See All"}</span>
           </button>
         </div>
-
         {/* Expandable Services Section */}
         <div
           className={`motion-preset-focus motion-preset-blur-down transition-max-height duration-200 ease-in-out overflow-hidden ${
@@ -89,7 +90,6 @@ const FeatureSection = () => {
             </ul>
           </div>
         </div>
-
         {/* Features Section */}
         <div
           className="flex flex-wrap motion-preset-fade"
@@ -111,8 +111,74 @@ const FeatureSection = () => {
           ))}
         </div>
 
+        <h2 className="text-4xl tracking-wide text-center sm:text-5xl lg:text-4xl  ">
+          <br></br>
+
+          <span className="text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">
+            AREAS WE SERVE
+          </span>
+        </h2>
+        <div className="flex flex-col md:flex-row gap-0 items-center justify-center my-8 px-4">
+          {/* Service area map/image */}
+          <div className="w-full md:w-1/2 lg:w-2/5">
+            <img
+              src={serviceAreaImage}
+              alt="Our Service Areas"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+
+          {/* City list */}
+          <div className="w-full md:w-1/2 lg:w-3/5 bg-white/10  ">
+            {/* Two-column city list - keep container centered */}
+            <div className="grid grid-cols-2 gap-x-4 gap-y-2 justify-center">
+              <div>
+                <ul className="flex flex-col space-y-2">
+                  {[
+                    "Bothell",
+                    "Kirkland",
+                    "Bellevue",
+                    "Shoreline",
+                    "Issaquah",
+                  ].map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex items-center text-base xs:text-lg text-black"
+                    >
+                      <MapPinIcon className="mr-2 text-red-600" size={18} />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <ul className="flex flex-col space-y-2">
+                  {["Everett", "Sammamish", "Seattle", "Renton", "& More!"].map(
+                    (item, index) => (
+                      <li
+                        key={index}
+                        className="flex items-center text-base xs:text-lg text-black"
+                      >
+                        <MapPinIcon className="mr-2 text-red-600" size={18} />
+                        {item}
+                      </li>
+                    )
+                  )}
+                </ul>
+              </div>
+            </div>
+
+            {/* Slogan text */}
+            <div className="mt-6 ">
+              <p className="text-xl font-semibold text-blue-600">
+                Covering all projects across Snohomish, King, and Pierce
+                Counties.
+              </p>
+            </div>
+          </div>
+        </div>
         {/* Placeholder for additional grid content */}
-        <div className="grid grid-cols-2 gap-2 pb-20 md:grid-cols-3"></div>
+        <div className="grid grid-cols-2 gap-2 pb-5 md:grid-cols-3"></div>
       </div>
       {/* Separate div for the border at the bottom */}
       <div className="border-b border-red-600 max-w-4xl mx-auto"></div>

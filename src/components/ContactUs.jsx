@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import { PhoneCall } from "lucide-react";
 import { useRef, useState } from "react";
 import backgroundImage from "../assets/backgroundwires2.png";
+import aboutUsImage from "../assets/about-us.png";
 
 const Contacts = ({ homeRef }) => {
   const formRef = useRef();
@@ -58,6 +59,49 @@ const Contacts = ({ homeRef }) => {
     >
       {/* Separate div for the border above remove max-w-4xl mx-auto for the line to extend*/}
       <div className="border-t-1 border-red-600 max-w-4xl mx-auto "></div>
+      <div className="tracking-wide border-blue-600">
+        {/* Section title */}
+        <h2 className="pt-10 mt-6 text-4xl tracking-wide text-center sm:text-5xl lg:text-6xl">
+          <span className="text-center text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">
+            ABOUT US
+          </span>
+          <br></br> <br></br>
+        </h2>
+
+        {/* About Us content and image side by side */}
+        <div className="flex flex-wrap justify-center gap-8">
+          {/* Container for about us image */}
+          <div className="flex flex-wrap justify-center">
+            <div className="w-full px-4 py-2 sm:w-1/2 lg:w-1/1">
+              {/* Image container */}
+              <div>
+                <img
+                  className="w-full object-contain h-66"
+                  src={aboutUsImage}
+                  alt="Meter Electric Team"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* About us description */}
+          <div className="max-w-lg text-lg text-black text-left  sm:px-0 px-4">
+            <p className="mb-4">
+              As a local, family-owned business and with over 30 years of
+              experience in the electrical industry, we are committed to
+              delivering high-quality workmanship and reliable service on every
+              project.
+            </p>
+            <p className="mb-4">
+              What sets us apart is the personal care we bring to every job — we
+              treat your home or business like it’s our own, and we believe in
+              doing the job right the first time. We take pride in providing
+              solutions that are safe, efficient, and built to last.
+            </p>
+          </div>
+        </div>
+      </div>
+
       <h2 className="flex flex-col items-center gap-2 pt-12 text-5xl tracking-wide text-center bg-gradient-to-b from-white-50 to-transparent">
         <div>
           CONTACT{" "}

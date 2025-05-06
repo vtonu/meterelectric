@@ -10,13 +10,13 @@ Your go-to destination for quality electrical solutions, offering residential, c
 
 ### Keywords
 
-Electrical contractor, electrical services, residential electrician, commercial electrician, electrical repairs, electrical installations, MeterElectric, meter electric, professional electricians, electrical solutions, greater seattle area electric, seattle electricians, lynnwood electric, lynnwood electrician, lynnwood electrical contractor, seattle electric, north lynnwood electrical, lynnwood electrical company
+Electrical contractor, electrical services, residential electrician, commercial electrician, electrical repairs, electrical installations, MeterElectric, meter electric, professional electricians, electrical solutions, greater seattle area electric, seattle electricians, lynnwood electric, lynnwood electrician, lynnwood electrical contractor, seattle electric, north lynnwood electrical, lynnwood electrical company, bothell electrician, seattle electric, everett electrician, electrical service seattle, electrical service mill creek, bothell electricians, bothell electrical, kirkland electrician, shoreline electrician,
 
 #### NavBar section
 
 - Home
 - Services
-- Projects
+- Gallery
 - Contact
 
 #### Page section
@@ -24,29 +24,15 @@ Electrical contractor, electrical services, residential electrician, commercial 
 - Navbar.jsx - NavBar section
 - HeroSection.jsx - Company description & Call-to-Action button
 - FeatureSection.jsx - Our Services
-- Projects.jsx - Our Projects (Church Project, Gallery)
+- Projects.jsx - Gallery
 - Partners.jsx - Our Partners (Generac)
 - ContactUs.jsx - Contact Us form
 - Footer.jsx - Footer Logo
 
-### Image Alt Text
-
-- "Red residential home"
-- "Blue commercial panel"
-- "Gray industrial cables"
-
-### URL Structure
-
-- Homepage: `https://www.meterelectrical.com/`
-- Services: `https://www.meterelectrical.com/residential`
-- Commercial: `https://www.meterelectrical.com/commercial`
-- Industrial: `https://www.meterelectrical.com/industrial`
-- Projects: `https://www.meterelectrical.com/projects`
-
 ### Internal Linking
 
 - Services link from NavBar goes to OUR SERVICES section (top of the site)
-- Projects link from NavBar goes to OUR PROJECTS section (middle of the site)
+- Gallery link from NavBar goes to GALLERY section (middle of the site)
 - Contact link from NavBar goes to CONTACT US section (bottom of the site)
 
 ## GEO (Generative Search Optimization)
@@ -90,7 +76,7 @@ Electrical contractor, electrical services, residential electrician, commercial 
       "postalCode": "98087",
       "addressCountry": "United States of America"
     },
-    "telephone": "+1-425-588-7578",
+    "telephone": "+1-425-561-9562",
     "url": "https://www.meterelectrical.com/"
   }
 </script>
