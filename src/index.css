@@ -26,3 +26,21 @@ layer(base);
   font-family: "Poppins", sans-serif;
   color-scheme: light;
 }
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes borderAnimation {
+  to {
+    --border-angle: 360deg;
+  }
+}
+
+.animate-gradient-border {
+  animation: borderAnimation 5s linear infinite;
+  /* Ensures the border area is defined for the conic-gradient */
+  border: 1px solid transparent; /* Adjust thickness (e.g., border-2px) if needed, ensure color is transparent */
+}

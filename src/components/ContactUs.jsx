@@ -105,12 +105,6 @@ const Contacts = ({ homeRef }) => {
       </div>
 
       <h2 className="flex flex-col items-center gap-2 pt-12 text-5xl tracking-wide text-center bg-gradient-to-b from-white-50 to-transparent">
-        {/* <div>
-          CONTACT{" "}
-          <span className="text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">
-            US
-          </span>
-        </div> */}
         <h2 className="text-4xl tracking-widest text-center sm:text-5xl lg:text-4xl  text-transparent bg-linear-to-r from-zinc-900 to-zinc-950 bg-clip-text">
           CONTACT US
         </h2>
@@ -127,7 +121,7 @@ const Contacts = ({ homeRef }) => {
         </a>
       </h2>
 
-      <div className="max-w-lg px-4 py-8 mx-auto bg-white border border-gray-300 rounded-lg shadow-lg isolate sm:py-8 lg:px-6 ">
+      <div className="max-w-lg px-4 py-8 mx-auto rounded-lg shadow-lg isolate sm:py-8 lg:px-6 animate-gradient-border [background:linear-gradient(white,white)_padding-box,conic-gradient(from_var(--border-angle),transparent_0%,transparent_80%,theme(colors.blue.600/0.48)_82%,theme(colors.blue.500)_88%,theme(colors.blue.300)_92%,theme(colors.blue.500)_96%,theme(colors.blue.600/0.48)_98%,transparent_100%)_border-box]">
         <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
           {/* Name Field */}
           <div>

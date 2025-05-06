@@ -129,7 +129,7 @@ const Projects = () => {
     centerPadding: "10px",
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 5,
     arrows: true,
     autoplay: true,
     autoplaySpeed: 5000,
@@ -140,14 +140,14 @@ const Projects = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          centerPadding: "10px",
+          centerPadding: "0px",
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          centerPadding: "30px",
+          centerPadding: "10px",
         },
       },
     ],
@@ -185,7 +185,7 @@ const Projects = () => {
       className="mt-10 relative"
       onContextMenu={(e) => e.preventDefault()} // Disable right-click
     >
-      <h2 className="mt-8 text-5xl tracking-wide text-center lg:text-6xl text-transparent bg-gradient-to-r from-zinc-900 to-zinc-950 bg-clip-text">
+      <h2 className="mt-8 text-5xl tracking-wide text-center lg:text-6xl text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
         GALLERY
       </h2>
       <br></br>
