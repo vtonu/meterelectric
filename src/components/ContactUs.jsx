@@ -52,7 +52,7 @@ const Contacts = ({ homeRef }) => {
 
   return (
     <div
-      className="mt-20 tracking-wide min-h-[300px] bg-cover  px-2 "
+      className="mt-20 tracking-wide min-h-[300px] bg-cover  px-3 "
       style={{
         backgroundImage: `url(${backgroundImage})`,
       }}
@@ -73,7 +73,7 @@ const Contacts = ({ homeRef }) => {
         {/* About Us content and image side by side */}
         <div className="flex flex-wrap justify-center ">
           {/* Container for about us image */}
-          <div className="flex flex-wrap justify-center">
+          <div className="flex flex-wrap justify-center hover:scale-103 transition-transform duration-300 ease-in-out">
             <div className="w-full px-4 py-2 sm:w-1/2 lg:w-1/1">
               {/* Image container */}
               <div>
@@ -121,7 +121,7 @@ const Contacts = ({ homeRef }) => {
         </a>
       </h2>
 
-      <div className="max-w-lg px-4 py-8 mx-auto rounded-lg shadow-lg isolate sm:py-8 lg:px-6 animate-gradient-border [background:linear-gradient(white,white)_padding-box,conic-gradient(from_var(--border-angle),transparent_0%,transparent_70%,theme(colors.blue.600/0.48)_82%,theme(colors.blue.500)_88%,theme(colors.blue.300)_92%,theme(colors.blue.500)_96%,theme(colors.blue.600/0.48)_98%,transparent_100%)_border-box]">
+      <div className="max-w-lg px-4 py-8 mx-auto rounded-lg shadow-md isolate sm:py-8 lg:px-6 animate-gradient-border [background:linear-gradient(white,white)_padding-box,conic-gradient(from_var(--border-angle),transparent_0%,transparent_70%,theme(colors.blue.600/0.48)_82%,theme(colors.blue.500)_88%,theme(colors.blue.300)_92%,theme(colors.blue.500)_96%,theme(colors.blue.600/0.48)_98%,transparent_100%)_border-box] ">
         <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
           {/* Name Field */}
           <div>

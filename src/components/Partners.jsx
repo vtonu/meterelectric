@@ -21,16 +21,16 @@ const Partners = () => {
         {/* Container for partner logos */}
         <div className="flex flex-wrap justify-center">
           {partners.map((partner, index) => (
-            <div key={index} className="w-full px-4 py-2 sm:w-1/2 lg:w-1/1">
+            <div key={index} className="w-full px-4 py-2 sm:w-1/2 lg:w-1/1 ">
               {/* Individual partner card */}
-              <div className="p-6 border-1 border-blue-700 rounded-sm bg-neutral-900 hover:scale-103 transition-transform duration-300 ease-in-out">
+              <div className="p-6 border-1 border-blue-700 rounded-sm bg-neutral-900 hover:scale-103 transition-transform duration-300 ease-in-out ">
                 <a
                   /* href="https://www.generac.com" */ // Link to partner's website
                   target="_blank" // Opens the link in a new tab
                   rel="noopener noreferrer" // Prevents security vulnerabilities
                 >
                   <img
-                    className="w-full rounded-md h-30 object-contain" // Styling for the partner logo
+                    className="w-full rounded-md h-30 object-contain " // Styling for the partner logo
                     src={partner.image} // Partner logo image source
                   />
                 </a>

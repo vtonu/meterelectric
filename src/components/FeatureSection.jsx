@@ -59,25 +59,25 @@ const FeatureSection = () => {
             className={`flex items-center justify-center cursor-pointer w-48 h-12 text-white ${
               isExpanded
                 ? "bg-zinc-950 rounded-none border-none shadow-none"
-                : "border-zinc-950 border-1 bg-linear-to-r from-neutral-950 to-zinc-900 hover:to-zinc-600 shadow-zinc-600 rounded-b-lg  "
+                : "border-zinc-950 border-1 bg-linear-to-r from-neutral-950 to-zinc-900 hover:to-zinc-600 shadow-zinc-600 rounded-b-md motion-preset-focus "
             }`}
           >
             {/* Chevron icon and button label */}
             {isExpanded ? <ChevronUp /> : <ChevronDown />}
-            <span className="ml-2">{isExpanded ? "Close" : "See All"}</span>
+            <span className="ml-2 ">{isExpanded ? "Close" : "See All"}</span>
           </button>
         </div>
         {/* Expandable Services Section */}
         <div
-          className={`motion-preset-focus motion-preset-blur-down transition-max-height duration-200 ease-in-out overflow-hidden ${
+          className={` transition-max-height duration-200 ease-in-out overflow-hidden ${
             isExpanded ? "max-h-screen px-2" : "max-h-0 "
           }`}
         >
           <div
-            className={`lg:max-w-2xl motion-preset-focus lg:flex lg:justify-center lg:items-center motion-preset-blur-right max-w-lg p-6 mx-auto mt-0 text-lg text-white bg-zinc-950 shadow-lg ${
+            className={`lg:max-w-2xl lg:flex lg:justify-center lg:items-center motion-preset-blur-right max-w-lg p-6 mx-auto mt-0 text-lg text-white bg-zinc-950 shadow-lg ${
               isExpanded
-                ? "rounded-md"
-                : "motion-preset-fade motion-preset-blur-down"
+                ? "rounded-md motion-preset-blur-down "
+                : "motion-preset-blur-down rounded-md"
             }`}
           >
             {/* List of services */}
