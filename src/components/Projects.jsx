@@ -43,7 +43,7 @@ const NextArrow = (props) => {
   return (
     <div
       className={`custom-arrow next-arrow ${
-        isAnimating ? "motion-preset-focus" : ""
+        isAnimating ? "motion-preset-fade" : ""
       }`}
       onClick={handleClick}
       style={{
@@ -56,7 +56,7 @@ const NextArrow = (props) => {
         right: "auto",
         cursor: "pointer",
         backgroundColor: "#2563EB",
-        borderRadius: "6px",
+        borderRadius: "5px",
         width: "36px",
         height: "36px",
         display: "flex",
@@ -91,7 +91,7 @@ const PrevArrow = (props) => {
   return (
     <div
       className={`custom-arrow prev-arrow ${
-        isAnimating ? "motion-preset-focus" : ""
+        isAnimating ? "motion-preset-fade" : ""
       }`}
       onClick={handleClick}
       style={{
@@ -104,7 +104,7 @@ const PrevArrow = (props) => {
         right: "auto",
         cursor: "pointer",
         backgroundColor: "#2563EB",
-        borderRadius: "6px",
+        borderRadius: "5px",
         width: "36px",
         height: "36px",
         display: "flex",
@@ -181,8 +181,11 @@ const Projects = () => {
   ];
 
   return (
-    <div className="mt-10 relative">
-      <h2 className="mt-8 text-5xl tracking-wide text-center lg:text-6xl text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
+    <div
+      className="mt-10 relative"
+      onContextMenu={(e) => e.preventDefault()} // Disable right-click
+    >
+      <h2 className="mt-8 text-5xl tracking-wide text-center lg:text-6xl text-transparent bg-gradient-to-r from-zinc-900 to-zinc-950 bg-clip-text">
         GALLERY
       </h2>
       <br></br>

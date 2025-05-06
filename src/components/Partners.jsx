@@ -2,7 +2,10 @@ import { partners } from "../constants"; // Importing the list of partners from 
 
 const Partners = () => {
   return (
-    <div className="mt-20 tracking-wide min-h-[300px] border-blue-600">
+    <div
+      className="mt-20 tracking-wide min-h-[300px] border-blue-600"
+      onContextMenu={(e) => e.preventDefault()} // Disable right-click
+    >
       {/* Separate div for the border at the top */}
       <div className="border-b border-blue-700 max-w-4xl mx-auto "></div>
       {/* Section title */}

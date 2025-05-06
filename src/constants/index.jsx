@@ -20,7 +20,7 @@ export const partners = [
 export const features = [
   {
     description: (
-      <div className="p-4 font-normal text-center  rounded-xs shadow-xs border-neutral-900  font-sm  bg-linear-to-r from-neutral-900 to-neutral-900 cursor-default shadow-neutral-500">
+      <div className="p-4 font-normal text-center  rounded-xs shadow-xs border-neutral-950  font-sm  bg-linear-to-r from-neutral-900 to-zinc-950 cursor-default shadow-neutral-600">
         <span className="text-2xl text-red-600">RESIDENTIAL</span>
         <p className="p-2 text-left">
           Top-quality residential services, from EV car chargers, emergency
@@ -36,7 +36,7 @@ export const features = [
   },
   {
     description: (
-      <div className="p-4 font-normal text-center  rounded-xs shadow-xs border-neutral-900 font-sm  bg-linear-to-r from-neutral-900 to-neutral-900 cursor-default shadow-neutral-500">
+      <div className="p-4 font-normal text-center  rounded-xs shadow-xs border-neutral-950  font-sm  bg-linear-to-r from-neutral-900 to-zinc-950 cursor-default shadow-neutral-600">
         <span className="text-2xl text-blue-500">COMMERCIAL</span>
         <p className="p-2 text-left">
           From logic systems to automations & controls, Meter Electric provides
@@ -54,7 +54,7 @@ export const features = [
 
   {
     description: (
-      <div className="p-4 font-normal text-center  rounded-xs shadow-xs border-neutral-900  font-sm  bg-linear-to-r from-neutral-900 to-neutral-900 cursor-default shadow-neutral-500">
+      <div className="p-4 font-normal text-center  rounded-xs shadow-xs border-neutral-950  font-sm  bg-linear-to-r from-neutral-900 to-zinc-950 cursor-default shadow-neutral-600">
         <span className="text-2xl text-gray-400 ">INDUSTRIAL</span>
         <p className="p-2 text-left">
           From control systems troubleshooting to automations & controls, we are

@@ -59,13 +59,15 @@ const Contacts = ({ homeRef }) => {
     >
       {/* Separate div for the border above remove max-w-4xl mx-auto for the line to extend*/}
       <div className="border-t-1 border-red-600 max-w-4xl mx-auto "></div>
-      <div className="tracking-wide border-blue-600">
+      <div
+        className="tracking-wide border-blue-600"
+        onContextMenu={(e) => e.preventDefault()} // Disable right-click
+      >
         {/* Section title */}
-        <h2 className="pt-10 text-5xl tracking-wide text-center sm:text-5xl lg:text-6xl">
+        <h2 className="pt-10 pb-10 text-5xl tracking-wide text-center sm:text-5xl lg:text-6xl">
           <span className="text-center text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">
             ABOUT US
           </span>
-          <br></br> <br></br>
         </h2>
 
         {/* About Us content and image side by side */}
@@ -85,7 +87,7 @@ const Contacts = ({ homeRef }) => {
           </div>
 
           {/* About us description */}
-          <div className="max-w-lg text-lg text-black text-left  sm:px-0 px-4">
+          <div className="max-w-lg text-lg text-zinc-950 text-left  sm:px-0 px-4">
             <p className="mb-4">
               As a local, family-owned business and with over 30 years of
               experience in the electrical industry, we are committed to
@@ -103,19 +105,22 @@ const Contacts = ({ homeRef }) => {
       </div>
 
       <h2 className="flex flex-col items-center gap-2 pt-12 text-5xl tracking-wide text-center bg-gradient-to-b from-white-50 to-transparent">
-        <div>
+        {/* <div>
           CONTACT{" "}
           <span className="text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">
             US
           </span>
-        </div>
+        </div> */}
+        <h2 className="text-4xl tracking-widest text-center sm:text-5xl lg:text-4xl  text-transparent bg-linear-to-r from-zinc-900 to-zinc-950 bg-clip-text">
+          CONTACT US
+        </h2>
         <h6 className="flex gap-2 text-sm text-blue-600">
           Email - meterelectrical@gmail.com
         </h6>
 
         <a
           href="tel:425-588-7578"
-          className="flex items-center justify-center gap-2 text-xl font-semibold text-blue-600 pb-2"
+          className="flex items-center justify-center gap-2 text-2xl font-semibold text-blue-600 pb-2 hover:text-blue-500"
         >
           <PhoneCall />
           <p>425-561-9562 </p>
@@ -179,6 +184,7 @@ const Contacts = ({ homeRef }) => {
             </label>
             <div className="mt-2.5">
               <input
+                maxLength={50}
                 id="email"
                 name="user_email"
                 type="email"
@@ -206,7 +212,7 @@ const Contacts = ({ homeRef }) => {
                 required
                 placeholder="Your message here..."
                 maxLength="500"
-                className="block w-full px-3 py-2 text-base text-gray-900 bg-white border rounded-md outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500"
+                className="resize-none block w-full px-3 py-2 text-base text-gray-900 bg-white border rounded-md outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500"
               />
             </div>
           </div>
@@ -216,9 +222,11 @@ const Contacts = ({ homeRef }) => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className=" cursor-pointer block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-2xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:bg-blue-300 group-active:motion-preset-blur-down group-active:motion-preset-fade"
+              className="cursor-pointer block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-2xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:bg-blue-400 "
             >
-              {isSubmitting ? "Sending..." : "Submit"}
+              <span className="block group-active:[transform:translate3d(0,1px,0)]">
+                {isSubmitting ? "Sending..." : "Submit"}
+              </span>
             </button>
           </div>
         </form>
@@ -230,10 +238,12 @@ const Contacts = ({ homeRef }) => {
           onClick={() =>
             homeRef.current?.scrollIntoView({ behavior: "smooth" })
           }
-          className="flex px-4 py-3 mx-2 font-medium border-blue-600 rounded-xs shadow-xs border-1 bg-linear-to-r from-blue-400 to-blue-800 text-amber-50 hover:to-blue-600 shadow-sky-200 md:mb-4 lg:mb-4 md:px-6 md:py-4 md:text-lg cursor-pointer"
+          className="group flex items-center max-w-[180px] px-4 py-2 font-medium border-blue-600 rounded-md shadow-xs border-1 bg-linear-to-r from-blue-400 to-blue-800 text-amber-50 hover:to-blue-600 text-sm cursor-pointer"
         >
-          <MoveUp />
-          Back to Top
+          <span className="flex items-center gap-1 group-active:[transform:translate3d(0,1px,0)]">
+            <MoveUp size={16} />
+            Back to Top
+          </span>
         </button>
       </div>
     </div>

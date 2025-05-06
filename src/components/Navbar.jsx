@@ -45,7 +45,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
           <div className="hidden lg:flex items-center absolute left-1/2 transform -translate-x-1/2">
             <a
               href="tel:425-561-9562"
-              className="flex items-center gap-2 text-2xl font-semibold text-blue-600"
+              className="flex items-center gap-2 text-2xl font-semibold text-blue-600 hover:text-blue-500"
             >
               <PhoneCall />
               <span>425-561-9562</span>
@@ -66,7 +66,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
                     if (item.scrollTo === "contactRef")
                       handleScroll(contactRef);
                   }}
-                  className="p-1 text-blue-700 hover:underline hover:bg-blue-100 cursor-pointer"
+                  className="p-1 text-blue-700 relative bg-[linear-gradient(transparent,transparent),linear-gradient(#3b82f6,#3b82f6)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat transition-[background-size,color] duration-300 hover:bg-[0_2px,100%_2px] hover:text-blue-500 cursor-pointer"
                 >
                   {item.label}
                 </button>
@@ -98,7 +98,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
                       if (item.scrollTo === "contactRef")
                         handleScroll(contactRef);
                     }}
-                    className="text-blue-700 hover:underline"
+                    className="text-blue-700 relative bg-[linear-gradient(transparent,transparent),linear-gradient(#3b82f6,#3b82f6)] bg-[length:100%_2px,0_2px] bg-[position:100%_100%,0_100%] bg-no-repeat transition-[background-size] duration-300 hover:bg-[0_2px,100%_2px] cursor-pointer"
                   >
                     {item.label}
                   </button>

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import FeatureSection from "./components/FeatureSection";
@@ -14,6 +14,11 @@ const App = () => {
   const servicesRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
+
+  // Scroll to top on page refresh
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

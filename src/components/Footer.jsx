@@ -2,7 +2,10 @@ import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="py-10  text-center border-t border-blue-600 bg-gradient-to-b from-blue-100 to-transparent">
+    <footer
+      className="py-10  text-center border-t border-blue-600 bg-gradient-to-b from-blue-100 to-transparent"
+      onContextMenu={(e) => e.preventDefault()} // Disable right-click
+    >
       <h3 className="flex flex-col items-center">
         <img
           className="h-20 m-2"

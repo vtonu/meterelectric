@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { features } from "../constants";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import backgroundImage from "../assets/backgroundwires2.png";
+import backgroundImage from "../assets/backgroundwires.png";
 import { MapPinIcon } from "lucide-react";
 import serviceAreaImage from "../assets/herosection/citymap.jpg"; // Import the service area image
 
@@ -35,7 +35,7 @@ const FeatureSection = () => {
 
   return (
     <div
-      className="relative   min-h-[600px] bg-cover "
+      className="relative   min-h-[600px] bg-cover d"
       style={{
         backgroundImage: `url(${backgroundImage})`,
       }}
@@ -58,8 +58,8 @@ const FeatureSection = () => {
             onClick={toggleExpand}
             className={`flex items-center justify-center cursor-pointer w-48 h-12 text-white ${
               isExpanded
-                ? "bg-black rounded-none border-none shadow-none"
-                : "border-neutral-900 border-1 bg-linear-to-r from-neutral-950 to-neutral-900 hover:to-neutral-800 shadow-neutral-500 rounded-b-xl motion-preset-fade  motion-preset-blur-down"
+                ? "bg-zinc-950 rounded-none border-none shadow-none"
+                : "border-zinc-950 border-1 bg-linear-to-r from-neutral-950 to-zinc-900 hover:to-zinc-700 shadow-zinc-600 rounded-b-lg  "
             }`}
           >
             {/* Chevron icon and button label */}
@@ -74,7 +74,7 @@ const FeatureSection = () => {
           }`}
         >
           <div
-            className={`lg:max-w-2xl motion-preset-focus lg:flex lg:justify-center lg:items-center motion-preset-blur-right max-w-lg p-6 mx-auto mt-0 text-lg text-white bg-black shadow-lg ${
+            className={`lg:max-w-2xl motion-preset-focus lg:flex lg:justify-center lg:items-center motion-preset-blur-right max-w-lg p-6 mx-auto mt-0 text-lg text-white bg-zinc-950 shadow-lg ${
               isExpanded
                 ? "rounded-md"
                 : "motion-preset-fade motion-preset-blur-down"
@@ -118,7 +118,10 @@ const FeatureSection = () => {
             AREAS WE SERVE
           </span>
         </h2>
-        <div className="flex flex-col md:flex-row gap-0 items-center justify-center my-8 px-4">
+        <div
+          className="flex flex-col md:flex-row gap-0 items-center justify-center my-8 px-4"
+          onContextMenu={(e) => e.preventDefault()} // Disable right-click
+        >
           {/* Service area map/image */}
           <div className="w-full md:w-1/2 lg:w-2/5">
             <img
@@ -143,7 +146,7 @@ const FeatureSection = () => {
                   ].map((item, index) => (
                     <li
                       key={index}
-                      className="flex items-center text-base xs:text-lg text-black"
+                      className="flex items-center text-base xs:text-lg text-zinc-950"
                     >
                       <MapPinIcon className="mr-2 text-red-600" size={18} />
                       {item}
@@ -157,7 +160,7 @@ const FeatureSection = () => {
                     (item, index) => (
                       <li
                         key={index}
-                        className="flex items-center text-base xs:text-lg text-black"
+                        className="flex items-center text-base xs:text-lg text-zinc-950"
                       >
                         <MapPinIcon className="mr-2 text-red-600" size={18} />
                         {item}
@@ -170,7 +173,7 @@ const FeatureSection = () => {
 
             {/* Slogan text */}
             <div className="mt-6 ">
-              <p className="text-xl font-semibold text-black">
+              <p className="text-xl font-semibold text-zinc-950">
                 Covering all projects across Snohomish, King, and Pierce County.
               </p>
             </div>

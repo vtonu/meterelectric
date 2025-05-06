@@ -42,15 +42,19 @@ const HeroSection = ({ contactRef }) => {
                 onClick={() =>
                   contactRef.current?.scrollIntoView({ behavior: "smooth" })
                 }
-                className="w-full max-w-[240px] px-4 xs:px-6 py-3 xs:py-4 font-medium border-blue-600 rounded-md shadow-xs border-1 bg-linear-to-r from-blue-400 to-blue-800 text-amber-50 hover:to-blue-600 text-base xs:text-lg cursor-pointer motion-preset-bounce"
+                className="group w-full max-w-[240px] px-4 xs:px-6 py-3 xs:py-4 font-medium border-blue-700 rounded-md shadow-xs border-1 bg-linear-to-r from-blue-400 to-blue-800 text-amber-50 hover:to-blue-600 text-base xs:text-lg cursor-pointer motion-preset-bounce"
               >
-                GET A QUOTE TODAY
+                <span className="block group-active:[transform:translate3d(0,1px,0)]">
+                  GET A QUOTE TODAY
+                </span>
               </button>
               <button
                 onClick={() => (window.location.href = "tel:425-561-9562")}
-                className="w-full max-w-[240px] px-4 xs:px-6 py-3 xs:py-4 font-medium border-red-600 rounded-md shadow-xs border-1 bg-linear-to-r from-red-400 to-red-800 text-amber-50 hover:to-red-600 text-base xs:text-lg cursor-pointer motion-preset-bounce"
+                className="group w-full max-w-[240px] px-4 xs:px-6 py-3 xs:py-4 font-medium border-red-700 rounded-md shadow-xs border-1 bg-linear-to-r from-red-400 to-red-800 text-amber-50 hover:to-red-600 text-base xs:text-lg cursor-pointer motion-preset-bounce"
               >
-                CALL US NOW
+                <span className="block group-active:[transform:translate3d(0,1px,0)]">
+                  CALL US NOW
+                </span>
               </button>
             </div>
           </div>

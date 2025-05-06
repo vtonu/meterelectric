@@ -4,35 +4,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
 import ErrorPage from "./error-page";
-import ResidentialPage from "./routes/residentialpage";
-import IndustrialPage from "./routes/industrialpage";
-import CommercialPage from "./routes/commercialpage";
-import ChurchProjectPage from "./routes/churchprojectpage";
 
+// Simplified router with only the main App route
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "residential",
-    element: <ResidentialPage />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "industrial",
-    element: <IndustrialPage />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "commercial",
-    element: <CommercialPage />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "projects",
-    element: <ChurchProjectPage />,
     errorElement: <ErrorPage />,
   },
 ]);
