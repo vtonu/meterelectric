@@ -45,7 +45,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
           <div className="hidden lg:flex items-center absolute left-1/2 transform -translate-x-1/2">
             <a
               href="tel:425-561-9562"
-              className="flex items-center gap-2 text-2xl font-semibold text-blue-600 hover:text-blue-500"
+              className="flex items-center gap-2 text-2xl font-semibold text-blue-600 hover:text-blue-500 hover:scale-102 transition-transform duration-300 ease-in-out"
             >
               <PhoneCall />
               <span>425-561-9562</span>

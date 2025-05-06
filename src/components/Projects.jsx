@@ -189,7 +189,7 @@ const Projects = () => {
         GALLERY
       </h2>
       <br></br>
-      <div className="gallery-slider motion-preset-blur-down">
+      <div className="gallery-slider ">
         <Slider {...settings} className="mx-auto">
           {images.map((image, index) => (
             <div key={index} className="focus:outline-none px-1">

@@ -114,7 +114,7 @@ const Contacts = ({ homeRef }) => {
 
         <a
           href="tel:425-588-7578"
-          className="flex items-center justify-center gap-2 text-2xl font-semibold text-blue-600 pb-2 hover:text-blue-500"
+          className="flex items-center justify-center gap-2 text-2xl font-semibold text-blue-600 pb-2 hover:text-blue-500 hover:scale-102 transition-transform duration-300 ease-in-out"
         >
           <PhoneCall />
           <p>425-561-9562 </p>

@@ -59,7 +59,7 @@ const FeatureSection = () => {
             className={`flex items-center justify-center cursor-pointer w-48 h-12 text-white ${
               isExpanded
                 ? "bg-zinc-950 rounded-none border-none shadow-none"
-                : "border-zinc-950 border-1 bg-linear-to-r from-neutral-950 to-zinc-900 hover:to-zinc-700 shadow-zinc-600 rounded-b-lg  "
+                : "border-zinc-950 border-1 bg-linear-to-r from-neutral-950 to-zinc-900 hover:to-zinc-600 shadow-zinc-600 rounded-b-lg  "
             }`}
           >
             {/* Chevron icon and button label */}
@@ -81,7 +81,7 @@ const FeatureSection = () => {
             }`}
           >
             {/* List of services */}
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-2 list-disc list-outside text-sm pl-4">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-2 list-disc list-outside text-sm pl-4 ">
               {services.map((service, index) => (
                 <li key={index} className="pr-4 mr-2">
                   {service}
@@ -92,7 +92,7 @@ const FeatureSection = () => {
         </div>
         {/* Features Section */}
         <div
-          className="flex flex-wrap motion-preset-fade"
+          className="flex flex-wrap motion-preset-fade "
           onContextMenu={(e) => e.preventDefault()} // Disable right-click
         >
           {features.map((feature, index) => (
@@ -103,7 +103,7 @@ const FeatureSection = () => {
                 {/* Feature icon */}
                 <div>{feature.icon}</div>
                 {/* Feature description with link */}
-                <p className="p-2 text-md text-amber-50">
+                <p className="p-2 text-md text-amber-50 ">
                   <Link to={feature.link}>{feature.description}</Link>
                 </p>
               </div>

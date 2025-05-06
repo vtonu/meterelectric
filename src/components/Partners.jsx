@@ -23,7 +23,7 @@ const Partners = () => {
           {partners.map((partner, index) => (
             <div key={index} className="w-full px-4 py-2 sm:w-1/2 lg:w-1/1">
               {/* Individual partner card */}
-              <div className="p-6 border-1 border-blue-700 rounded-sm bg-neutral-900">
+              <div className="p-6 border-1 border-blue-700 rounded-sm bg-neutral-900 hover:scale-103 transition-transform duration-300 ease-in-out">
                 <a
                   /* href="https://www.generac.com" */ // Link to partner's website
                   target="_blank" // Opens the link in a new tab
@@ -39,7 +39,7 @@ const Partners = () => {
           ))}
         </div>
         {/* Certification description */}
-        <div className="max-w-lg text-lg text-black text-left sm:text-center sm:px-0 px-4">
+        <div className="max-w-lg text-lg text-black text-left sm:text-center sm:px-0 px-4 ">
           Our certification means we’ve been thoroughly trained to meet
           Generac’s standards, ensuring your generator is installed correctly,
           safely, and efficiently. Choosing Meter Electric gives you peace of
