@@ -61,7 +61,7 @@ const Contacts = ({ homeRef }) => {
       <div className="border-t-1 border-red-600 max-w-4xl mx-auto "></div>
       <div className="tracking-wide border-blue-600">
         {/* Section title */}
-        <h2 className="pt-10 mt-6 text-4xl tracking-wide text-center sm:text-5xl lg:text-6xl">
+        <h2 className="pt-10 text-5xl tracking-wide text-center sm:text-5xl lg:text-6xl">
           <span className="text-center text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">
             ABOUT US
           </span>
@@ -69,16 +69,16 @@ const Contacts = ({ homeRef }) => {
         </h2>
 
         {/* About Us content and image side by side */}
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center ">
           {/* Container for about us image */}
           <div className="flex flex-wrap justify-center">
             <div className="w-full px-4 py-2 sm:w-1/2 lg:w-1/1">
               {/* Image container */}
               <div>
                 <img
-                  className="w-full object-contain h-66"
+                  className="w-full object-contain h-56"
                   src={aboutUsImage}
-                  alt="Meter Electric Team"
+                  alt="Meter Electric Van"
                 />
               </div>
             </div>
