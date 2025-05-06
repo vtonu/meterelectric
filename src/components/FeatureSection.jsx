@@ -114,7 +114,7 @@ const FeatureSection = () => {
         <h2 className="text-4xl tracking-wide text-center sm:text-5xl lg:text-4xl  ">
           <br></br>
 
-          <span className="text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">
+          <span className="text-transparent bg-linear-to-r from-red-500 to-blue-700 bg-clip-text">
             AREAS WE SERVE
           </span>
         </h2>
@@ -170,9 +170,8 @@ const FeatureSection = () => {
 
             {/* Slogan text */}
             <div className="mt-6 ">
-              <p className="text-xl font-semibold text-blue-600">
-                Covering all projects across Snohomish, King, and Pierce
-                Counties.
+              <p className="text-xl font-semibold text-black">
+                Covering all projects across Snohomish, King, and Pierce County.
               </p>
             </div>
           </div>
