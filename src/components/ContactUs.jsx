@@ -73,7 +73,7 @@ const Contacts = ({ homeRef }) => {
         {/* About Us content and image side by side */}
         <div className="flex flex-wrap justify-center ">
           {/* Container for about us image */}
-          <div className="flex flex-wrap justify-center hover:scale-103 transition-transform duration-300 ease-in-out">
+          <div className="flex flex-wrap justify-center hover:scale-102 transition-transform duration-200 ease-in-out">
             <div className="w-full px-4 py-2 sm:w-1/2 lg:w-1/1">
               {/* Image container */}
               <div>

@@ -76,10 +76,8 @@ const FeatureSection = () => {
           }`}
         >
           <div
-            className={`lg:max-w-2xl lg:flex lg:justify-center lg:items-center motion-preset-blur-right max-w-lg p-6 mx-auto mt-0 text-lg text-white bg-zinc-950 shadow-lg ${
-              isExpanded
-                ? "rounded-md motion-preset-blur-down "
-                : "motion-preset-blur-down rounded-md"
+            className={`lg:max-w-2xl lg:flex lg:justify-center lg:items-center  max-w-lg p-6 mx-auto mt-0 text-lg text-white bg-zinc-950 shadow-lg ${
+              isExpanded ? "rounded-md  " : " rounded-md"
             }`}
           >
             {/* List of services */}
@@ -97,7 +95,7 @@ const FeatureSection = () => {
         </div>
         {/* Features Section */}
         <div
-          className="flex flex-wrap motion-preset-fade "
+          className="flex flex-wrap motion-preset-fade pt-4"
           onContextMenu={(e) => e.preventDefault()} // Disable right-click
         >
           {features.map((feature, index) => (
@@ -133,7 +131,7 @@ const FeatureSection = () => {
           onContextMenu={(e) => e.preventDefault()} // Disable right-click
         >
           {/* Service area map/image */}
-          <div className="w-full md:w-1/2 lg:w-2/5">
+          <div className="w-full md:w-1/2 lg:w-2/5 hover:scale-102 transition-transform duration-200 ease-in-out px-2">
             <img
               src={serviceAreaImage}
               alt="Map showing the areas we serve, including Bothell, Kirkland, and more."

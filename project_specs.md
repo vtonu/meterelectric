@@ -2,7 +2,7 @@
 
 ### Title
 
-Meter Electric LLC - Professional Electrical Contractor Services in the Greater Seattle Area
+METER ELECTRIC LLC - Professional Electrical Contractor Services in the Greater Seattle Area in Washington State.
 
 ### Meta Description
 
@@ -10,53 +10,77 @@ Your go-to destination for quality electrical solutions, offering residential, c
 
 ### Keywords
 
-Electrical contractor, electrical services, residential electrician, commercial electrician, electrical repairs, electrical installations, MeterElectric, meter electric, professional electricians, electrical solutions, greater seattle area electric, seattle electricians, lynnwood electric, lynnwood electrician, lynnwood electrical contractor, seattle electric, north lynnwood electrical, lynnwood electrical company, bothell electrician, seattle electric, everett electrician, electrical service seattle, electrical service mill creek, bothell electricians, bothell electrical, kirkland electrician, shoreline electrician,
+Electrical contractor, electrical services, residential electrician, commercial electrician, electrical repairs, electrical installations, MeterElectric, meter electric, professional electricians, electrical solutions, greater seattle area electric, seattle electricians, lynnwood electric, lynnwood electrician, lynnwood electrical contractor, seattle electric, north lynnwood electrical, lynnwood electrical company, bothell electrician, seattle electric, everett electrician, electrical service seattle, electrical service mill creek, bothell electricians, bothell electrical, kirkland electrician, shoreline electrician, washington electric, washington state electrician, washington state electric, WA electrician, washington state electrical contractor
 
-#### NavBar section
+#### Navbar section
 
-- Home
-- Services
-- Gallery
-- Contact
+- HOME
+- SERVICES
+- GALLERY
+- CONTACT
 
 #### Page section
 
-- Navbar.jsx - NavBar section
-- HeroSection.jsx - Company description & Call-to-Action button
-- FeatureSection.jsx - Our Services
-- Projects.jsx - Gallery
-- Partners.jsx - Our Partners (Generac)
-- ContactUs.jsx - Contact Us form
-- Footer.jsx - Footer Logo
+- Navbar.jsx - Navbar section
+- HeroSection.jsx - Slogan & Call-to-Action buttons (Get a Quote Today & Call Us Now)
+- FeatureSection.jsx - Our Services (Residential, Commercial & Industrial)
+- Areas We Serve Section
+- Gallery Slider
+- Certified Generac Installer Section (Generac Logo)
+- ContactUs.jsx - About Us & Contact Form
+- Footer.jsx - Footer Logo, License # & Copyright Info
 
 ### Internal Linking
 
-- Services link from NavBar goes to OUR SERVICES section (top of the site)
-- Gallery link from NavBar goes to GALLERY section (middle of the site)
-- Contact link from NavBar goes to CONTACT US section (bottom of the site)
+- SERVICES link from Navbar goes to OUR SERVICES section (top of the site)
+- GALLERY link from Navbar goes to GALLERY Slider section (middle of the site)
+- CONTACT link from Navbar goes to CONTACT US section (bottom of the site)
 
 ## GEO (Generative Search Optimization)
 
 ### Local Keywords
 
 - Professional electrical contractors Seattle
+- Greater Seattle Area electrical services
+- Washington Electrical Installation Services
+- Washington Electrician Contractor Seattle
+- WA Emergency Generator Installation
+- Seattle Electrical Safety Inspections
+- Seattle EV Car Charger Installation
+- Seattle Electrical Contractor
+- Greater Seattle Area Electrician
 - Emergency electrical services Seattle
 - Affordable electrical solutions Seattle
-- Greater Seattle Area electrical services
-- Electrical contractor in Seattle
+- Washington Electrical Contractor
 - Seattle residential electrician
-- Lynnwood commercial electrician
+- WA State Electrical Contractor
+- Washington Electricians
+- Local Seattle electrical repairs
+- Washington Electrician Near Me
+- WA Panel Upgrades & Replacement
 - Top-rated Seattle electricians
-- Local electrical repairs
-- Best electricians near me
-- Emergency Generator Installation
-- Panel Upgrades & Replacement
+- Washington Electrical Repairs
+- Local Seattle Electricians
+- Best electrician near seattle
 - Electrical Installation Services
+- Panel Upgrades & Replacement
+- Seattle Electrical Repairs
+- Seattle Surge Protection Services
+- Seattle Surge Protection
+- WA State Electrician
+- Emergency Generator Installation
 - Electrical Safety Inspections
-- EV Car Charger Installation
 - Electrical Rewiring
 - Electrical Repairs
-- Surge Protection
+- Washington Electrician
+- Local electrical repairs
+- EV Car Charger Installation
+- Local Seattle Electric
+- Bothell Electricians
+- Kirkland Electricians
+- WA State Electric
+- WA Meter Electric
+- Best electricians near me
 
 ### Schema Markup
 
