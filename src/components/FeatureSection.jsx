@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { features } from "../constants";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import backgroundImage from "../assets/backgroundwires.png";
 import { MapPinIcon } from "lucide-react";
-import serviceAreaImage from "../assets/herosection/citymap.jpg"; // Import the service area image
+import backgroundImage from "../assets/backgroundwires_featured.webp"; // Hero Background Image
+import serviceAreaImage from "../assets/herosection/citymap.webp"; // City Map Image
 
 // List of services to display in the expandable section
 const services = [
@@ -56,15 +56,17 @@ const FeatureSection = () => {
         <div className="flex justify-center ">
           <button
             onClick={toggleExpand}
+            aria-label={
+              isExpanded ? "Collapse services list" : "Expand services list"
+            }
             className={`flex items-center justify-center cursor-pointer w-48 h-12 text-white ${
               isExpanded
                 ? "bg-zinc-950 rounded-none border-none shadow-none"
                 : "border-zinc-950 border-1 bg-linear-to-r from-neutral-950 to-zinc-900 hover:to-zinc-600 shadow-zinc-600 rounded-b-md motion-preset-focus "
             }`}
           >
-            {/* Chevron icon and button label */}
             {isExpanded ? <ChevronUp /> : <ChevronDown />}
-            <span className="ml-2 ">{isExpanded ? "Close" : "See All"}</span>
+            <span className="ml-2">{isExpanded ? "Close" : "See All"}</span>
           </button>
         </div>
         {/* Expandable Services Section */}
@@ -81,9 +83,12 @@ const FeatureSection = () => {
             }`}
           >
             {/* List of services */}
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-2 list-disc list-outside text-sm pl-4 ">
+            <ul
+              className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-2 list-disc list-outside text-sm pl-4"
+              role="list"
+            >
               {services.map((service, index) => (
-                <li key={index} className="pr-4 mr-2">
+                <li key={index} className="pr-4 mr-2" role="listitem">
                   {service}
                 </li>
               ))}
@@ -103,8 +108,13 @@ const FeatureSection = () => {
                 {/* Feature icon */}
                 <div>{feature.icon}</div>
                 {/* Feature description with link */}
-                <p className="p-2 text-md text-amber-50 ">
-                  <Link to={feature.link}>{feature.description}</Link>
+                <p className="p-2 text-md text-amber-50">
+                  <Link
+                    to={feature.link}
+                    aria-label={`Learn more about ${feature.text}`}
+                  >
+                    {feature.description}
+                  </Link>
                 </p>
               </div>
             </div>
@@ -126,7 +136,7 @@ const FeatureSection = () => {
           <div className="w-full md:w-1/2 lg:w-2/5">
             <img
               src={serviceAreaImage}
-              alt="Our Service Areas"
+              alt="Map showing the areas we serve, including Bothell, Kirkland, and more."
               className="w-full h-auto object-cover"
             />
           </div>

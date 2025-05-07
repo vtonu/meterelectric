@@ -2,8 +2,8 @@ import { MoveUp } from "lucide-react";
 import emailjs from "emailjs-com";
 import { PhoneCall } from "lucide-react";
 import { useRef, useState } from "react";
-import backgroundImage from "../assets/backgroundwires2.png";
-import aboutUsImage from "../assets/about-us.png";
+import backgroundImage from "../assets/backgroundwires_blue.webp"; // Contact Us Background Image
+import aboutUsImage from "../assets/about-us.webp"; // About Us Van
 
 const Contacts = ({ homeRef }) => {
   const formRef = useRef();
@@ -80,7 +80,7 @@ const Contacts = ({ homeRef }) => {
                 <img
                   className="w-full object-contain h-56"
                   src={aboutUsImage}
-                  alt="Meter Electric Van"
+                  alt="Meter Electric Van Illustration"
                 />
               </div>
             </div>
@@ -114,14 +114,15 @@ const Contacts = ({ homeRef }) => {
 
         <a
           href="tel:425-588-7578"
+          aria-label="Call us at 425-561-9562"
           className="flex items-center justify-center gap-2 text-2xl font-semibold text-blue-600 pb-2 hover:text-blue-500 hover:scale-102 transition-transform duration-300 ease-in-out"
         >
           <PhoneCall />
-          <p>425-561-9562 </p>
+          <p>425-561-9562</p>
         </a>
       </h2>
 
-      <div className="max-w-lg px-4 py-8 mx-auto rounded-lg shadow-md isolate sm:py-8 lg:px-6 animate-gradient-border [background:linear-gradient(white,white)_padding-box,conic-gradient(from_var(--border-angle),transparent_0%,transparent_70%,theme(colors.blue.600/0.48)_82%,theme(colors.blue.500)_88%,theme(colors.blue.300)_92%,theme(colors.blue.500)_96%,theme(colors.blue.600/0.48)_98%,transparent_100%)_border-box] ">
+      <div className="max-w-lg px-4 py-8 mx-auto rounded-lg shadow-md isolate sm:py-8 lg:px-6 animate-gradient-border [background:linear-gradient(white,white)_padding-box,conic-gradient(from_var(--border-angle),transparent_0%,transparent_60%,theme(colors.blue.600/0.48)_82%,theme(colors.blue.500)_88%,theme(colors.blue.300)_92%,theme(colors.blue.500)_96%,theme(colors.blue.600/0.48)_98%,transparent_100%)_border-box] ">
         <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
           {/* Name Field */}
           <div>
@@ -137,6 +138,7 @@ const Contacts = ({ homeRef }) => {
                 name="from_name"
                 type="text"
                 required
+                aria-describedby="name-description"
                 autoComplete="name"
                 placeholder="Your name here..."
                 pattern="[A-Za-z\s]+"
@@ -213,6 +215,14 @@ const Contacts = ({ homeRef }) => {
 
           {/* Submit Button */}
           <div className="group">
+            {/* Submission Status for Screen Readers */}
+            <div
+              role="status"
+              aria-live="polite"
+              className="text-xs text-zinc-900"
+            >
+              {isSubmitting ? "Submitting your message..." : ""}
+            </div>
             <button
               type="submit"
               disabled={isSubmitting}
@@ -232,6 +242,7 @@ const Contacts = ({ homeRef }) => {
           onClick={() =>
             homeRef.current?.scrollIntoView({ behavior: "smooth" })
           }
+          aria-label="Scroll back to the top of the page"
           className="group flex items-center max-w-[180px] px-4 py-2 font-medium border-blue-600 rounded-md shadow-xs border-1 bg-linear-to-r from-blue-400 to-blue-800 text-amber-50 hover:to-blue-600 text-sm cursor-pointer"
         >
           <span className="flex items-center gap-1 group-active:[transform:translate3d(0,1px,0)]">

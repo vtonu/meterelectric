@@ -1,7 +1,7 @@
-import generac from "../assets/profile-pictures/generac.jpg";
-import commercial from "../assets/services/commercial.jpg";
-import residential from "../assets/services/residential.jpg";
-import industrial from "../assets/services/industrial.jpg";
+import generac from "../assets/profile-pictures/generac.webp";
+import commercial from "../assets/services/commercial.webp";
+import residential from "../assets/services/residential.webp";
+import industrial from "../assets/services/industrial.webp";
 
 export const navItems = [
   { label: "HOME", scrollTo: "homeRef" },
@@ -20,7 +20,7 @@ export const partners = [
 export const features = [
   {
     description: (
-      <div className="p-4 font-normal text-center  rounded-xs shadow-xs border-neutral-950  font-sm  bg-linear-to-r from-neutral-900 to-zinc-950 cursor-default shadow-neutral-400 ">
+      <div className="p-4 font-normal text-center  rounded-xs shadow-xs border-neutral-950  font-sm  bg-linear-to-r from-neutral-900 to-zinc-950 cursor-default shadow-neutral-300 ">
         <span className="text-2xl text-red-600">RESIDENTIAL</span>
         <p className="p-2 text-left">
           Top-quality residential services, from EV car chargers, emergency
@@ -36,7 +36,7 @@ export const features = [
   },
   {
     description: (
-      <div className="p-4 font-normal text-center  rounded-xs shadow-xs border-neutral-950  font-sm  bg-linear-to-r from-neutral-900 to-zinc-950 cursor-default shadow-neutral-400">
+      <div className="p-4 font-normal text-center  rounded-xs shadow-xs border-neutral-950  font-sm  bg-linear-to-r from-neutral-900 to-zinc-950 cursor-default shadow-neutral-300">
         <span className="text-2xl text-blue-500">COMMERCIAL</span>
         <p className="p-2 text-left">
           From logic systems to automations & controls, Meter Electric provides
@@ -54,7 +54,7 @@ export const features = [
 
   {
     description: (
-      <div className="p-4 font-normal text-center  rounded-xs shadow-xs border-neutral-950  font-sm  bg-linear-to-r from-neutral-900 to-zinc-950 cursor-default shadow-neutral-400 ">
+      <div className="p-4 font-normal text-center  rounded-xs shadow-xs border-neutral-950  font-sm  bg-linear-to-r from-neutral-900 to-zinc-950 cursor-default shadow-neutral-300 ">
         <span className="text-2xl text-gray-400 ">INDUSTRIAL</span>
         <p className="p-2 text-left">
           From control systems troubleshooting to automations & controls, we are
