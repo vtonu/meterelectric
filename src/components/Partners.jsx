@@ -23,7 +23,12 @@ const Partners = () => {
           {partners.map((partner, index) => (
             <div key={index} className="w-full px-4 py-2 sm:w-1/2 lg:w-1/1 ">
               {/* Individual partner card */}
-              <div className="p-6 border-1 border-blue-700 rounded-sm bg-neutral-900 hover:scale-103 transition-transform duration-300 ease-in-out ">
+              <div className="relative group p-6 border-1 border-blue-700 rounded-sm bg-neutral-900 hover:scale-102 transition-transform duration-500 ease-in-out ">
+                {/* Gradient blur effect on hover */}
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 rounded-sm bg-gradient-to-br from-orange-500 via-red-600 to-blue-600 opacity-0 group-hover:opacity-15 blur-xl transition-opacity duration-500 ease-in-out -z-10"
+                ></div>
                 <a
                   /* href="https://www.generac.com" */ // Link to partner's website
                   target="_blank" // Opens the link in a new tab

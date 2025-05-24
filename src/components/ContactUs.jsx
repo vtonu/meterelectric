@@ -3,7 +3,7 @@ import emailjs from "emailjs-com";
 import { PhoneCall } from "lucide-react";
 import { useRef, useState } from "react";
 import backgroundImage from "../assets/backgroundwires_blue.webp"; // Contact Us Background Image
-import aboutUsImage from "../assets/about-us.webp"; // About Us Van
+import aboutUsImage from "../assets/about-us.png"; // About Us Van
 
 const Contacts = ({ homeRef }) => {
   const formRef = useRef();
@@ -73,8 +73,17 @@ const Contacts = ({ homeRef }) => {
         {/* About Us content and image side by side */}
         <div className="flex flex-wrap justify-center ">
           {/* Container for about us image */}
-          <div className="flex flex-wrap justify-center hover:scale-102 transition-transform duration-200 ease-in-out">
+          <div className="relative group flex flex-wrap justify-center hover:scale-102 transition-transform duration-200 ease-in-out">
+            {" "}
+            {/* Added relative and group */}
+            {/* Gradient blur effect on hover */}
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 rounded-md bg-gradient-to-br from-sky-400 via-indigo-400 to-blue-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 ease-in-out -z-10"
+            ></div>
             <div className="w-full px-4 py-2 sm:w-1/2 lg:w-1/1">
+              {" "}
+              {/* This content will be above the blur */}
               {/* Image container */}
               <div>
                 <img

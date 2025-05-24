@@ -131,12 +131,22 @@ const FeatureSection = () => {
           onContextMenu={(e) => e.preventDefault()} // Disable right-click
         >
           {/* Service area map/image */}
-          <div className="w-full md:w-1/2 lg:w-2/5 hover:scale-102 transition-transform duration-200 ease-in-out px-2">
-            <img
-              src={serviceAreaImage}
-              alt="Map showing the areas we serve, including Bothell, Kirkland, and more."
-              className="w-full h-auto object-cover"
-            />
+          <div className="relative group flex flex-wrap justify-center hover:scale-102 transition-transform duration-300 ease-in-out">
+            {/* Gradient blur effect on hover */}
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 bg-gradient-to-br from-red-500 via-purple-400 to-blue-700 opacity-0 group-hover:opacity-15 blur-xl transition-opacity duration-500 ease-in-out -z-10"
+            ></div>
+            <div className="w-full px-4 py-2 sm:w-1/2 lg:w-1/1">
+              {/* Image container */}
+              <div>
+                <img
+                  className="w-full object-contain h-56"
+                  src={serviceAreaImage}
+                  alt="Map showing the areas we serve, including Bothell, Kirkland, and more."
+                />
+              </div>
+            </div>
           </div>
 
           {/* City list */}

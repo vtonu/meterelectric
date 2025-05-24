@@ -35,11 +35,9 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
       <div className="container relative px-4 mx-auto lg:text-sm">
         <div className="flex items-center justify-between">
           {/* Logo section */}
-          <div className="flex items-center shrink-0 m-4">
-            <button onClick={handleLogoClick}>
-              <img className="h-20 cursor-pointer" src={logo} alt="Logo" />
-            </button>
-          </div>
+          <button onClick={handleLogoClick} className="mx-auto lg:mx-0">
+            <img className="h-20 cursor-pointer" src={logo} alt="Logo" />
+          </button>
 
           {/* Phone number for desktop */}
           <div className="hidden lg:flex items-center absolute left-1/2 transform -translate-x-1/2">
@@ -75,7 +73,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
           </ul>
 
           {/* Mobile menu toggle button */}
-          <div className="flex-col justify-end lg:hidden md:flex">
+          <div className="lg:hidden">
             <button onClick={toggleNavbar}>
               {mobileDrawerOpen ? <X /> : <Menu />}
             </button>
