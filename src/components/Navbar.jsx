@@ -36,7 +36,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
         <div className="flex items-center justify-between">
           {/* Logo section */}
           <button onClick={handleLogoClick} className="mx-auto lg:mx-0">
-            <img className="h-20 cursor-pointer" src={logo} alt="Logo" />
+            <img className="h-28 cursor-pointer pl-8" src={logo} alt="Logo" />
           </button>
 
           {/* Phone number for desktop */}
