@@ -1,4 +1,4 @@
-⚡ Meter Electric Landing Page (v3.4.7)
+⚡ Meter Electric Landing Page (v3.4.8)
 
 🚀 Features
 

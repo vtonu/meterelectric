@@ -79,7 +79,7 @@ const Contacts = ({ homeRef }) => {
             {/* Gradient blur effect on hover */}
             <div
               aria-hidden="true"
-              className="absolute inset-0 rounded-md bg-gradient-to-br from-sky-400 via-indigo-400 to-blue-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 ease-in-out -z-10"
+              className="absolute inset-0 rounded-md bg-gradient-to-br from-sky-400 via-indigo-400 to-blue-500 opacity-0 group-hover:opacity-15 blur-xl transition-opacity duration-500 ease-in-out -z-10"
             ></div>
             <div className="w-full px-4 py-2 sm:w-1/2 lg:w-1/1">
               {" "}
