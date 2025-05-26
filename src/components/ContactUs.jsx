@@ -235,7 +235,7 @@ const Contacts = ({ homeRef }) => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="cursor-pointer block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-blue-600 rounded-md shadow-2xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:bg-blue-400 "
+              className="cursor-pointer block w-full px-4 py-2 text-sm font-semibold text-center text-white bg-[#1a3cb9] rounded-md shadow-2xs hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:bg-blue-400 "
             >
               <span className="block group-active:[transform:translate3d(0,1px,0)]">
                 {isSubmitting ? "Sending..." : "Submit"}
