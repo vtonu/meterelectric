@@ -66,7 +66,9 @@ const FeatureSection = () => {
             }`}
           >
             {isExpanded ? <ChevronUp /> : <ChevronDown />}
-            <span className="ml-2">{isExpanded ? "Close" : "See All"}</span>
+            <span className="ml-2">
+              {isExpanded ? "Close" : "Click to See More"}
+            </span>
           </button>
         </div>
         {/* Expandable Services Section */}
@@ -191,7 +193,7 @@ const FeatureSection = () => {
 
             {/* Slogan text */}
             <div className="mt-6 ">
-              <p className="text-xl font-semibold text-zinc-950">
+              <p className="text-lg font-semibold text-zinc-950">
                 Covering all projects across Snohomish, King, and Pierce County.
               </p>
             </div>

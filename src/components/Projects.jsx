@@ -10,7 +10,6 @@ import project7_panel from "../assets/projects/project7_panel.jpg";
 import project9_generac from "../assets/projects/project9_generac.jpg";
 import project10_carcharger from "../assets/projects/project10_carcharger.jpg";
 import project11_panel from "../assets/projects/project11_panel.png";
-import project12_teslaev from "../assets/projects/project12_teslaev.png";
 import project13_whitelights from "../assets/projects/project13_whitelights.png";
 import project14_teslaev2 from "../assets/projects/project14_teslaev2.png";
 import project15_service from "../assets/projects/project15_service.png";
@@ -138,7 +137,7 @@ const Projects = () => {
     slidesToShow: 5,
     arrows: true,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 4000,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
@@ -160,6 +159,11 @@ const Projects = () => {
   };
 
   const images = [
+    { src: project23_generac1, alt: "Project 23" },
+    { src: project23_generac2, alt: "Project 24" },
+    { src: project23_generac4, alt: "Project 24" },
+    { src: project23_generac3, alt: "Project 25" },
+    { src: project15_service, alt: "Project 15" },
     { src: project13_whitelights, alt: "Project 13" },
     { src: project26_pendant, alt: "Project 26" },
     { src: project9_generac, alt: "Project 8" },
@@ -170,26 +174,15 @@ const Projects = () => {
     { src: project25_church, alt: "Project 25" },
     { src: project18_teslaev3, alt: "Project 18" },
     { src: project19_teslaev4, alt: "Project 19" },
-    { src: project12_teslaev, alt: "Project 12" },
     { src: project7_panel, alt: "Project 7" },
     /* { src: project3_yellowstickers, alt: "Project 3" }, */
     { src: project14_teslaev2, alt: "Project 14" },
     { src: project11_panel, alt: "Project 11" },
-
     { src: project1_yellow, alt: "Project 1" },
-    { src: project23_generac1, alt: "Project 23" },
-
-    { src: project23_generac2, alt: "Project 24" },
-    { src: project23_generac4, alt: "Project 24" },
-    { src: project23_generac3, alt: "Project 25" },
-
-    { src: project15_service, alt: "Project 15" },
     { src: project16_panels, alt: "Project 16" },
     { src: project10_carcharger, alt: "Project 9" },
     { src: project17_panels, alt: "Project 17" },
-
     { src: project20_service, alt: "Project 20" },
-
     { src: project21_cables, alt: "Project 22" },
     { src: project21_service, alt: "Project 21" },
   ];
@@ -210,7 +203,7 @@ const Projects = () => {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="object-contain w-full h-100"
+                className="object-contain w-full h-96"
               />
             </div>
           ))}

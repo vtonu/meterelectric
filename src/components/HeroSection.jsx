@@ -40,7 +40,10 @@ const HeroSection = ({ contactRef }) => {
             <div className="flex flex-col items-center space-y-2 pb-4 xs:pb-8 mt-2 xs:mt-0">
               <button
                 onClick={() =>
-                  contactRef.current?.scrollIntoView({ behavior: "smooth" })
+                  contactRef.current?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  })
                 }
                 className="group w-full max-w-[240px] px-4 xs:px-6 py-3 xs:py-4 font-medium border-blue-700 rounded-md shadow-xs border-1 bg-linear-to-r from-blue-400 to-blue-800 text-amber-50 hover:to-blue-600 text-base xs:text-lg cursor-pointer motion-preset-bounce"
               >
