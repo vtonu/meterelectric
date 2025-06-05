@@ -116,7 +116,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
         </a>
       </div>
 
-      <div className="relative p-1 mx-auto bg-blue-600 lg:text-sm"></div>
+      <div className="relative p-0.75 mx-auto bg-blue-600 lg:text-sm"></div>
     </nav>
   );
 };

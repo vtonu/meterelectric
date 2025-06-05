@@ -52,13 +52,13 @@ const Contacts = ({ homeRef }) => {
 
   return (
     <div
-      className="mt-20 tracking-wide min-h-[300px] bg-cover  px-3 "
+      className="mt-20 tracking-wide min-h-[300px] bg-cover  px-0 "
       style={{
         backgroundImage: `url(${backgroundImage})`,
       }}
     >
       {/* Separate div for the border above remove max-w-4xl mx-auto for the line to extend*/}
-      <div className="border-t-1 border-red-600 max-w-4xl mx-auto "></div>
+      <div className="border-t-1 border-red-600"></div>
       <div
         className="tracking-wide border-blue-600"
         onContextMenu={(e) => e.preventDefault()} // Disable right-click
@@ -114,11 +114,11 @@ const Contacts = ({ homeRef }) => {
       </div>
 
       <h2 className="flex flex-col items-center gap-2 pt-12 text-5xl tracking-wide text-center bg-gradient-to-b from-white-50 to-transparent">
-        <h2 className="text-4xl tracking-widest text-center sm:text-5xl lg:text-4xl  text-transparent bg-linear-to-r from-zinc-900 to-zinc-950 bg-clip-text">
-          CONTACT US
+        <h2 className="text-4xl tracking-widest text-center sm:text-5xl lg:text-5xl  text-transparent bg-linear-to-r from-zinc-900 to-zinc-950 bg-clip-text">
+          CONTACT
         </h2>
         <h6 className="flex gap-2 text-sm text-blue-600">
-          Email - meterelectrical@gmail.com
+          meterelectrical@gmail.com
         </h6>
 
         <a
