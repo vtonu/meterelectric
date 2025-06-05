@@ -2,7 +2,7 @@ import { Check } from "lucide-react";
 
 const HeroSection = ({ contactRef }) => {
   return (
-    <div className="relative w-full min-h-[450px] h-auto max-h-[60vh] xs:max-h-[70vh] sm:h-auto bg-[url('/src/assets/herosection/headerbanner1.webp')] bg-cover bg-center overflow-hidden">
+    <div className="relative w-full min-h-[450px] h-auto max-h-[60vh] xs:max-h-[70vh] sm:h-auto bg-[url('/src/assets/herosection/headerbanner.jpg')] bg-cover bg-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-white/95 to-transparent"></div>
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full w-full max-w-6xl mx-auto pt-6 xs:pt-12 sm:pt-20 sm:px-6 sm:py-8 px-2  ">
