@@ -2,7 +2,7 @@
 
 ### Title
 
-METER ELECTRIC LLC - Professional Electrical Contractor Services in the Greater Seattle Area in Washington State.
+METER ELECTRIC LLC - Electrical Contractor Services in the Greater Seattle Area in Washington State.
 
 ### Meta Description
 
@@ -81,10 +81,14 @@ Electrical contractor, electrical services, residential electrician, commercial 
 - WA State Electric
 - WA Meter Electric
 - Best electricians near me
+- Electrical Seattle
+- Seattle Electric Near Me
+- Seattle electrician
+- Lynnwood electrician
+- Best electrician near me
+- Generac installer near me
 
 ### Schema Markup
-
-- LocalBusiness schema to provide search engines with detailed information about your business
 
 ```html
 <script type="application/ld+json">

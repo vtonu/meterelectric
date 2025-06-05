@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import project1_yellow from "../assets/projects/project1_yellow.jpg";
 import project3_yellowstickers from "../assets/projects/project3_yellowstickers.jpg";
 import project4_housebackground from "../assets/projects/project4_housebackground.jpg";
-
 import project6_panel from "../assets/projects/project6_panel.jpg";
 import project7_panel from "../assets/projects/project7_panel.jpg";
 import project9_generac from "../assets/projects/project9_generac.jpg";
@@ -23,6 +22,13 @@ import project20_service from "../assets/projects/project20_service.png";
 import project21_service from "../assets/projects/project21_service.png";
 import project21_cables from "../assets/projects/project21_cables.png";
 import project22_generacbene from "../assets/projects/project22_generacbene.png";
+import project23_generac1 from "../assets/projects/project23_generac1.png";
+import project23_generac2 from "../assets/projects/project23_generac2.png";
+import project23_generac3 from "../assets/projects/project23_generac3.png";
+import project23_generac4 from "../assets/projects/project23_generac4.jpg";
+import project24_church from "../assets/projects/project24_church.jpg";
+import project25_church from "../assets/projects/project25_church.jpeg";
+import project26_pendant from "../assets/projects/project26_pendant.jpeg";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Custom Next Arrow Component
@@ -155,25 +161,33 @@ const Projects = () => {
 
   const images = [
     { src: project13_whitelights, alt: "Project 13" },
-
+    { src: project26_pendant, alt: "Project 26" },
     { src: project9_generac, alt: "Project 8" },
     { src: project22_generacbene, alt: "Project 22" },
     { src: project4_housebackground, alt: "Project 4" },
     { src: project6_panel, alt: "Project 6" },
-
+    { src: project24_church, alt: "Project 24" },
+    { src: project25_church, alt: "Project 25" },
     { src: project18_teslaev3, alt: "Project 18" },
     { src: project19_teslaev4, alt: "Project 19" },
     { src: project12_teslaev, alt: "Project 12" },
     { src: project7_panel, alt: "Project 7" },
-    { src: project3_yellowstickers, alt: "Project 3" },
+    /* { src: project3_yellowstickers, alt: "Project 3" }, */
     { src: project14_teslaev2, alt: "Project 14" },
     { src: project11_panel, alt: "Project 11" },
 
     { src: project1_yellow, alt: "Project 1" },
+    { src: project23_generac1, alt: "Project 23" },
+
+    { src: project23_generac2, alt: "Project 24" },
+    { src: project23_generac4, alt: "Project 24" },
+    { src: project23_generac3, alt: "Project 25" },
+
     { src: project15_service, alt: "Project 15" },
     { src: project16_panels, alt: "Project 16" },
-    { src: project17_panels, alt: "Project 17" },
     { src: project10_carcharger, alt: "Project 9" },
+    { src: project17_panels, alt: "Project 17" },
+
     { src: project20_service, alt: "Project 20" },
 
     { src: project21_cables, alt: "Project 22" },
@@ -196,7 +210,7 @@ const Projects = () => {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="object-contain w-full h-96"
+                className="object-contain w-full h-100"
               />
             </div>
           ))}

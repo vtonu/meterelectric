@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { features } from "../constants";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { MapPinIcon } from "lucide-react";
-import backgroundImage from "../assets/backgroundwires_featured.webp"; // Hero Background Image
+import backgroundImage from "../assets/backgroundwires_featured.jpg"; // Hero Background Image
 import serviceAreaImage from "../assets/herosection/citymap.webp"; // City Map Image
 
 // List of services to display in the expandable section
@@ -158,7 +158,7 @@ const FeatureSection = () => {
                   {[
                     "Bothell",
                     "Kirkland",
-                    "Bellevue",
+                    "Redmond",
                     "Shoreline",
                     "Issaquah",
                   ].map((item, index) => (
@@ -174,7 +174,7 @@ const FeatureSection = () => {
               </div>
               <div>
                 <ul className="flex flex-col space-y-2">
-                  {["Everett", "Sammamish", "Seattle", "Renton", "& More!"].map(
+                  {["Everett", "Bellevue", "Seattle", "Renton", "& More!"].map(
                     (item, index) => (
                       <li
                         key={index}

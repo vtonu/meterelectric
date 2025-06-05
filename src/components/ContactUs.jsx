@@ -2,7 +2,7 @@ import { MoveUp } from "lucide-react";
 import emailjs from "emailjs-com";
 import { PhoneCall } from "lucide-react";
 import { useRef, useState } from "react";
-import backgroundImage from "../assets/backgroundwires_blue.webp"; // Contact Us Background Image
+import backgroundImage from "../assets/backgroundwires_blue.jpg"; // Contact Us Background Image
 import aboutUsImage from "../assets/about-us.png"; // About Us Van
 
 const Contacts = ({ homeRef }) => {

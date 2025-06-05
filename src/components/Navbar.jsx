@@ -43,7 +43,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
           <div className="hidden lg:flex items-center absolute left-1/2 transform -translate-x-1/2">
             <a
               href="tel:425-561-9562"
-              className="flex items-center gap-2 text-2xl font-semibold text-blue-600 hover:text-blue-500 hover:scale-102 transition-transform duration-300 ease-in-out"
+              className="flex items-center gap-2 text-4xl font-semibold text-red-600 hover:text-red-500 hover:scale-102 transition-transform duration-300 ease-in-out"
             >
               <PhoneCall />
               <span>425-561-9562</span>
@@ -109,7 +109,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
         {/* Phone number for mobile */}
         <a
           href="tel:425-561-9562"
-          className="flex items-center justify-center gap-2 text-xl font-semibold text-blue-600 pb-2 lg:hidden"
+          className="flex items-center justify-center gap-2 text-xl font-semibold text-red-600 pb-2 lg:hidden"
         >
           <PhoneCall />
           <p>425-561-9562</p>
