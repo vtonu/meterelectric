@@ -2,6 +2,7 @@ import generac from "../assets/profile-pictures/generac.webp";
 import commercial from "../assets/services/commercial.webp";
 import residential from "../assets/services/residential.webp";
 import industrial from "../assets/services/industrial.webp";
+import generacgenerator from "../assets/profile-pictures/generacgenerator.jpeg"; // Generac Generator
 
 export const navItems = [
   { label: "HOME", scrollTo: "homeRef" },
@@ -13,7 +14,7 @@ export const navItems = [
 export const partners = [
   {
     company: "GENERAC COMPANY",
-    image: generac,
+    image: generacgenerator,
   },
 ];
 

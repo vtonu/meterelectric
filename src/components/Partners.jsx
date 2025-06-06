@@ -23,7 +23,7 @@ const Partners = () => {
           {partners.map((partner, index) => (
             <div key={index} className="w-full px-4 py-2 sm:w-1/2 lg:w-1/1 ">
               {/* Individual partner card */}
-              <div className="relative group p-6 border-1 border-blue-700 rounded-sm bg-neutral-900 hover:scale-102 transition-transform duration-500 ease-in-out ">
+              <div className="relative group hover:scale-102 transition-transform duration-500 ease-in-out ">
                 {/* Gradient blur effect on hover */}
                 <div
                   aria-hidden="true"
@@ -35,7 +35,7 @@ const Partners = () => {
                   rel="noopener noreferrer" // Prevents security vulnerabilities
                 >
                   <img
-                    className="w-full rounded-md h-30 object-contain " // Styling for the partner logo
+                    className="w-full h-58 rounded-sm object-contain " // Styling for the partner logo
                     src={partner.image} // Partner logo image source
                   />
                 </a>
@@ -44,12 +44,30 @@ const Partners = () => {
           ))}
         </div>
         {/* Certification description */}
-        <div className="max-w-lg text-lg text-black text-left sm:text-center sm:px-0 px-4 ">
-          Our certification means we’ve been thoroughly trained to meet
-          Generac’s standards, ensuring your generator is installed correctly,
-          safely, and efficiently. Choosing Meter Electric gives you peace of
-          mind and reliable service— making it a smart investment in your home
-          or business’s power security.
+        <div className="max-w-lg text-lg text-black text-left sm:text-left sm:px-0 px-4 ">
+          <p>
+            Our certification means we’ve been thoroughly trained to meet
+            Generac’s standards, ensuring your generator is installed correctly,
+            safely, and efficiently. Choosing Meter Electric gives you peace of
+            mind and reliable service— making it a smart investment in your home
+            or business’s power security.
+          </p>
+          {/* Flex container for "Need a generator?" text and button */}
+          {/* On mobile (default): column layout, centered items */}
+          {/* On small screens and up (sm:): row layout, items aligned to start */}
+          <div className="flex flex-col items-center mt-6 sm:flex-row sm:justify-start">
+            <p className="text-3xl sm:text-4xl font-semibold text-zinc-950 mb-3 sm:mb-0 sm:mr-4 text-center sm:text-left">
+              Need a generator?
+            </p>
+            <button
+              onClick={() => (window.location.href = "tel:425-561-9562")}
+              className="group w-full sm:w-auto px-6 py-3 font-medium border-orange-700 rounded-md shadow-xs border-1 bg-linear-to-r from-orange-400 to-orange-800 text-amber-50 hover:to-orange-600 text-base xs:text-lg cursor-pointer motion-preset-bounce"
+            >
+              <span className="block group-active:[transform:translate3d(0,1px,0)]">
+                CALL NOW
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
