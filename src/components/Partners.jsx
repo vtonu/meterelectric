@@ -9,7 +9,7 @@ const Partners = () => {
       {/* Separate div for the border at the top */}
       <div className="border-b border-blue-700 max-w-4xl mx-auto "></div>
       {/* Section title */}
-      <h2 className="pt-10 mt-6 text-4xl tracking-wide text-center sm:text-5xl lg:text-6xl">
+      <h2 className="pt-10 mt-6 text-2xl tracking-wide text-center sm:text-5xl lg:text-6xl">
         <span className=" text-center text-transparent bg-linear-to-r from-orange-700 to-orange-600 bg-clip-text">
           Certified Generac Installer
         </span>
@@ -35,7 +35,7 @@ const Partners = () => {
                   rel="noopener noreferrer" // Prevents security vulnerabilities
                 >
                   <img
-                    className="w-full h-58 rounded-sm object-contain " // Styling for the partner logo
+                    className="w-full h-60 rounded-sm object-contain " // Styling for the partner logo
                     src={partner.image} // Partner logo image source
                   />
                 </a>
@@ -52,16 +52,18 @@ const Partners = () => {
             mind and reliable service— making it a smart investment in your home
             or business’s power security.
           </p>
+          {/* Separate div for the border at the top */}
+          <div className="border-b border-orange-700 w-44 mx-auto pt-4"></div>
           {/* Flex container for "Need a generator?" text and button */}
           {/* On mobile (default): column layout, centered items */}
           {/* On small screens and up (sm:): row layout, items aligned to start */}
           <div className="flex flex-col items-center mt-6 sm:flex-row sm:justify-start">
-            <p className="text-3xl sm:text-4xl font-semibold text-zinc-950 mb-3 sm:mb-0 sm:mr-4 text-center sm:text-left">
-              Need a generator?
+            <p className="text-3xl sm:text-3xl font-semibold text-zinc-950 mb-3 sm:mb-0 sm:mr-4 text-center sm:text-left">
+              Ready for a generator?
             </p>
             <button
               onClick={() => (window.location.href = "tel:425-561-9562")}
-              className="group w-full sm:w-auto px-6 py-3 font-medium border-orange-700 rounded-md shadow-xs border-1 bg-linear-to-r from-orange-400 to-orange-800 text-amber-50 hover:to-orange-600 text-base xs:text-lg cursor-pointer motion-preset-bounce"
+              className="group w-1/2 sm:w-auto px-6 py-3 font-medium border-orange-700 rounded-md shadow-xs border-1 bg-linear-to-r from-orange-400 to-orange-800 text-amber-50 hover:to-orange-600 text-base xs:text-lg cursor-pointer motion-preset-bounce"
             >
               <span className="block group-active:[transform:translate3d(0,1px,0)]">
                 CALL NOW
