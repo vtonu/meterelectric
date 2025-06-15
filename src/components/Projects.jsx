@@ -201,11 +201,11 @@ const Projects = () => {
       <div className="gallery-slider ">
         <Slider {...settings} className="mx-auto">
           {images.map((image, index) => (
-            <div key={index} className="focus:outline-none px-1">
+            <div key={index} className="focus:outline-none px-1 ">
               <img
                 src={image.src}
                 alt={image.alt}
-                className="object-contain w-full h-96"
+                className="object-contain w-full h-96 "
               />
             </div>
           ))}
