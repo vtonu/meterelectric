@@ -219,7 +219,7 @@ const FeatureSection = () => {
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="object-contain w-full h-50"
+                    className="object-contain w-full h-44"
                   />
                 </a>
               </div>
