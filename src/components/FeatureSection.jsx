@@ -200,13 +200,13 @@ const FeatureSection = () => {
       {/* Section Title */}
       <h2 className="text-4xl tracking-wide text-center border-t-1  border-blue-600 sm:text-5xl lg:text-6xl  bg-gradient-to-b from-blue-50 to-transparent ">
         <div
-          className="mt-0 relative"
+          className="relative"
           onContextMenu={(e) => e.preventDefault()} // Disable right-click
         >
           {/* <h2 className="mt-8 text-5xl tracking-wide text-center lg:text-6xl text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
           REVIEWS
         </h2> */}
-          <br></br>
+
           <Slider {...settings} className="mx-auto ">
             {images.map((image, index) => (
               <div key={index} className="focus:outline-none px-1  ">
