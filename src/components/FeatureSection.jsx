@@ -122,13 +122,13 @@ const PrevArrow = (props) => {
 const settings = {
   className: "center",
   centerMode: true,
-  centerPadding: "10px",
+  centerPadding: "0px",
   infinite: true,
-  speed: 500,
-  slidesToShow: 3,
+  speed: 1000,
+  slidesToShow: 4,
   arrows: true,
   autoplay: true,
-  autoplaySpeed: 4000,
+  autoplaySpeed: 5000,
   /* nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />, */
   responsive: [
@@ -150,7 +150,6 @@ const settings = {
 };
 
 const images = [
-  { src: adkins_review, alt: "Adkins Review" },
   { src: amy_review, alt: "Amy Review" },
   { src: justinr_eview, alt: "Justin R Review" },
   { src: karthik_review, alt: "Karthik Review" },
@@ -159,6 +158,7 @@ const images = [
   { src: marilyn_review, alt: "Marilyn Review" },
   { src: michael_review, alt: "Michael Review" },
   { src: robin_review, alt: "Robin Review" },
+  { src: adkins_review, alt: "Adkins Review" },
   { src: sarah_review, alt: "Sarah Review" },
   { src: spence_review, alt: "Spence Review" },
 ];
@@ -200,7 +200,7 @@ const FeatureSection = () => {
       {/* Section Title */}
       <h2 className="text-4xl tracking-wide text-center border-t-1  border-blue-600 sm:text-5xl lg:text-6xl  bg-gradient-to-b from-blue-50 to-transparent ">
         <div
-          className="relative"
+          className="relative "
           onContextMenu={(e) => e.preventDefault()} // Disable right-click
         >
           {/* <h2 className="mt-8 text-5xl tracking-wide text-center lg:text-6xl text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
@@ -209,12 +209,19 @@ const FeatureSection = () => {
 
           <Slider {...settings} className="mx-auto ">
             {images.map((image, index) => (
-              <div key={index} className="focus:outline-none px-1  ">
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="object-contain w-full h-48 "
-                />
+              <div key={index} className="focus:outline-none px-1">
+                <a
+                  href="https://www.google.com/search?q=meter+electric+llc&sca_esv=05c894fd792d1e12&source=hp&ei=zjBPaMHWEbyAm9cPzvvU2Qw&iflsig=AOw8s4IAAAAAaE8-3loUOjTJwIJr9IOvhEt9VMuFltXN&ved=0ahUKEwjB9d7TpfSNAxU8wOYEHc49NcsQ4dUDCCE&uact=5&oq=meter+electric+llc&gs_lp=Egdnd3Mtd2l6IhJtZXRlciBlbGVjdHJpYyBsbGMyBhAAGBYYHjICECYyCxAAGIAEGIYDGIoFMgsQABiABBiGAxiKBTILEAAYgAQYhgMYigUyCxAAGIAEGIYDGIoFMgsQABiABBiGAxiKBTIIEAAYgAQYogQyCBAAGIAEGKIEMggQABiABBiiBEjmFFAAWABwAXgAkAEAmAFOoAFOqgEBMbgBA8gBAPgBAvgBAZgCAqACVJgDAJIHATKgB7wGsgcBMbgHU8IHBTAuMS4xyAcE&sclient=gws-wiz&sei=0TBPaOXfLcuc0PEP3fH66AY#lrd=0x2bcc8ea2f59d233:0x32b08f37e9e406a5,1,,,,"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="focus:outline-none"
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="object-contain w-full h-50"
+                  />
+                </a>
               </div>
             ))}
           </Slider>
