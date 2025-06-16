@@ -124,7 +124,7 @@ const settings = {
   centerMode: true,
   centerPadding: "0px",
   infinite: true,
-  speed: 1000,
+  speed: 2000,
   slidesToShow: 4,
   arrows: true,
   autoplay: true,
@@ -192,7 +192,7 @@ const FeatureSection = () => {
 
   return (
     <div
-      className="relative   min-h-[600px] bg-cover "
+      className="relative   min-h-[600px] bg-cover overflow-hidden"
       style={{
         backgroundImage: `url(${backgroundImage})`,
       }}
