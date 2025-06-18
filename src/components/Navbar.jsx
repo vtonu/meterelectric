@@ -109,7 +109,7 @@ const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
         {/* Phone number for mobile */}
         <a
           href="tel:425-561-9562"
-          className="flex items-center justify-center gap-2 text-xl font-semibold text-red-600 pb-2 lg:hidden"
+          className="flex items-center justify-center gap-2 text-2xl font-semibold text-red-600 pb-2 lg:hidden"
         >
           <PhoneCall />
           <p>425-561-9562</p>
