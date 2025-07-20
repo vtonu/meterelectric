@@ -1,4 +1,6 @@
 import logo from "../assets/logo.png";
+import google from "../assets/googlelogo.png";
+import facebook from "../assets/facebooklogo.png";
 
 const Footer = () => {
   return (
@@ -6,6 +8,32 @@ const Footer = () => {
       className="py-10  text-center border-t border-blue-600 bg-gradient-to-b from-blue-100 to-transparent"
       onContextMenu={(e) => e.preventDefault()} // Disable right-click
     >
+      <h3 className="flex justify-center">
+        <a
+          href="https://g.co/kgs/7HcDMAj"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="h-10 mr-2"
+            src={google}
+            alt="Google Logo"
+            onContextMenu={(e) => e.preventDefault()} // Disable right-click
+          />
+        </a>
+        <a
+          href="https://www.facebook.com/people/Meter-Electric-LLC/61577419228409/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="h-10 ml-2"
+            src={facebook}
+            alt="Facebook Logo"
+            onContextMenu={(e) => e.preventDefault()} // Disable right-click
+          />
+        </a>
+      </h3>
       <h3 className="flex flex-col items-center">
         <img
           className="h-20 m-2"
