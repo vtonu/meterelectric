@@ -17,7 +17,7 @@ const HeroSection = ({ contactRef }) => {
             <ul className="flex flex-col space-y-1 xs:space-y-2">
               {[
                 "Licensed, Bonded & Insured",
-                "3-year Warranty Guarantee",
+                "2-year Warranty Guarantee",
                 "Transparent, Upfront Pricing",
                 "Locally & Family Owned",
                 "FREE Estimates",
