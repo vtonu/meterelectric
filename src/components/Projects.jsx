@@ -32,6 +32,7 @@ import project27_parkinglot from "../assets/projects/project27_parkinglot.jpeg";
 import project28_generac from "../assets/projects/project28_generac.jpeg";
 import project29_wall from "../assets/projects/project29_wall.jpeg";
 import project30_pete from "../assets/projects/project30_pete.jpeg";
+import project31_generator from "../assets/projects/project31_generator.jpg";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Custom Next Arrow Component
@@ -170,6 +171,8 @@ const Projects = () => {
     { src: project23_generac1, alt: "Project 23" },
     { src: project15_service, alt: "Project 15" },
     { src: project13_whitelights, alt: "Project 13" },
+
+    { src: project31_generator, alt: "Project 31 Gen 3" },
     { src: project30_pete, alt: "Project 30 pete" },
     { src: project26_pendant, alt: "Project 26" },
     /* { src: project9_generac, alt: "Project 8" }, */
