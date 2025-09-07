@@ -29,6 +29,9 @@ import project24_church from "../assets/projects/project24_church.jpg";
 import project25_church from "../assets/projects/project25_church.jpeg";
 import project26_pendant from "../assets/projects/project26_pendant.jpeg";
 import project27_parkinglot from "../assets/projects/project27_parkinglot.jpeg";
+import project28_generac from "../assets/projects/project28_generac.jpeg";
+import project29_wall from "../assets/projects/project29_wall.jpeg";
+import project30_pete from "../assets/projects/project30_pete.jpeg";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Custom Next Arrow Component
@@ -160,14 +163,18 @@ const Projects = () => {
   };
 
   const images = [
-    { src: project23_generac1, alt: "Project 23" },
+    { src: project23_generac3, alt: "Project 25" },
     { src: project23_generac2, alt: "Project 24" },
     { src: project23_generac4, alt: "Project 24" },
-    { src: project23_generac3, alt: "Project 25" },
+
+    { src: project23_generac1, alt: "Project 23" },
     { src: project15_service, alt: "Project 15" },
     { src: project13_whitelights, alt: "Project 13" },
+    { src: project30_pete, alt: "Project 30 pete" },
     { src: project26_pendant, alt: "Project 26" },
-    { src: project9_generac, alt: "Project 8" },
+    /* { src: project9_generac, alt: "Project 8" }, */
+    { src: project28_generac, alt: "Project 28" },
+    { src: project29_wall, alt: "Project 29" },
     { src: project22_generacbene, alt: "Project 22" },
     { src: project27_parkinglot, alt: "Project 27" },
     { src: project4_housebackground, alt: "Project 4" },
