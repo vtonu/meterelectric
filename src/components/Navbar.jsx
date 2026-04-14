@@ -1,6 +1,6 @@
 import { Menu, X, PhoneCall } from "lucide-react";
 import { useState } from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logonollc.png";
 import { navItems } from "../constants";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 

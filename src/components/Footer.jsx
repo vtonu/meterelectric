@@ -49,7 +49,7 @@ const Footer = () => {
       </h6>
       <br></br>
       <h6 className="text-xs font-light text-neutral-700 ">
-        Copyright © 2025 METER ELECTRIC LLC.
+        Copyright © 2026 METER ELECTRIC LLC.
       </h6>
     </footer>
   );
