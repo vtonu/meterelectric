@@ -4,10 +4,7 @@ import facebook from "../assets/facebooklogo.png";
 
 const Footer = () => {
   return (
-    <footer
-      className="py-10  text-center border-t border-blue-600 bg-gradient-to-b from-blue-100 to-transparent"
-      onContextMenu={(e) => e.preventDefault()} // Disable right-click
-    >
+    <footer className="py-10  text-center border-t border-blue-600 bg-gradient-to-b from-blue-100 to-transparent">
       <h3 className="flex justify-center">
         <a
           href="https://g.co/kgs/7HcDMAj"
@@ -18,7 +15,6 @@ const Footer = () => {
             className="h-10 mr-2"
             src={google}
             alt="Google Logo"
-            onContextMenu={(e) => e.preventDefault()} // Disable right-click
           />
         </a>
         <a
@@ -30,7 +26,6 @@ const Footer = () => {
             className="h-10 ml-2"
             src={facebook}
             alt="Facebook Logo"
-            onContextMenu={(e) => e.preventDefault()} // Disable right-click
           />
         </a>
       </h3>
@@ -39,7 +34,6 @@ const Footer = () => {
           className="h-20 m-2"
           src={logo}
           alt="Logo"
-          onContextMenu={(e) => e.preventDefault()} // Disable right-click
           style={{ cursor: "default" }} // Set default cursor
         />
       </h3>

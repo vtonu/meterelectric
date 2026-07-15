@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { features } from "../constants";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { MapPinIcon } from "lucide-react";
@@ -199,10 +198,7 @@ const FeatureSection = () => {
     >
       {/* Section Title */}
       <h2 className="text-4xl tracking-wide text-center border-t-1  border-blue-600 sm:text-5xl lg:text-6xl  bg-gradient-to-b from-blue-50 to-transparent ">
-        <div
-          className="relative "
-          onContextMenu={(e) => e.preventDefault()} // Disable right-click
-        >
+        <div className="relative ">
           {/* <h2 className="mt-8 text-5xl tracking-wide text-center lg:text-6xl text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
           REVIEWS
         </h2> */}
@@ -306,10 +302,7 @@ const FeatureSection = () => {
           </div>
         </div>
         {/* Features Section */}
-        <div
-          className="flex flex-wrap motion-preset-fade pt-4"
-          onContextMenu={(e) => e.preventDefault()} // Disable right-click
-        >
+        <div className="flex flex-wrap motion-preset-fade pt-4">
           {features.map((feature, index) => (
             <div key={index} className="w-full sm:w-1/2 lg:w-1/3 ">
               <div>
@@ -317,15 +310,10 @@ const FeatureSection = () => {
                 <div>{feature.text}</div>
                 {/* Feature icon */}
                 <div>{feature.icon}</div>
-                {/* Feature description with link */}
-                <p className="p-2 text-md text-amber-50">
-                  <Link
-                    to={feature.link}
-                    aria-label={`Learn more about ${feature.text}`}
-                  >
-                    {feature.description}
-                  </Link>
-                </p>
+                {/* Feature description */}
+                <div className="p-2 text-md text-amber-50">
+                  {feature.description}
+                </div>
               </div>
             </div>
           ))}
@@ -338,10 +326,7 @@ const FeatureSection = () => {
             AREAS WE SERVE
           </span>
         </h2>
-        <div
-          className="flex flex-col md:flex-row gap-0 items-center justify-center my-8 px-4"
-          onContextMenu={(e) => e.preventDefault()} // Disable right-click
-        >
+        <div className="flex flex-col md:flex-row gap-0 items-center justify-center my-8 px-4">
           {/* Service area map/image */}
           <div className="relative group flex flex-wrap justify-center hover:scale-102 transition-transform duration-300 ease-in-out">
             {/* Gradient blur effect on hover */}

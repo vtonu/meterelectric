@@ -60,10 +60,7 @@ const Contacts = ({ homeRef }) => {
       {/* Separate div for the border above remove max-w-4xl mx-auto for the line to extend*/}
       <div className="border-t-1 border-red-600"></div>
       <div className="px-2">
-        <div
-          className="tracking-wide border-blue-600"
-          onContextMenu={(e) => e.preventDefault()} // Disable right-click
-        >
+        <div className="tracking-wide border-blue-600">
           {/* Section title */}
           <h2 className="pt-10 pb-10 text-5xl tracking-wide text-center sm:text-5xl lg:text-6xl">
             <span className="text-center text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">
@@ -123,7 +120,7 @@ const Contacts = ({ homeRef }) => {
           </h6>
 
           <a
-            href="tel:425-588-7578"
+            href="tel:425-561-9562"
             aria-label="Call us at 425-561-9562"
             className="flex items-center justify-center gap-2 text-2xl font-semibold text-blue-600 pb-2 hover:text-blue-500 hover:scale-102 transition-transform duration-300 ease-in-out"
           >

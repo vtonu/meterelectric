@@ -143,6 +143,7 @@ const Projects = () => {
     arrows: true,
     autoplay: true,
     autoplaySpeed: 4000,
+    lazyLoad: "ondemand",
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
@@ -158,6 +159,7 @@ const Projects = () => {
         settings: {
           slidesToShow: 1,
           centerPadding: "10px",
+          /* infinite: false, */
         },
       },
     ],
@@ -200,10 +202,7 @@ const Projects = () => {
   ];
 
   return (
-    <div
-      className="mt-10 relative"
-      onContextMenu={(e) => e.preventDefault()} // Disable right-click
-    >
+    <div className="mt-10 relative">
       <h2 className="mt-8 text-5xl tracking-wide text-center lg:text-6xl text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
         GALLERY
       </h2>
@@ -215,6 +214,8 @@ const Projects = () => {
               <img
                 src={image.src}
                 alt={image.alt}
+                loading="lazy"
+                decoding="async"
                 className="object-contain w-full h-96 "
               />
             </div>
