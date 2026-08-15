@@ -1,5 +1,5 @@
 import { MoveUp } from "lucide-react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { PhoneCall } from "lucide-react";
 import { useRef, useState } from "react";
 import backgroundImage from "../assets/backgroundwires_blue.jpg"; // Contact Us Background Image
@@ -18,7 +18,9 @@ const Contacts = ({ homeRef }) => {
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        {
+          publicKey: import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+        }
       )
       .then(
         (result) => {
