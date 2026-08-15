@@ -1,54 +1,105 @@
 import { MoveUp } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { PhoneCall } from "lucide-react";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import backgroundImage from "../assets/backgroundwires_blue.jpg"; // Contact Us Background Image
 import aboutUsImage from "../assets/about-us.png"; // About Us Van
 
 const Contacts = ({ homeRef }) => {
-  const formRef = useRef();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [phoneNumber, setPhoneNumber] = useState("");
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  const normalizePhoneNumber = (value) => {
+    const digits = value.replace(/\D/g, "");
+    const localNumber =
+      digits.length === 11 && digits.startsWith("1")
+        ? digits.substring(1)
+        : digits;
 
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        formRef.current,
-        {
-          publicKey: import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
-        }
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          alert("Message sent successfully! We will get back to you soon.");
-          formRef.current.reset();
-          setIsSubmitting(false);
-        },
-        (error) => {
-          console.log(error.text);
-          alert("Failed to send message, please try again later.");
-          setIsSubmitting(false);
-        }
-      );
+    return localNumber.substring(0, 10);
   };
 
-  const formatPhoneNumber = (e) => {
-    const input = e.target.value.replace(/\D/g, "").substring(0, 10);
+  const formatPhoneNumber = (value) => {
+    const input = normalizePhoneNumber(value);
     const areaCode = input.substring(0, 3);
     const middle = input.substring(3, 6);
     const last = input.substring(6, 10);
 
-    if (input.length > 6) {
-      e.target.value = `${areaCode}-${middle}-${last}`;
-    } else if (input.length > 3) {
-      e.target.value = `${areaCode}-${middle}`;
-    } else if (input.length > 0) {
-      e.target.value = `${areaCode}`;
+    if (input.length > 6) return `${areaCode}-${middle}-${last}`;
+    if (input.length > 3) return `${areaCode}-${middle}`;
+    return areaCode;
+  };
+
+  const handlePhoneChange = (e) => {
+    e.target.setCustomValidity("");
+    setPhoneNumber(formatPhoneNumber(e.target.value));
+  };
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const nameInput = form.elements.from_name;
+    const phoneInput = form.elements.contact_number;
+    const emailInput = form.elements.user_email;
+    const messageInput = form.elements.message;
+    const name = nameInput.value.trim();
+    const phone = normalizePhoneNumber(phoneInput.value);
+    const message = messageInput.value.trim();
+
+    if (form.elements.company_website.value) return;
+
+    if (name.length < 2) {
+      nameInput.setCustomValidity("Please enter your name.");
+      nameInput.reportValidity();
+      return;
+    }
+
+    nameInput.setCustomValidity("");
+
+    if (phone.length !== 10) {
+      phoneInput.setCustomValidity("Please enter a 10-digit phone number.");
+      phoneInput.reportValidity();
+      return;
+    }
+
+    phoneInput.setCustomValidity("");
+
+    if (!message) {
+      messageInput.setCustomValidity("Please enter a message.");
+      messageInput.reportValidity();
+      return;
+    }
+
+    messageInput.setCustomValidity("");
+    setIsSubmitting(true);
+
+    try {
+      const result = await emailjs.send(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: name,
+          contact_number: formatPhoneNumber(phone),
+          user_email: emailInput.value.trim(),
+          message,
+        },
+        {
+          publicKey: import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+          limitRate: {
+            id: "contact-form",
+            throttle: 10000,
+          },
+        }
+      );
+      console.log(result.text);
+      alert("Message sent successfully! We will get back to you soon.");
+      form.reset();
+      setPhoneNumber("");
+    } catch (error) {
+      console.log(error.text);
+      alert("Failed to send message, please try again later.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -132,7 +183,7 @@ const Contacts = ({ homeRef }) => {
         </h2>
 
         <div className="max-w-lg px-4 py-8 mx-auto rounded-lg shadow-md isolate sm:py-8 lg:px-6 animate-gradient-border [background:linear-gradient(white,white)_padding-box,conic-gradient(from_var(--border-angle),transparent_0%,transparent_60%,theme(colors.blue.600/0.48)_82%,theme(colors.blue.500)_88%,theme(colors.blue.300)_92%,theme(colors.blue.500)_96%,theme(colors.blue.600/0.48)_98%,transparent_100%)_border-box] ">
-          <form ref={formRef} onSubmit={sendEmail} className="space-y-4 ">
+          <form onSubmit={sendEmail} className="space-y-4 ">
             {/* Name Field */}
             <div>
               <label
@@ -150,8 +201,9 @@ const Contacts = ({ homeRef }) => {
                   aria-describedby="name-description"
                   autoComplete="name"
                   placeholder="Your name here..."
-                  pattern="[A-Za-z\s]+"
-                  maxLength="30"
+                  minLength="2"
+                  maxLength="60"
+                  onInput={(e) => e.currentTarget.setCustomValidity("")}
                   className="block w-full px-3 py-2 text-base text-gray-900 bg-white border rounded-md outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500"
                 />
               </div>
@@ -172,13 +224,23 @@ const Contacts = ({ homeRef }) => {
                   type="tel"
                   required
                   autoComplete="tel"
+                  inputMode="tel"
                   placeholder="Phone number here..."
-                  maxLength="12"
+                  maxLength="25"
+                  value={phoneNumber}
                   className="block w-full px-3 py-2 text-base text-gray-900 bg-white border rounded-md outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500"
-                  onInput={formatPhoneNumber}
+                  onChange={handlePhoneChange}
                 />
               </div>
             </div>
+            <input
+              type="text"
+              name="company_website"
+              autoComplete="off"
+              tabIndex="-1"
+              aria-hidden="true"
+              className="absolute h-0 w-0 overflow-hidden opacity-0 pointer-events-none"
+            />
             {/* Email Field */}
             <div>
               <label
@@ -217,6 +279,7 @@ const Contacts = ({ homeRef }) => {
                   required
                   placeholder="Your message here..."
                   maxLength="500"
+                  onInput={(e) => e.currentTarget.setCustomValidity("")}
                   className="resize-none block w-full px-3 py-2 text-base text-gray-900 bg-white border rounded-md outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500"
                 />
               </div>
