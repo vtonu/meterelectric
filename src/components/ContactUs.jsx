@@ -1,3 +1,4 @@
+import useReducedMotion from "../hooks/useReducedMotion";
 import { MoveUp } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { PhoneCall } from "lucide-react";
@@ -6,6 +7,7 @@ import backgroundImage from "../assets/backgroundwires_blue.jpg"; // Contact Us 
 import aboutUsImage from "../assets/about-us.png"; // About Us Van
 
 const Contacts = ({ homeRef }) => {
+  const reducedMotion = useReducedMotion();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState("");
 
@@ -124,7 +126,7 @@ const Contacts = ({ homeRef }) => {
           {/* About Us content and image side by side */}
           <div className="flex flex-wrap justify-center ">
             {/* Container for about us image */}
-            <div className="relative group flex flex-wrap justify-center hover:scale-102 transition-transform duration-200 ease-in-out">
+            <div className="image-hover relative isolate group flex flex-wrap justify-center hover:scale-102 transition-transform duration-200 ease-in-out">
               {" "}
               {/* Added relative and group */}
               {/* Gradient blur effect on hover */}
@@ -164,13 +166,13 @@ const Contacts = ({ homeRef }) => {
           </div>
         </div>
 
-        <h2 className="flex flex-col items-center gap-2 pt-12 text-5xl tracking-wide text-center bg-gradient-to-b from-white-50 to-transparent">
+        <div className="flex flex-col items-center gap-2 pt-12 text-5xl tracking-wide text-center bg-gradient-to-b from-white-50 to-transparent">
           <h2 className="text-4xl tracking-widest text-center sm:text-5xl lg:text-5xl  text-transparent bg-linear-to-r from-zinc-900 to-zinc-950 bg-clip-text">
             CONTACT
           </h2>
-          <h6 className="flex gap-2 text-sm text-blue-600">
+          <p className="flex gap-2 text-sm text-blue-600">
             meterelectrical@gmail.com
-          </h6>
+          </p>
 
           <a
             href="tel:425-561-9562"
@@ -180,7 +182,7 @@ const Contacts = ({ homeRef }) => {
             <PhoneCall />
             <p>425-561-9562</p>
           </a>
-        </h2>
+        </div>
 
         <div className="max-w-lg px-4 py-8 mx-auto rounded-lg shadow-md isolate sm:py-8 lg:px-6 animate-gradient-border [background:linear-gradient(white,white)_padding-box,conic-gradient(from_var(--border-angle),transparent_0%,transparent_60%,theme(colors.blue.600/0.48)_82%,theme(colors.blue.500)_88%,theme(colors.blue.300)_92%,theme(colors.blue.500)_96%,theme(colors.blue.600/0.48)_98%,transparent_100%)_border-box] ">
           <form onSubmit={sendEmail} className="space-y-4 ">
@@ -198,7 +200,6 @@ const Contacts = ({ homeRef }) => {
                   name="from_name"
                   type="text"
                   required
-                  aria-describedby="name-description"
                   autoComplete="name"
                   placeholder="Your name here..."
                   minLength="2"
@@ -312,7 +313,7 @@ const Contacts = ({ homeRef }) => {
         <div className="flex items-center justify-center mt-8 pb-4">
           <button
             onClick={() =>
-              homeRef.current?.scrollIntoView({ behavior: "smooth" })
+              homeRef.current?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth" })
             }
             aria-label="Scroll back to the top of the page"
             className="group flex items-center max-w-[180px] px-4 py-2 font-medium border-blue-600 rounded-md shadow-xs border-1 bg-linear-to-r from-blue-400 to-blue-800 text-amber-50 hover:to-blue-600 text-sm cursor-pointer"

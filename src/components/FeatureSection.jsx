@@ -1,3 +1,5 @@
+import { reviewText } from "../constants/reviewText";
+import useReducedMotion from "../hooks/useReducedMotion";
 import { useState } from "react";
 import { features } from "../constants";
 import { ChevronDown, ChevronUp } from "lucide-react";
@@ -51,7 +53,7 @@ const settings = {
 
 const images = [
   { src: amy_review, alt: "Amy Review" },
-  { src: justinr_eview, alt: "Justin R Review" },
+  { src: justinr_eview, alt: "Justin G Review" },
   { src: karthik_review, alt: "Karthik Review" },
   { src: lindsay_review, alt: "Lindsay Review" },
   { src: lorraine_review, alt: "Lorraine Review" },
@@ -84,6 +86,7 @@ const services = [
 ];
 
 const FeatureSection = () => {
+  const reducedMotion = useReducedMotion();
   // State to manage whether the services section is expanded or collapsed
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -98,13 +101,13 @@ const FeatureSection = () => {
       }}
     >
       {/* Section Title */}
-      <h2 className="text-4xl tracking-wide text-center border-t-1  border-blue-600 sm:text-5xl lg:text-6xl  bg-gradient-to-b from-blue-50 to-transparent ">
+      <div className="text-4xl tracking-wide text-center border-t-1  border-blue-600 sm:text-5xl lg:text-6xl  bg-gradient-to-b from-blue-50 to-transparent ">
         <div className="relative ">
           {/* <h2 className="mt-8 text-5xl tracking-wide text-center lg:text-6xl text-transparent bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text">
           REVIEWS
         </h2> */}
 
-          <Slider {...settings} className="mx-auto ">
+          <Slider {...settings} autoplay={!reducedMotion} speed={reducedMotion ? 0 : settings.speed} className="mx-auto ">
             {images.map((image, index) => (
               <div key={index} className="focus:outline-none px-1">
                 <a
@@ -149,12 +152,20 @@ const FeatureSection = () => {
             }
           `}</style>
         </div>
+      <section className="sr-only" aria-label="Customer review transcripts">
+        <ul>
+          {reviewText.map((text, index) => <li key={index}>{text}</li>)}
+        </ul>
+      </section>
+
         <br></br>
-        OUR{" "}
-        <span className="text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">
-          SERVICES
-        </span>
-      </h2>
+        <h2 className="text-inherit">
+          OUR{" "}
+          <span className="text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text">
+            SERVICES
+          </span>
+        </h2>
+      </div>
       <br></br>
 
       {/* Main Content */}
@@ -229,7 +240,7 @@ const FeatureSection = () => {
         </h2>
         <div className="flex flex-col md:flex-row gap-0 items-center justify-center my-8 px-4">
           {/* Service area map/image */}
-          <div className="relative group flex flex-wrap justify-center hover:scale-102 transition-transform duration-300 ease-in-out">
+          <div className="image-hover relative isolate group flex flex-wrap justify-center hover:scale-102 transition-transform duration-300 ease-in-out">
             {/* Gradient blur effect on hover */}
             <div
               aria-hidden="true"

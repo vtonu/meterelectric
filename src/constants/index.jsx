@@ -28,7 +28,7 @@ export const features = [
         </p>
         <img
           src={residential}
-          alt="Industrial Image"
+          alt="Residential electrical services"
           className="object-cover w-full h-48 "
         />
       </div>
@@ -45,7 +45,7 @@ export const features = [
         <br></br>
         <img
           src={commercial}
-          alt="Commercial Image"
+          alt="Commercial electrical services"
           className="object-cover w-full h-48 "
         />
       </div>
@@ -63,7 +63,7 @@ export const features = [
         <br></br>
         <img
           src={industrial}
-          alt="Industrial Image"
+          alt="Industrial electrical services"
           className="object-cover w-full h-48 "
         />
       </div>

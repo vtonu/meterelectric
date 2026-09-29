@@ -44,3 +44,25 @@ layer(base);
   /* Ensures the border area is defined for the conic-gradient */
   border: 1.5px solid transparent; /* Adjust thickness (e.g., border-2px) if needed, ensure color is transparent */
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  [class*="hover:scale"]:not(.image-hover):hover,
+  .group:active .group-active\:\[transform\:translate3d\(0\,1px\,0\)\] {
+    transform: none !important;
+    scale: none !important;
+  }
+
+  .image-hover {
+    transition-property: transform, scale !important;
+    transition-duration: var(--tw-duration, 200ms) !important;
+    transition-timing-function: ease-in-out !important;
+  }
+}

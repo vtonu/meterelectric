@@ -20,7 +20,7 @@ const Partners = () => {
           {partners.map((partner, index) => (
             <div key={index} className="w-full px-4 py-2 sm:w-1/2 lg:w-1/1 ">
               {/* Individual partner card */}
-              <div className="relative group hover:scale-102 transition-transform duration-500 ease-in-out ">
+              <div className="image-hover relative isolate group hover:scale-102 transition-transform duration-500 ease-in-out ">
                 {/* Gradient blur effect on hover */}
                 <div
                   aria-hidden="true"
@@ -34,6 +34,7 @@ const Partners = () => {
                   <img
                     className="w-full h-60 rounded-sm object-contain " // Styling for the partner logo
                     src={partner.image} // Partner logo image source
+                    alt="Generac generator"
                   />
                 </a>
               </div>

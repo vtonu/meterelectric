@@ -1,3 +1,4 @@
+import useReducedMotion from "../hooks/useReducedMotion";
 import { Menu, X, PhoneCall } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/logonollc.png";
@@ -5,6 +6,7 @@ import { navItems } from "../constants";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = ({ servicesRef, projectsRef, contactRef }) => {
+  const reducedMotion = useReducedMotion();
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -15,9 +17,9 @@ const Navbar = ({ servicesRef, projectsRef, contactRef }) => {
 
   const handleScroll = (ref) => {
     if (ref === null) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({ top: 0, behavior: reducedMotion ? "auto" : "smooth" });
     } else {
-      ref.current?.scrollIntoView({ behavior: "smooth" });
+      ref.current?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth" });
     }
     setMobileDrawerOpen(false);
   };
@@ -36,7 +38,7 @@ const Navbar = ({ servicesRef, projectsRef, contactRef }) => {
         <div className="flex items-center justify-between">
           {/* Logo section */}
           <button onClick={handleLogoClick} className="mx-auto lg:mx-0">
-            <img className="h-28 cursor-pointer pl-8" src={logo} alt="Logo" />
+            <img className="h-28 cursor-pointer pl-8" src={logo} alt="Meter Electric home" />
           </button>
 
           {/* Phone number for desktop */}
@@ -74,7 +76,13 @@ const Navbar = ({ servicesRef, projectsRef, contactRef }) => {
 
           {/* Mobile menu toggle button */}
           <div className="lg:hidden">
-            <button onClick={toggleNavbar}>
+            <button
+              type="button"
+              onClick={toggleNavbar}
+              aria-label={mobileDrawerOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileDrawerOpen}
+              aria-controls={mobileDrawerOpen ? "mobile-menu" : undefined}
+            >
               {mobileDrawerOpen ? <X /> : <Menu />}
             </button>
           </div>
@@ -82,7 +90,7 @@ const Navbar = ({ servicesRef, projectsRef, contactRef }) => {
 
         {/* Mobile drawer menu */}
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 flex flex-col items-center justify-center w-full p-12 bg-neutral-200 lg:hidden">
+          <div id="mobile-menu" className="fixed right-0 z-20 flex flex-col items-center justify-center w-full p-12 bg-neutral-200 lg:hidden">
             <ul>
               {navItems.map((item, index) => (
                 <li key={index} className="py-4">

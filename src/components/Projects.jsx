@@ -1,3 +1,4 @@
+import useReducedMotion from "../hooks/useReducedMotion";
 import { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -37,7 +38,9 @@ const NextArrow = (props) => {
   };
 
   return (
-    <div
+    <button
+      type="button"
+      aria-label="Next photo"
       className={`custom-arrow next-arrow ${
         isAnimating ? "motion-preset-fade" : ""
       }`}
@@ -64,8 +67,8 @@ const NextArrow = (props) => {
         transition: "all 0.2s ease-in-out",
       }}
     >
-      <ChevronRight size={24} color="white" />
-    </div>
+      <ChevronRight size={24} color="white" aria-hidden="true" />
+    </button>
   );
 };
 
@@ -85,7 +88,9 @@ const PrevArrow = (props) => {
   };
 
   return (
-    <div
+    <button
+      type="button"
+      aria-label="Previous photo"
       className={`custom-arrow prev-arrow ${
         isAnimating ? "motion-preset-fade" : ""
       }`}
@@ -112,22 +117,23 @@ const PrevArrow = (props) => {
         transition: "all 0.2s ease-in-out",
       }}
     >
-      <ChevronLeft size={24} color="white" />
-    </div>
+      <ChevronLeft size={24} color="white" aria-hidden="true" />
+    </button>
   );
 };
 
 const Projects = () => {
+  const reducedMotion = useReducedMotion();
   // Settings for the react-slick carousel
   const settings = {
     className: "center",
     centerMode: true,
     centerPadding: "10px",
     infinite: true,
-    speed: 500,
+    speed: reducedMotion ? 0 : 500,
     slidesToShow: 5,
     arrows: true,
-    autoplay: true,
+    autoplay: !reducedMotion,
     autoplaySpeed: 4000,
     lazyLoad: "ondemand",
     nextArrow: <NextArrow />,

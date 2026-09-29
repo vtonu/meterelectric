@@ -1,16 +1,18 @@
+import useReducedMotion from "../hooks/useReducedMotion";
 import { Check } from "lucide-react";
 
 const HeroSection = ({ contactRef }) => {
+  const reducedMotion = useReducedMotion();
   return (
     <div className="relative w-full min-h-[450px] h-auto max-h-[60vh] xs:max-h-[70vh] sm:h-auto bg-[url('/src/assets/herosection/headerbanner.jpg')] bg-cover bg-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-white/95 to-transparent"></div>
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full w-full max-w-6xl mx-auto pt-6 xs:pt-12 sm:pt-20 sm:px-6 sm:py-8 px-2  ">
-        <h2 className="text-3xl xs:text-4xl tracking-wide text-center sm:text-5xl lg:text-6xl mx-auto mb-4 xs:mb-6 sm:mb-8 mt-4  xs:mt-8 motion-preset-focus ">
+        <h1 className="text-3xl xs:text-4xl tracking-wide text-center sm:text-5xl lg:text-6xl mx-auto mb-4 xs:mb-6 sm:mb-8 mt-4  xs:mt-8 motion-preset-focus ">
           <span className="text-transparent bg-linear-to-r from-blue-500 to-blue-700 bg-clip-text font-semibold ">
             Your go-to destination for quality electrical solutions.
           </span>
-        </h2>
+        </h1>
 
         <div className="grid grid-cols-1 gap-4 xs:gap-6 w-full px-2 xs:px-4">
           <div className="flex flex-col md:flex-row md:justify-center items-center w-full space-y-2 xs:space-y-4 md:space-y-0 md:space-x-32 pb-4">
@@ -41,7 +43,7 @@ const HeroSection = ({ contactRef }) => {
               <button
                 onClick={() =>
                   contactRef.current?.scrollIntoView({
-                    behavior: "smooth",
+                    behavior: reducedMotion ? "auto" : "smooth",
                     block: "center",
                   })
                 }

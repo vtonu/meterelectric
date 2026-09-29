@@ -5,7 +5,7 @@ import facebook from "../assets/facebooklogo.png";
 const Footer = () => {
   return (
     <footer className="py-10  text-center border-t border-blue-600 bg-gradient-to-b from-blue-100 to-transparent">
-      <h3 className="flex justify-center">
+      <div className="flex justify-center">
         <a
           href="https://g.co/kgs/7HcDMAj"
           target="_blank"
@@ -28,23 +28,23 @@ const Footer = () => {
             alt="Facebook Logo"
           />
         </a>
-      </h3>
-      <h3 className="flex flex-col items-center">
+      </div>
+      <div className="flex flex-col items-center">
         <img
           className="h-20 m-2"
           src={logo}
-          alt="Logo"
+          alt="Meter Electric LLC"
           style={{ cursor: "default" }} // Set default cursor
         />
-      </h3>
-      <h6 className="flex items-center justify-center gap-2 text-sm font-medium text-blue-700">
+      </div>
+      <p className="flex items-center justify-center gap-2 text-sm font-medium text-blue-700">
         LIC#: METEREL772R7
         <br></br> UBI#: 605-383-312
-      </h6>
+      </p>
       <br></br>
-      <h6 className="text-xs font-light text-neutral-700 ">
+      <p className="text-xs font-light text-neutral-700 ">
         Copyright © 2026 METER ELECTRIC LLC.
-      </h6>
+      </p>
     </footer>
   );
 };
