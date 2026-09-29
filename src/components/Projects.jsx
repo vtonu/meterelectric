@@ -8,22 +8,10 @@ import project6_panel from "../assets/projects/project6_panel.jpg";
 import project7_panel from "../assets/projects/project7_panel.jpg";
 import project10_carcharger from "../assets/projects/project10_carcharger.jpg";
 import project11_panel from "../assets/projects/project11_panel.png";
-import project13_whitelights from "../assets/projects/project13_whitelights.png";
-import project14_teslaev2 from "../assets/projects/project14_teslaev2.png";
-import project15_service from "../assets/projects/project15_service.png";
-import project16_panels from "../assets/projects/project16_panels.png";
-import project17_panels from "../assets/projects/project17_panels.png";
-import project18_teslaev3 from "../assets/projects/project18_teslaev3.png";
 import project19_teslaev4 from "../assets/projects/project19_teslaev4.png";
-import project20_service from "../assets/projects/project20_service.png";
 import project21_service from "../assets/projects/project21_service.png";
 import project21_cables from "../assets/projects/project21_cables.png";
-import project22_generacbene from "../assets/projects/project22_generacbene.png";
-import project23_generac1 from "../assets/projects/project23_generac1.png";
-import project23_generac2 from "../assets/projects/project23_generac2.png";
 import project23_generac3 from "../assets/projects/project23_generac3.png";
-import project23_generac4 from "../assets/projects/project23_generac4.jpg";
-import project24_church from "../assets/projects/project24_church.jpg";
 import project25_church from "../assets/projects/project25_church.jpeg";
 import project26_pendant from "../assets/projects/project26_pendant.jpeg";
 import project27_parkinglot from "../assets/projects/project27_parkinglot.jpeg";
@@ -165,34 +153,20 @@ const Projects = () => {
 
   const images = [
     { src: project23_generac3, alt: "Project 25" },
-    { src: project23_generac2, alt: "Project 24" },
-    { src: project23_generac4, alt: "Project 24" },
-
-    { src: project23_generac1, alt: "Project 23" },
-    { src: project15_service, alt: "Project 15" },
-    { src: project13_whitelights, alt: "Project 13" },
-
     { src: project31_generator, alt: "Project 31 Gen 3" },
     { src: project30_pete, alt: "Project 30 pete" },
     { src: project26_pendant, alt: "Project 26" },
     { src: project28_generac, alt: "Project 28" },
     { src: project29_wall, alt: "Project 29" },
-    { src: project22_generacbene, alt: "Project 22" },
     { src: project27_parkinglot, alt: "Project 27" },
     { src: project4_housebackground, alt: "Project 4" },
     { src: project6_panel, alt: "Project 6" },
-    { src: project24_church, alt: "Project 24" },
     { src: project25_church, alt: "Project 25" },
-    { src: project18_teslaev3, alt: "Project 18" },
     { src: project19_teslaev4, alt: "Project 19" },
     { src: project7_panel, alt: "Project 7" },
-    { src: project14_teslaev2, alt: "Project 14" },
     { src: project11_panel, alt: "Project 11" },
     { src: project1_yellow, alt: "Project 1" },
-    { src: project16_panels, alt: "Project 16" },
     { src: project10_carcharger, alt: "Project 9" },
-    { src: project17_panels, alt: "Project 17" },
-    { src: project20_service, alt: "Project 20" },
     { src: project21_cables, alt: "Project 22" },
     { src: project21_service, alt: "Project 21" },
   ];
