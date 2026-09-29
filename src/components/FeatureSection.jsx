@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { features } from "../constants";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { MapPinIcon } from "lucide-react";
@@ -7,7 +7,6 @@ import serviceAreaImage from "../assets/herosection/citymap.webp"; // City Map I
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import adkins_review from "../assets/projects/reviews/adkins_review.png";
 import amy_review from "../assets/projects/reviews/amy_review.png";
@@ -21,102 +20,6 @@ import robin_review from "../assets/projects/reviews/robin_review.png";
 import sarah_review from "../assets/projects/reviews/sarah_review.png";
 import spence_review from "../assets/projects/reviews/spence_review.png";
 
-// Custom Next Arrow Component
-const NextArrow = (props) => {
-  const { className, onClick } = props;
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const handleClick = (e) => {
-    setIsAnimating(true);
-    onClick(e);
-
-    // Reset animation after it completes
-    setTimeout(() => {
-      setIsAnimating(false);
-    }, 300);
-  };
-
-  return (
-    <div
-      className={`custom-arrow next-arrow ${
-        isAnimating ? "motion-preset-fade" : ""
-      }`}
-      onClick={handleClick}
-      style={{
-        position: "absolute",
-        bottom: "-65px",
-        left: "50%",
-        transform: "translateX(50px)",
-        zIndex: 1,
-        top: "auto",
-        right: "auto",
-        cursor: "pointer",
-        backgroundColor: "#18181B",
-        borderRadius: "5px",
-        width: "36px",
-        height: "36px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        fontSize: "0px",
-        lineHeight: "0",
-        color: "transparent",
-        transition: "all 0.2s ease-in-out",
-      }}
-    >
-      <ChevronRight size={24} color="white" />
-    </div>
-  );
-};
-
-// Custom Previous Arrow Component
-const PrevArrow = (props) => {
-  const { className, onClick } = props;
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const handleClick = (e) => {
-    setIsAnimating(true);
-    onClick(e);
-
-    // Reset animation after it completes
-    setTimeout(() => {
-      setIsAnimating(false);
-    }, 300);
-  };
-
-  return (
-    <div
-      className={`custom-arrow prev-arrow ${
-        isAnimating ? "motion-preset-fade" : ""
-      }`}
-      onClick={handleClick}
-      style={{
-        position: "absolute",
-        bottom: "-65px",
-        left: "50%",
-        transform: "translateX(calc(-100% - 50px))",
-        zIndex: 1,
-        top: "auto",
-        right: "auto",
-        cursor: "pointer",
-        backgroundColor: "#18181B",
-        borderRadius: "5px",
-        width: "36px",
-        height: "36px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        fontSize: "0px",
-        lineHeight: "0",
-        color: "transparent",
-        transition: "all 0.2s ease-in-out",
-      }}
-    >
-      <ChevronLeft size={24} color="white" />
-    </div>
-  );
-};
-
 // Settings for the react-slick carousel
 const settings = {
   className: "center",
@@ -128,8 +31,6 @@ const settings = {
   arrows: true,
   autoplay: true,
   autoplaySpeed: 5000,
-  /* nextArrow: <NextArrow />,
-  prevArrow: <PrevArrow />, */
   responsive: [
     {
       breakpoint: 1024,

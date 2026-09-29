@@ -2,9 +2,9 @@ import { Menu, X, PhoneCall } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/logonollc.png";
 import { navItems } from "../constants";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
-const Navbar = ({ homeRef, servicesRef, projectsRef, contactRef }) => {
+const Navbar = ({ servicesRef, projectsRef, contactRef }) => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();

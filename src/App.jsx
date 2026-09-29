@@ -23,7 +23,6 @@ const App = () => {
   return (
     <>
       <Navbar
-        homeRef={homeRef}
         servicesRef={servicesRef}
         projectsRef={projectsRef}
         contactRef={contactRef}

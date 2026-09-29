@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import project1_yellow from "../assets/projects/project1_yellow.jpg";
-import project3_yellowstickers from "../assets/projects/project3_yellowstickers.jpg";
 import project4_housebackground from "../assets/projects/project4_housebackground.jpg";
 import project6_panel from "../assets/projects/project6_panel.jpg";
 import project7_panel from "../assets/projects/project7_panel.jpg";
-import project9_generac from "../assets/projects/project9_generac.jpg";
 import project10_carcharger from "../assets/projects/project10_carcharger.jpg";
 import project11_panel from "../assets/projects/project11_panel.png";
 import project13_whitelights from "../assets/projects/project13_whitelights.png";
@@ -37,7 +35,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Custom Next Arrow Component
 const NextArrow = (props) => {
-  const { className, onClick } = props;
+  const { onClick } = props;
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleClick = (e) => {
@@ -85,7 +83,7 @@ const NextArrow = (props) => {
 
 // Custom Previous Arrow Component
 const PrevArrow = (props) => {
-  const { className, onClick } = props;
+  const { onClick } = props;
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleClick = (e) => {
@@ -177,7 +175,6 @@ const Projects = () => {
     { src: project31_generator, alt: "Project 31 Gen 3" },
     { src: project30_pete, alt: "Project 30 pete" },
     { src: project26_pendant, alt: "Project 26" },
-    /* { src: project9_generac, alt: "Project 8" }, */
     { src: project28_generac, alt: "Project 28" },
     { src: project29_wall, alt: "Project 29" },
     { src: project22_generacbene, alt: "Project 22" },
@@ -189,7 +186,6 @@ const Projects = () => {
     { src: project18_teslaev3, alt: "Project 18" },
     { src: project19_teslaev4, alt: "Project 19" },
     { src: project7_panel, alt: "Project 7" },
-    /* { src: project3_yellowstickers, alt: "Project 3" }, */
     { src: project14_teslaev2, alt: "Project 14" },
     { src: project11_panel, alt: "Project 11" },
     { src: project1_yellow, alt: "Project 1" },

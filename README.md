@@ -1,4 +1,4 @@
-⚡ Meter Electric Website (v3.7.0)
+⚡ Meter Electric Website (v3.7.1)
 
 🚀 Features
 
