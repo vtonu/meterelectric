@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 import FeatureSection from "./components/FeatureSection";
 import Projects from "./components/Projects";
 import Partners from "./components/Partners";
+import Reviews from "./components/Reviews";
 import Contacts from "./components/ContactUs";
 
 import { Analytics } from "@vercel/analytics/react";
@@ -38,6 +39,7 @@ const App = () => {
           <Projects />
         </div>
         <Partners />
+        <Reviews />
         <div ref={contactRef}>
           <Contacts homeRef={homeRef} />
         </div>
