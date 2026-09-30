@@ -3,46 +3,46 @@ import { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import project14_meterBank from "../assets/projects/project14_meterBank.jpg";
-import project9_dualPanels from "../assets/projects/project9_dualPanels.jpg";
-import project12_breakerPanel from "../assets/projects/project12_breakerPanel.jpg";
-import project15_carCharger from "../assets/projects/project15_carCharger.jpg";
-import project11_teslaCharger from "../assets/projects/project11_teslaCharger.png";
-import project7_parkingLotLights from "../assets/projects/project7_parkingLotLights.jpeg";
-import project3_generatorInletInstall from "../assets/projects/project3_generatorInletInstall.jpeg";
-import project2_portableGenerator from "../assets/projects/project2_portableGenerator.jpg";
-import project16_apartmentsPete from "../assets/projects/project16_apartmentsPete.jpg";
-import project17_apartmentsRoom from "../assets/projects/project17_apartmentsRoom.jpg";
-import project18_apartmentsWall from "../assets/projects/project18_apartmentsWall.jpg";
-import project19_blueLadder from "../assets/projects/project19_blueLadder.jpg";
-import project20_brightDay from "../assets/projects/project20_brightDay.jpg";
-import project21_chandelierLight from "../assets/projects/project21_chandelierLight.jpg";
-import project22_epsonGadget from "../assets/projects/project22_epsonGadget.jpg";
-import project23_firMan from "../assets/projects/project23_firMan.jpg";
-import project24_foamIsolation from "../assets/projects/project24_foamIsolation.jpg";
-import project25_generacBeautifulBrick from "../assets/projects/project25_generacBeautifulBrick.jpg";
-import project26_generacBeautifulGreen from "../assets/projects/project26_generacBeautifulGreen.jpg";
-import project27_greenCamera from "../assets/projects/project27_greenCamera.jpg";
-import project28_housePanelUpgrade from "../assets/projects/project28_housePanelUpgrade.jpg";
-import project29_kitchenMarble from "../assets/projects/project29_kitchenMarble.jpg";
-import project30_luxuryChandelier from "../assets/projects/project30_luxuryChandelier.jpg";
-import project31_outsideLight from "../assets/projects/project31_outsideLight.jpg";
-import project32_outsidePanelPete from "../assets/projects/project32_outsidePanelPete.jpg";
-import project33_parkinglotBlack from "../assets/projects/project33_parkinglotBlack.jpg";
-import project34_peteNewGenerator from "../assets/projects/project34_peteNewGenerator.jpg";
-import project35_pineTrees from "../assets/projects/project35_pineTrees.jpg";
-import project36_redBlueWires from "../assets/projects/project36_redBlueWires.jpg";
-import project37_redWiretubes from "../assets/projects/project37_redWiretubes.jpg";
-import project38_redYellowWall from "../assets/projects/project38_redYellowWall.jpg";
-import project39_roofAluminium from "../assets/projects/project39_roofAluminium.jpg";
-import project40_tallParkinglot from "../assets/projects/project40_tallParkinglot.jpg";
-import project41_westingHouse from "../assets/projects/project41_westingHouse.jpg";
-import project42_whiteKitchen from "../assets/projects/project42_whiteKitchen.jpg";
-import project43_wideFence from "../assets/projects/project43_wideFence.jpg";
-import project44_wireModule from "../assets/projects/project44_wireModule.jpg";
-import project45_yellowHousewall from "../assets/projects/project45_yellowHousewall.jpg";
-import project46_yellowKitchen from "../assets/projects/project46_yellowKitchen.jpg";
-import project47_yellowMeter from "../assets/projects/project47_yellowMeter.jpg";
+import photo1 from "../assets/projects/1.webp";
+import photo2 from "../assets/projects/2.webp";
+import photo3 from "../assets/projects/3.webp";
+import photo4 from "../assets/projects/4.webp";
+import photo5 from "../assets/projects/5.webp";
+import photo6 from "../assets/projects/6.webp";
+import photo7 from "../assets/projects/7.webp";
+import photo8 from "../assets/projects/8.webp";
+import photo9 from "../assets/projects/9.webp";
+import photo10 from "../assets/projects/10.webp";
+import photo11 from "../assets/projects/11.webp";
+import photo12 from "../assets/projects/12.webp";
+import photo13 from "../assets/projects/13.webp";
+import photo14 from "../assets/projects/14.webp";
+import photo15 from "../assets/projects/15.webp";
+import photo16 from "../assets/projects/16.webp";
+import photo17 from "../assets/projects/17.webp";
+import photo18 from "../assets/projects/18.webp";
+import photo19 from "../assets/projects/19.webp";
+import photo20 from "../assets/projects/20.webp";
+import photo21 from "../assets/projects/21.webp";
+import photo22 from "../assets/projects/22.webp";
+import photo23 from "../assets/projects/23.webp";
+import photo24 from "../assets/projects/24.webp";
+import photo25 from "../assets/projects/25.webp";
+import photo26 from "../assets/projects/26.webp";
+import photo27 from "../assets/projects/27.webp";
+import photo28 from "../assets/projects/28.webp";
+import photo29 from "../assets/projects/29.webp";
+import photo30 from "../assets/projects/30.webp";
+import photo31 from "../assets/projects/31.webp";
+import photo32 from "../assets/projects/32.webp";
+import photo33 from "../assets/projects/33.webp";
+import photo34 from "../assets/projects/34.webp";
+import photo35 from "../assets/projects/35.webp";
+import photo36 from "../assets/projects/36.webp";
+import photo37 from "../assets/projects/37.webp";
+import photo38 from "../assets/projects/38.webp";
+import photo39 from "../assets/projects/39.webp";
+import photo40 from "../assets/projects/40.webp";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Custom Next Arrow Component
@@ -181,46 +181,46 @@ const Projects = () => {
   };
 
   const images = [
-    { src: project2_portableGenerator, alt: "Portable generator" },
-    { src: project3_generatorInletInstall, alt: "Generator inlet installation" },
-    { src: project7_parkingLotLights, alt: "Parking lot lights" },
-    { src: project9_dualPanels, alt: "Dual panels" },
-    { src: project11_teslaCharger, alt: "Tesla charger" },
-    { src: project12_breakerPanel, alt: "Breaker panel" },
-    { src: project14_meterBank, alt: "Meter bank" },
-    { src: project15_carCharger, alt: "Car charger" },
-    { src: project16_apartmentsPete, alt: "apartments Pete" },
-    { src: project17_apartmentsRoom, alt: "apartments Room" },
-    { src: project18_apartmentsWall, alt: "apartments Wall" },
-    { src: project19_blueLadder, alt: "blue Ladder" },
-    { src: project20_brightDay, alt: "bright Day" },
-    { src: project21_chandelierLight, alt: "chandelier Light" },
-    { src: project22_epsonGadget, alt: "epson Gadget" },
-    { src: project23_firMan, alt: "fir Man" },
-    { src: project24_foamIsolation, alt: "foam Isolation" },
-    { src: project25_generacBeautifulBrick, alt: "generac Beautiful Brick" },
-    { src: project26_generacBeautifulGreen, alt: "generac Beautiful Green" },
-    { src: project27_greenCamera, alt: "green Camera" },
-    { src: project28_housePanelUpgrade, alt: "house Panel Upgrade" },
-    { src: project29_kitchenMarble, alt: "kitchen Marble" },
-    { src: project30_luxuryChandelier, alt: "luxury Chandelier" },
-    { src: project31_outsideLight, alt: "outside Light" },
-    { src: project32_outsidePanelPete, alt: "outside Panel Pete" },
-    { src: project33_parkinglotBlack, alt: "parkinglot Black" },
-    { src: project34_peteNewGenerator, alt: "pete New Generator" },
-    { src: project35_pineTrees, alt: "pine Trees" },
-    { src: project36_redBlueWires, alt: "red Blue Wires" },
-    { src: project37_redWiretubes, alt: "red Wiretubes" },
-    { src: project38_redYellowWall, alt: "red Yellow Wall" },
-    { src: project39_roofAluminium, alt: "roof Aluminium" },
-    { src: project40_tallParkinglot, alt: "tall Parkinglot" },
-    { src: project41_westingHouse, alt: "westing House" },
-    { src: project42_whiteKitchen, alt: "white Kitchen" },
-    { src: project43_wideFence, alt: "wide Fence" },
-    { src: project44_wireModule, alt: "wire Module" },
-    { src: project45_yellowHousewall, alt: "yellow Housewall" },
-    { src: project46_yellowKitchen, alt: "yellow Kitchen" },
-    { src: project47_yellowMeter, alt: "yellow Meter" },
+    { src: photo1, alt: "Project photo 1" },
+    { src: photo2, alt: "Project photo 2" },
+    { src: photo3, alt: "Project photo 3" },
+    { src: photo4, alt: "Project photo 4" },
+    { src: photo5, alt: "Project photo 5" },
+    { src: photo6, alt: "Project photo 6" },
+    { src: photo7, alt: "Project photo 7" },
+    { src: photo8, alt: "Project photo 8" },
+    { src: photo9, alt: "Project photo 9" },
+    { src: photo10, alt: "Project photo 10" },
+    { src: photo11, alt: "Project photo 11" },
+    { src: photo12, alt: "Project photo 12" },
+    { src: photo13, alt: "Project photo 13" },
+    { src: photo14, alt: "Project photo 14" },
+    { src: photo15, alt: "Project photo 15" },
+    { src: photo16, alt: "Project photo 16" },
+    { src: photo17, alt: "Project photo 17" },
+    { src: photo18, alt: "Project photo 18" },
+    { src: photo20, alt: "Project photo 20" },
+    { src: photo21, alt: "Project photo 21" },
+    { src: photo22, alt: "Project photo 22" },
+    { src: photo23, alt: "Project photo 23" },
+    { src: photo24, alt: "Project photo 24" },
+    { src: photo25, alt: "Project photo 25" },
+    { src: photo26, alt: "Project photo 26" },
+    { src: photo27, alt: "Project photo 27" },
+    { src: photo28, alt: "Project photo 28" },
+    { src: photo29, alt: "Project photo 29" },
+    { src: photo30, alt: "Project photo 30" },
+    { src: photo19, alt: "Project photo 19" },
+    { src: photo31, alt: "Project photo 31" },
+    { src: photo32, alt: "Project photo 32" },
+    { src: photo33, alt: "Project photo 33" },
+    { src: photo34, alt: "Project photo 34" },
+    { src: photo35, alt: "Project photo 35" },
+    { src: photo36, alt: "Project photo 36" },
+    { src: photo37, alt: "Project photo 37" },
+    { src: photo38, alt: "Project photo 38" },
+    { src: photo39, alt: "Project photo 39" },
+    { src: photo40, alt: "Project photo 40" },
   ];
 
   return (
