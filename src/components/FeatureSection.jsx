@@ -5,7 +5,6 @@ import { MapPinIcon } from "lucide-react";
 import backgroundImage from "../assets/backgroundwires_featured.jpg"; // Hero Background Image
 import serviceAreaImage from "../assets/herosection/citymap.webp"; // City Map Image
 
-
 // List of services to display in the expandable section
 const services = [
   "New Construction Electrical Services",
@@ -18,6 +17,7 @@ const services = [
   "Electrical Troubleshooting",
   "Building & House Rewiring",
   "LED Lighting Services",
+  "Low Voltage Services",
   "Inspection Reports",
   "Service Upgrades",
   "Smart Devices",
@@ -173,7 +173,7 @@ const FeatureSection = () => {
                         <MapPinIcon className="mr-2 text-red-600" size={18} />
                         {item}
                       </li>
-                    )
+                    ),
                   )}
                 </ul>
               </div>
