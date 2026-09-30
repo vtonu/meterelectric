@@ -8,22 +8,19 @@ import serviceAreaImage from "../assets/herosection/citymap.webp"; // City Map I
 
 // List of services to display in the expandable section
 const services = [
+  "New Construction Electrical Services",
   "Emergency Generator Installation",
-  "Electrical Safety Inspections",
-  "Panel Upgrades & Replacement",
+  "Remodeling Electrical Services",
+  "Security Cameras Installation",
+  "Electrical Safety Inspection",
+  "Lighting Electrical Services",
   "EV Car Charger Installation",
-  "Electrical Installation Services",
-  "Switches & Outlets Installation",
-  "Lighting Installation / Repair",
-  "Fan & Chandelier Installation",
-  "Smart Switches / Devices",
-  "200 & 400 Amp Service Panel",
-  "Panel Breaker Replacing",
   "Electrical Troubleshooting",
-  "Electrical Rewiring",
-  "Electrical Repairs",
-  "GFCI / AFCI Installation",
-  "Surge Protection",
+  "Building & House Rewiring",
+  "LED Lighting Services",
+  "Inspection Reports",
+  "Service Upgrades",
+  "Smart Devices",
 ];
 
 const FeatureSection = () => {
@@ -86,7 +83,7 @@ const FeatureSection = () => {
           >
             {/* List of services */}
             <ul
-              className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-2 list-disc list-outside text-sm pl-4"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-2 list-disc list-outside text-left text-sm pl-4"
               role="list"
             >
               {services.map((service, index) => (
