@@ -153,19 +153,22 @@ const Projects = () => {
     centerMode: true,
     centerPadding: "10px",
     infinite: true,
-    speed: reducedMotion ? 0 : 500,
-    slidesToShow: 5,
+    speed: reducedMotion ? 0 : 350,
+    slidesToShow: 1,
+    variableWidth: true,
     arrows: true,
     autoplay: !reducedMotion,
     autoplaySpeed: 4000,
-    lazyLoad: "ondemand",
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 1,
+          variableWidth: false,
+          speed: reducedMotion ? 0 : 500,
+          lazyLoad: "ondemand",
           centerPadding: "0px",
         },
       },
@@ -173,6 +176,9 @@ const Projects = () => {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          variableWidth: false,
+          speed: reducedMotion ? 0 : 500,
+          lazyLoad: "ondemand",
           centerPadding: "10px",
           /* infinite: false, */
         },
@@ -181,46 +187,46 @@ const Projects = () => {
   };
 
   const images = [
-    { src: photo1, alt: "Project photo 1" },
-    { src: photo2, alt: "Project photo 2" },
-    { src: photo3, alt: "Project photo 3" },
-    { src: photo4, alt: "Project photo 4" },
-    { src: photo5, alt: "Project photo 5" },
-    { src: photo6, alt: "Project photo 6" },
-    { src: photo7, alt: "Project photo 7" },
-    { src: photo8, alt: "Project photo 8" },
-    { src: photo9, alt: "Project photo 9" },
-    { src: photo10, alt: "Project photo 10" },
-    { src: photo11, alt: "Project photo 11" },
-    { src: photo12, alt: "Project photo 12" },
-    { src: photo13, alt: "Project photo 13" },
-    { src: photo14, alt: "Project photo 14" },
-    { src: photo15, alt: "Project photo 15" },
-    { src: photo16, alt: "Project photo 16" },
-    { src: photo17, alt: "Project photo 17" },
-    { src: photo18, alt: "Project photo 18" },
-    { src: photo20, alt: "Project photo 20" },
-    { src: photo21, alt: "Project photo 21" },
-    { src: photo22, alt: "Project photo 22" },
-    { src: photo23, alt: "Project photo 23" },
-    { src: photo24, alt: "Project photo 24" },
-    { src: photo25, alt: "Project photo 25" },
-    { src: photo26, alt: "Project photo 26" },
-    { src: photo27, alt: "Project photo 27" },
-    { src: photo28, alt: "Project photo 28" },
-    { src: photo29, alt: "Project photo 29" },
-    { src: photo30, alt: "Project photo 30" },
-    { src: photo19, alt: "Project photo 19" },
-    { src: photo31, alt: "Project photo 31" },
-    { src: photo32, alt: "Project photo 32" },
-    { src: photo33, alt: "Project photo 33" },
-    { src: photo34, alt: "Project photo 34" },
-    { src: photo35, alt: "Project photo 35" },
-    { src: photo36, alt: "Project photo 36" },
-    { src: photo37, alt: "Project photo 37" },
-    { src: photo38, alt: "Project photo 38" },
-    { src: photo39, alt: "Project photo 39" },
-    { src: photo40, alt: "Project photo 40" },
+    { src: photo1, alt: "Project photo 1", width: 810, height: 1080 },
+    { src: photo2, alt: "Project photo 2", width: 3220, height: 4293 },
+    { src: photo3, alt: "Project photo 3", width: 3464, height: 3464 },
+    { src: photo4, alt: "Project photo 4", width: 3024, height: 4032 },
+    { src: photo5, alt: "Project photo 5", width: 613, height: 793 },
+    { src: photo6, alt: "Project photo 6", width: 707, height: 955 },
+    { src: photo7, alt: "Project photo 7", width: 3371, height: 2740 },
+    { src: photo8, alt: "Project photo 8", width: 1382, height: 2547 },
+    { src: photo9, alt: "Project photo 9", width: 3024, height: 4032 },
+    { src: photo10, alt: "Project photo 10", width: 4032, height: 3024 },
+    { src: photo11, alt: "Project photo 11", width: 2385, height: 1487 },
+    { src: photo12, alt: "Project photo 12", width: 4032, height: 3024 },
+    { src: photo13, alt: "Project photo 13", width: 3024, height: 4032 },
+    { src: photo14, alt: "Project photo 14", width: 2753, height: 3451 },
+    { src: photo15, alt: "Project photo 15", width: 3024, height: 3441 },
+    { src: photo16, alt: "Project photo 16", width: 3024, height: 4032 },
+    { src: photo17, alt: "Project photo 17", width: 4090, height: 5453 },
+    { src: photo18, alt: "Project photo 18", width: 4032, height: 3024 },
+    { src: photo20, alt: "Project photo 20", width: 2529, height: 3007 },
+    { src: photo21, alt: "Project photo 21", width: 2864, height: 1272 },
+    { src: photo22, alt: "Project photo 22", width: 4032, height: 3024 },
+    { src: photo23, alt: "Project photo 23", width: 2824, height: 3705 },
+    { src: photo24, alt: "Project photo 24", width: 2525, height: 3464 },
+    { src: photo25, alt: "Project photo 25", width: 2914, height: 3429 },
+    { src: photo26, alt: "Project photo 26", width: 2837, height: 3782 },
+    { src: photo27, alt: "Project photo 27", width: 3024, height: 3734 },
+    { src: photo28, alt: "Project photo 28", width: 3024, height: 4032 },
+    { src: photo29, alt: "Project photo 29", width: 2728, height: 3637 },
+    { src: photo30, alt: "Project photo 30", width: 2014, height: 3440 },
+    { src: photo19, alt: "Project photo 19", width: 4032, height: 2294 },
+    { src: photo31, alt: "Project photo 31", width: 3035, height: 1903 },
+    { src: photo32, alt: "Project photo 32", width: 3024, height: 4032 },
+    { src: photo33, alt: "Project photo 33", width: 2084, height: 4032 },
+    { src: photo34, alt: "Project photo 34", width: 3024, height: 3608 },
+    { src: photo35, alt: "Project photo 35", width: 3024, height: 3347 },
+    { src: photo36, alt: "Project photo 36", width: 3710, height: 1412 },
+    { src: photo37, alt: "Project photo 37", width: 3024, height: 4032 },
+    { src: photo38, alt: "Project photo 38", width: 2701, height: 1768 },
+    { src: photo39, alt: "Project photo 39", width: 3024, height: 3504 },
+    { src: photo40, alt: "Project photo 40", width: 3024, height: 4032 },
   ];
 
   return (
@@ -232,7 +238,11 @@ const Projects = () => {
       <div className="gallery-slider ">
         <Slider {...settings} className="mx-auto">
           {images.map((image, index) => (
-            <div key={index} className="focus:outline-none px-1 ">
+            <div
+              key={index}
+              className="focus:outline-none px-1 lg:px-4 "
+              style={{ width: Math.round((image.width / image.height) * 384) + 32 }}
+            >
               <img
                 src={image.src}
                 alt={image.alt}
