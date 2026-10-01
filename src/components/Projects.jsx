@@ -179,7 +179,7 @@ const Projects = () => {
           variableWidth: false,
           speed: reducedMotion ? 0 : 500,
           lazyLoad: "ondemand",
-          centerPadding: "10px",
+          centerPadding: "0px",
           /* infinite: false, */
         },
       },
@@ -241,7 +241,9 @@ const Projects = () => {
             <div
               key={index}
               className="focus:outline-none px-1 lg:px-4 "
-              style={{ width: Math.round((image.width / image.height) * 384) + 32 }}
+              style={{
+                width: Math.round((image.width / image.height) * 384) + 32,
+              }}
             >
               <img
                 src={image.src}
